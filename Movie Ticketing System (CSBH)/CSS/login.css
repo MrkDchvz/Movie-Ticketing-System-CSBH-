@@ -1,4 +1,17 @@
 ﻿@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800&display=swap');
+/* Root */
+:root {
+    /*Text colors*/
+    --clr-white: hsl(0, 0%, 98%);
+    --clr-grey: hsl(225, 7%, 53%);
+    --clr-dark-purple: hsl(253, 64%, 31%);
+    /*Background Colors*/
+    --bg-color-white: hsl(0, 0%, 98%);
+    --bg-dark-purple: hsl(253, 64%, 31%);
+}
+
+
+
 /* Box sizing rules */
 *,
 *::before,
@@ -125,7 +138,11 @@ section {
     min-width: 100px;
     backdrop-filter: blur(5px);
     border-radius: 10px;
-    background: #fbfbfb;
+    background: var(--bg-color-white);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 @media (min-width: 542px) {
@@ -150,21 +167,21 @@ section {
     text-align: center;
     font-size: 2.5rem;
     font-weight: 300;
-    color: #331d82;
+    color: var(--clr-dark-purple);
     padding-bottom: 0.2em;
 }
 
 .login-subheader {
     max-width: 400px;
     text-align: center;
-    color: #757575;
+    color: var(--clr-grey);
 }
 
 .login_input--label {
     position: absolute;
     top: 50%;
     left: 5px;
-    color: #adadad;
+    color: var(--clr-grey);
     transform: translateY(-50%);
     pointer-events: none;
     transition: .5s;
@@ -188,7 +205,7 @@ section {
         left: 0;
         width: 0%;
         height: 2px;
-        background-color: #331d82;
+        background-color: var(--bg-dark-purple);
         transition: .5s;
     }
 
@@ -219,7 +236,7 @@ section {
 .login_input--textbox:focus ~ label,
 .login_input--textbox:valid ~ label {
     top: -5px;
-    color: #331d82;
+    color: var(--clr-dark-purple);
     }
 
 .btn {
@@ -239,3 +256,25 @@ section {
         background: #fbfbfb;
         border: 2px solid #331d82;
     }
+
+.signup {
+    text-decoration: none;
+    color: var(--clr-grey);
+    text-align: center;
+    margin-top: 1rem;
+    display: inline-block;
+    width: 100%;
+    font-size: 14px;
+}
+
+.signup:hover {
+     transition: 0.5s;
+     color: var(--clr-dark-purple);
+    }
+
+@media (min-width: 542px) {
+
+    .signup {
+        text-align:right;
+    }
+}

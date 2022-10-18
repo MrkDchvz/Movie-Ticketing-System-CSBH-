@@ -1,0 +1,36 @@
+﻿@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800&display=swap');
+/* Root */
+:root {
+    /*Text colors*/
+    --clr-white: hsl(0, 0%, 98%);
+    --clr-grey: hsl(225, 7%, 53%);
+    --clr-dark-purple: hsl(253, 64%, 31%);
+    /*Background Colors*/
+    --bg-color-white: hsl(0, 0%, 98%);
+    --bg-dark-purple: hsl(253, 64%, 31%);
+}
+
+
+
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* Remove default margin */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd {
+    margin: 0;
+}
+

@@ -1,4 +1,4 @@
-﻿<%@ Page Language="vb" AutoEventWireup="false" CodeBehind="WebForm1.aspx.vb" Inherits="Movie_Ticketing_System__CSBH_.WebForm1" %>
+﻿<%@ Page Language="vb" AutoEventWireup="false" CodeBehind="Login.aspx.vb" Inherits="Movie_Ticketing_System__CSBH_.WebForm1" %>
 
 <!DOCTYPE html>
 
@@ -14,7 +14,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800&display=swap" rel="stylesheet" />
 
     <!-- Stylsheet -->
-    <link href="CSS/styles.css" rel="stylesheet" />
+    <link href="CSS/login.css" rel="stylesheet" />
 
 </head>
 <body>
@@ -32,17 +32,18 @@
                     <div class="login_input">
                     
                         <div class="login_input_field">
-                             <input type="text" class="login_input--textbox" required />
+                             <input type="text" id="txtuser" class="login_input--textbox" required />
                              <span></span>
                              <label class="login_input--label">Username</label>
                         </div>
                   
                             <div class="login_input_field">
-                                <input class="login_input--textbox" required />
+                                <input id="txtpass" class="login_input--textbox" required />
                                 <span></span>
                                 <label class="login_input--label" >Password</label>
                             </div>
                         <asp:Button ID="Button1" runat="server" Text="login" CssClass="btn" />
+                        <asp:HyperLink ID="HyperLink1" runat="server" CssClass="signup" NavigateUrl="~/Registration.aspx">New user? Sign up here</asp:HyperLink>
                     </div>
                 </div>
             </div>

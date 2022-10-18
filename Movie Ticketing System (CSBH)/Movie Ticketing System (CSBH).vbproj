@@ -108,7 +108,8 @@
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="Content\bootstrap.rtl.css" />
     <Content Include="Content\bootstrap.rtl.min.css" />
-    <Content Include="CSS\styles.css" />
+    <Content Include="CSS\login.css" />
+    <Content Include="CSS\registration.css" />
     <Content Include="img\Cinema Background %281%29.jpg" />
     <Content Include="img\Cinema Background.png" />
     <Content Include="img\cinema.jpg" />
@@ -116,6 +117,7 @@
     <Content Include="img\cinema3.jpg" />
     <Content Include="img\cinema4.jpeg" />
     <Content Include="img\cinemablur.jpg" />
+    <Content Include="Registration.aspx" />
     <Content Include="Scripts\bootstrap.bundle.js" />
     <Content Include="Scripts\bootstrap.bundle.min.js" />
     <Content Include="Scripts\bootstrap.esm.js" />
@@ -123,7 +125,7 @@
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
     <Content Include="Web.config" />
-    <Content Include="WebForm1.aspx" />
+    <Content Include="Login.aspx" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="My Project\AssemblyInfo.vb" />
@@ -145,11 +147,18 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
-    <Compile Include="WebForm1.aspx.designer.vb">
-      <DependentUpon>WebForm1.aspx</DependentUpon>
+    <Compile Include="Login.aspx.designer.vb">
+      <DependentUpon>Login.aspx</DependentUpon>
     </Compile>
-    <Compile Include="WebForm1.aspx.vb">
-      <DependentUpon>WebForm1.aspx</DependentUpon>
+    <Compile Include="Login.aspx.vb">
+      <DependentUpon>Login.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Registration.aspx.designer.vb">
+      <DependentUpon>Registration.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Registration.aspx.vb">
+      <DependentUpon>Registration.aspx</DependentUpon>
       <SubType>ASPXCodebehind</SubType>
     </Compile>
   </ItemGroup>
