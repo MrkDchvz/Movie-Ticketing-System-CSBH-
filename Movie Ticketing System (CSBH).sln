@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.32901.82
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "Movie Ticketing System (CSBH)", "Movie Ticketing System (CSBH)\Movie Ticketing System (CSBH).vbproj", "{AB3A9C3E-2F81-4C74-9686-C30A319A07C8}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{AB3A9C3E-2F81-4C74-9686-C30A319A07C8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AB3A9C3E-2F81-4C74-9686-C30A319A07C8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AB3A9C3E-2F81-4C74-9686-C30A319A07C8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AB3A9C3E-2F81-4C74-9686-C30A319A07C8}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {539481E4-3E8A-4FB5-959C-33425DDD2BFB}
+	EndGlobalSection
+EndGlobal
