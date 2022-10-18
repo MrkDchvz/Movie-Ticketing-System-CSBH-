@@ -32,7 +32,8 @@
                     <div class="login_input">
                     
                         <div class="login_input_field">
-                             <input type="text" id="txtuser" class="login_input--textbox" required />
+                           <!-- <input type="text" id="txtuser" class="login_input--textbox" required /> -->
+                            <asp:TextBox ID="txtuser" runat="server" Cssclass="login_input--textbox" required></asp:TextBox>
                              <span></span>
                              <label class="login_input--label">Username</label>
                         </div>

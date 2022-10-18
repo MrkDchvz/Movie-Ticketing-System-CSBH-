@@ -34,3 +34,182 @@ dd {
     margin: 0;
 }
 
+body {
+    width: 100%;
+    display: flex;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+    background-image: url('../img/cinemablur.jpg');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    color: #2b2b2b;
+}
+
+.container {
+    max-width: 700px;
+    width: 100%;
+    background: var(--bg-color-white);
+    padding: 25px 30px;
+    border-radius: 5px;
+}
+
+/*--Typography--*/
+.container .title  {
+    font-size: 25px;
+    font-weight: 500;
+    margin-bottom: 2rem; 
+    position: relative;
+}
+
+.container .title::before {
+    content: "";
+    position: absolute;
+    width: 10%;
+    height: 3.5px;
+    background-color: var(--bg-dark-purple);
+    bottom: -6px;
+}
+
+/* Layout */
+
+.user {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.user__input-box {
+    width: calc(100% / 2 - 20px);
+}
+
+.user__input-box .input {
+    margin: 15px 0 12px 0;
+    height: 45px;
+    width: 100%;
+    outline: none;
+    border-radius: 5px;
+    border: 1px solid var(--clr-grey);
+}
+
+.user__details {
+    font-weight: 500;
+    margin-bottom: 5px;
+    border-bottom-width: 2px;
+    transition: all 0.5s ease;
+}
+
+.input:focus,
+.input:valid {
+    border: 1px solid var(--bg-dark-purple);
+}
+
+.user__input-box--gender-details {
+    width: 80%;
+    margin: 14px 0px;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+}
+
+.user_details--gender {
+}
+
+.user__details--gender-title {
+    margin-bottom: 1rem;
+    font-weight: 500;
+}
+
+.user__details--category {
+    width: 80%;
+    display: flex;
+    justify-content: space-between; 
+}
+
+.user__input-box--radio {
+    display: inline-block;
+    height: 18px;
+    width: 18px;
+    background: #d9d9d9;
+    border-radius: 50%;
+    border: 5px solid transparent;
+    transition: all 0.1s ease;
+}
+
+#radio1:checked ~ .user__details--category .dot-one,
+#radio2:checked ~ .user__details--category .dot-two,
+#radio3:checked ~ .user__details--category .dot-three {
+    border-color: #d9d9d9;
+    background: var(--bg-dark-purple);
+}
+
+
+form input[type="radio"] {
+    display: none;
+}
+
+.btn {
+    width: 100%;
+    height: 50px;
+    background: #331d82;
+    border-radius: 25px;
+    font-size: 18px;
+    color: #e9f4fb;
+    font-weight: 300;
+    transition: all 0.5s ease;
+    border: 2px solid #331d82
+}
+
+    .btn:hover {
+        color: #331d82;
+        background: #fbfbfb;
+    }
+
+@media (max-width: 555px) {
+    .container {
+        max-width: 100%;
+    }
+
+    .user__input-box {
+        width: 100%;
+        margin-bottom: 15px;
+    }
+    .user__details--category {
+        width: 100%;
+   
+    }
+    .user__input-box--gender-details {
+        width: 100%;
+    }
+
+    .user {
+        max-height: 300px;
+        overflow:scroll;
+    }
+    .user__input-box--button {
+        padding-top: 1rem;
+    }
+}
+
+.signup {
+    text-decoration: none;
+    color: var(--clr-grey);
+    text-align: center;
+    margin-top: 1rem;
+    display: inline-block;
+    width: 100%;
+    font-size: 14px;
+}
+
+    .signup:hover {
+        transition: 0.5s;
+        color: var(--clr-dark-purple);
+    }
+
+@media (min-width: 555px) {
+
+    .signup {
+        text-align: right;
+    }
+}
