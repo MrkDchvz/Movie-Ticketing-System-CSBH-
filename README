@@ -1,0 +1,22 @@
+Tables for datebase
+
+CREATE TABLE user_rank (
+	id INTEGER PRIMARY KEY,
+	rank VARCHAR(20) NOT NULL UNIQUE
+);
+
+INSERT INTO USER_RANK (id, rank) 
+VALUES 
+(1, 'customer'),
+(2, 'admin');
+
+
+CREATE TABLE users (
+	fullname VARCHAR(50),
+	username VARCHAR(50) PRIMARY KEY,
+	password VARCHAR(50),
+	email VARCHAR(255),
+	phone_num VARCHAR(50),
+	rank  INT not null default 1,
+	constraint fk_user_rank foreign key (rank) references user_rank (id)
+	);
