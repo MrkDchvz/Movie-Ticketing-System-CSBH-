@@ -1,4 +1,4 @@
-Tables for datebase
+Tables for database
 
 CREATE TABLE user_rank (
 	id INTEGER PRIMARY KEY,
