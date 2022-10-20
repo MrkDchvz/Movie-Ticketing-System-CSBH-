@@ -18,5 +18,6 @@ CREATE TABLE users (
 	email VARCHAR(255),
 	phone_num VARCHAR(50),
 	rank  INT not null default 1,
+	gender VARCHAR(1),
 	constraint fk_user_rank foreign key (rank) references user_rank (id)
 	);
