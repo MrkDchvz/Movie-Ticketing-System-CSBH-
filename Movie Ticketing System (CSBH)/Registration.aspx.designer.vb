@@ -23,40 +23,58 @@ Partial Public Class Registration
     Protected WithEvents form1 As Global.System.Web.UI.HtmlControls.HtmlForm
 
     '''<summary>
-    '''TextBox1 control.
+    '''txtfullname control.
     '''</summary>
     '''<remarks>
     '''Auto-generated field.
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
-    Protected WithEvents TextBox1 As Global.System.Web.UI.WebControls.TextBox
+    Protected WithEvents txtfullname As Global.System.Web.UI.WebControls.TextBox
 
     '''<summary>
-    '''TextBox2 control.
+    '''txtusername control.
     '''</summary>
     '''<remarks>
     '''Auto-generated field.
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
-    Protected WithEvents TextBox2 As Global.System.Web.UI.WebControls.TextBox
+    Protected WithEvents txtusername As Global.System.Web.UI.WebControls.TextBox
 
     '''<summary>
-    '''TextBox3 control.
+    '''txtemail control.
     '''</summary>
     '''<remarks>
     '''Auto-generated field.
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
-    Protected WithEvents TextBox3 As Global.System.Web.UI.WebControls.TextBox
+    Protected WithEvents txtemail As Global.System.Web.UI.WebControls.TextBox
 
     '''<summary>
-    '''TextBox4 control.
+    '''txtnum control.
     '''</summary>
     '''<remarks>
     '''Auto-generated field.
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
-    Protected WithEvents TextBox4 As Global.System.Web.UI.WebControls.TextBox
+    Protected WithEvents txtnum As Global.System.Web.UI.WebControls.TextBox
+
+    '''<summary>
+    '''txtpass control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents txtpass As Global.System.Web.UI.HtmlControls.HtmlInputPassword
+
+    '''<summary>
+    '''txtcpass control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents txtcpass As Global.System.Web.UI.HtmlControls.HtmlInputPassword
 
     '''<summary>
     '''radio1 control.
@@ -86,13 +104,22 @@ Partial Public Class Registration
     Protected WithEvents radio3 As Global.System.Web.UI.HtmlControls.HtmlInputRadioButton
 
     '''<summary>
-    '''Button1 control.
+    '''btnregister control.
     '''</summary>
     '''<remarks>
     '''Auto-generated field.
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
-    Protected WithEvents Button1 As Global.System.Web.UI.WebControls.Button
+    Protected WithEvents btnregister As Global.System.Web.UI.WebControls.Button
+
+    '''<summary>
+    '''CompareValidator1 control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents CompareValidator1 As Global.System.Web.UI.WebControls.CompareValidator
 
     '''<summary>
     '''backlogin control.
@@ -102,4 +129,13 @@ Partial Public Class Registration
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
     Protected WithEvents backlogin As Global.System.Web.UI.WebControls.HyperLink
+
+    '''<summary>
+    '''txterror control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents txterror As Global.System.Web.UI.WebControls.Label
 End Class

@@ -35,6 +35,78 @@ dd {
 }
 
 
+/*--------------*/
+/*--Typography--*/
+/*--------------*/
+.login_header {
+    text-align: center;
+    font-size: 2.5rem;
+    font-weight: 300;
+    color: var(--clr-dark-purple);
+    padding-bottom: 0.2em;
+}
+
+.login-subheader {
+    max-width: 400px;
+    text-align: center;
+    color: var(--clr-grey);
+}
+
+.login_input--label {
+    position: absolute;
+    top: 50%;
+    left: 5px;
+    color: var(--clr-grey);
+    transform: translateY(-50%);
+    pointer-events: none;
+    transition: .5s;
+}
+
+.login_input--textbox {
+    color: #2b2b2b;
+}
+
+.login_input--textbox:focus ~ label,
+.login_input--textbox:valid ~ label {
+    top: -5px;
+    color: var(--clr-dark-purple);
+}
+
+
+.signup {
+    position: relative;
+    text-decoration: none;
+    color: var(--clr-grey);
+    text-align: center;
+    margin-top: 1rem;
+    display: inline-block;
+    width: 100%;
+    font-size: 14px;
+}
+
+    .signup:hover {
+        transition: 0.5s;
+        color: var(--clr-dark-purple);
+    }
+
+@media (min-width: 542px) {
+
+    .signup {
+        text-align: right;
+    }
+}
+
+.txt {
+    height: 16px;
+    margin: 0;
+    font-size: 16px;
+    color: tomato;
+}
+
+/*----------*/
+/*--Layout--*/
+/*----------*/
+
 section {
     width: 100%;
     min-height: 100vh;
@@ -81,29 +153,8 @@ section {
 }
 
 
-
-/*--Promotext Redundant--*/
-.promotext {
-    color: #ddedff;
-    text-shadow: 1px 1px 11px #121314;
-}
-
-.promotext h3 {
-    font-size: 4rem;
-    line-height: 1;
-}
-
-.promotext p {
-        font-size: 1.7rem;
-        font-weight: 300;
-        margin-top: 1rem;
-        color:#874cfc; 
-        margin-left: 1rem;
-    }
-
 /*Promo image*/
 .promoimg {
-    
     background-image: url('../img/cinema3.jpg');
     background-position: center;
     background-size: cover;
@@ -162,40 +213,17 @@ section {
     }
 }
 
-/*--Login Typography--*/
-.login_header {
-    text-align: center;
-    font-size: 2.5rem;
-    font-weight: 300;
-    color: var(--clr-dark-purple);
-    padding-bottom: 0.2em;
-}
-
-.login-subheader {
-    max-width: 400px;
-    text-align: center;
-    color: var(--clr-grey);
-}
-
-.login_input--label {
-    position: absolute;
-    top: 50%;
-    left: 5px;
-    color: var(--clr-grey);
-    transform: translateY(-50%);
-    pointer-events: none;
-    transition: .5s;
-}
-
 .login_input {
-    margin: 1rem;
+    margin: .5rem;
 }
+
+
 
 
 .login_input_field {
     position: relative;
     border-bottom: 1px solid silver;
-    margin: 30px 0;
+    margin: 25px 0 20px 0;
 }
 
 .login_input_field span::before {
@@ -233,17 +261,12 @@ section {
 }
 
 
-.login_input--textbox:focus ~ label,
-.login_input--textbox:valid ~ label {
-    top: -5px;
-    color: var(--clr-dark-purple);
-    }
-
 .btn {
     width: 100%;
     height: 50px;
     background: #331d82;
     border-radius: 25px;
+    margin-top: 10px;
     font-size: 18px;
     color: #e9f4fb;
     font-weight: 300;
@@ -256,24 +279,3 @@ section {
     background: #fbfbfb;
     }
 
-.signup {
-    text-decoration: none;
-    color: var(--clr-grey);
-    text-align: center;
-    margin-top: 1rem;
-    display: inline-block;
-    width: 100%;
-    font-size: 14px;
-}
-
-.signup:hover {
-     transition: 0.5s;
-     color: var(--clr-dark-purple);
-    }
-
-@media (min-width: 542px) {
-
-    .signup {
-        text-align:right;
-    }
-}

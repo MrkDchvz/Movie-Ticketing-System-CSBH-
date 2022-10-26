@@ -16,21 +16,29 @@
     <!-- Stylsheet -->
     <link href="CSS/login.css" rel="stylesheet" />
 
+    <style type="text/css">
+        .auto-style1 {
+            position: absolute;
+            left: 15px;
+            top: -24px;
+            right: 1002px;
+            height: 20px;
+        }
+    </style>
+
 </head>
 <body>
     <form id="form1" runat="server">
         <section>
             <div class="container">
                 <div class="promotext promoimg">
-                   <!-- <h3>CBSH Cinema</h3>
-                    <p>Catch films before everyone.</p> -->
+
                 </div>
 
                 <div class="login">
                     <h4 class="login_header">Welcome Back</h4>
                     <p class="login-subheader"> Please, provide login credentials to proceed and have access to all our services</p>
                     <div class="login_input">
-                    
                         <div class="login_input_field">
                            <!-- <input type="text" id="txtuser" class="login_input--textbox" required /> -->
                             <asp:TextBox ID="txtuser" runat="server" Cssclass="login_input--textbox" required></asp:TextBox>
@@ -39,13 +47,15 @@
                         </div>
                   
                             <div class="login_input_field">
-                                <input id="txtpass" class="login_input--textbox" required />
+                                <input type="password" id="txtpass" runat="server" class="login_input--textbox" required />
                                 <span></span>
                                 <label class="login_input--label" >Password</label>
                             </div>
+                        <asp:Label CssClass="txt" ID="txterror" runat="server"></asp:Label>
                         <asp:Button ID="Button1" runat="server" Text="login" CssClass="btn" />
-                        <asp:HyperLink ID="HyperLink1" runat="server" CssClass="signup" NavigateUrl="~/Registration.aspx">New user? Sign up here</asp:HyperLink>
-                    </div>
+                        <br />
+                        <asp:HyperLink ID="HyperLink2" runat="server" CssClass="signup" NavigateUrl="~/Registration.aspx">Dont have account? Sign up</asp:HyperLink>
+                    </div> <!-- END login_input -->
                 </div>
             </div>
         </section>

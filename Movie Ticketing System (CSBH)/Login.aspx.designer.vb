@@ -32,6 +32,24 @@ Partial Public Class WebForm1
     Protected WithEvents txtuser As Global.System.Web.UI.WebControls.TextBox
 
     '''<summary>
+    '''txtpass control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents txtpass As Global.System.Web.UI.HtmlControls.HtmlInputPassword
+
+    '''<summary>
+    '''txterror control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents txterror As Global.System.Web.UI.WebControls.Label
+
+    '''<summary>
     '''Button1 control.
     '''</summary>
     '''<remarks>
@@ -41,11 +59,11 @@ Partial Public Class WebForm1
     Protected WithEvents Button1 As Global.System.Web.UI.WebControls.Button
 
     '''<summary>
-    '''HyperLink1 control.
+    '''HyperLink2 control.
     '''</summary>
     '''<remarks>
     '''Auto-generated field.
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
-    Protected WithEvents HyperLink1 As Global.System.Web.UI.WebControls.HyperLink
+    Protected WithEvents HyperLink2 As Global.System.Web.UI.WebControls.HyperLink
 End Class

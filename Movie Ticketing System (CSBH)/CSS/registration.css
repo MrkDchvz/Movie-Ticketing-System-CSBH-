@@ -72,6 +72,12 @@ body {
     bottom: -6px;
 }
 
+.txterror {
+    position: relative;
+    top: -25px;
+    color:tomato;
+}
+
 /* Layout */
 
 .user {
