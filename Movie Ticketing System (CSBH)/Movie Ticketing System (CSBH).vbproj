@@ -111,6 +111,7 @@
     <Content Include="Content\bootstrap.rtl.min.css" />
     <Content Include="CSS\login.css" />
     <Content Include="CSS\registration.css" />
+    <Content Include="CSS\admin.css" />
     <Content Include="img\Cinema Background %281%29.jpg" />
     <Content Include="img\Cinema Background.png" />
     <Content Include="img\cinema.jpg" />
