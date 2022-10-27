@@ -39,7 +39,7 @@
                         <i class="fa-sharp fa-solid fa-ticket me-2"></i>Bookings
                     </a>
                     <a href="#" class="list-group-item list-group-item-action bg-transparent second-text fw-bold">
-                        <i class="fa-sharp fa-solid fa-clapperboard me-2"></i>movies
+                        <i class="fa-sharp fa-solid fa-clapperboard me-2"></i>Movies
                     </a>
                      <asp:LinkButton ID="btnLogout1" runat="server"  CssClass="text-danger list-group-item list-group-item-action bg-transparent second-text fw-bold"><i class=" fa-solid fa-power-off me-2"></i>Logout</asp:LinkButton>
 
@@ -68,7 +68,8 @@
                         <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
                             <li class="nav-item dropdown">
                                 <a href="#" class="nav-link dropdown-toggle second-text fw-bold" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                    <i class="fa-solid fa-user me-2 "></i>Insert Name
+                                    <i class="fa-solid fa-user me-2 "></i>
+                                    <asp:Label ID="txtusername" runat="server" Text=""></asp:Label>
                                 </a>
                                 <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
                                     <li><a href="#" class="dropdown-item">Profile</a></li>
@@ -85,7 +86,7 @@
                         <div class="col-md-3">
                             <div class="p-3 bg-white shadow-sm d-flex justify-content-around align-items-center rounded">
                             <div>
-                                <h3 class="fs-2">720</h3>
+                                <h3 class="fs-2">0</h3>
                                 <p class="fs-5">Bookings</p>
                             </div>
                             <i class="fa-solid fa-ticket fs-1 primary-text border rounded-full secondary-bg p-3"></i>
@@ -95,7 +96,7 @@
                         <div class="col-md-3">
                             <div class="p-3 bg-white shadow-sm d-flex justify-content-around align-items-center rounded">
                             <div>
-                                <h3 class="fs-2">720</h3>
+                                <h3 class="fs-2">0</h3>
                                 <p class="fs-5">Movies</p>
                             </div>
                             <i class=" fa-sharp fa-solid fa-film fs-1 primary-text border rounded-full secondary-bg p-3"></i>
@@ -105,7 +106,7 @@
                         <div class="col-md-3">
                             <div class="p-3 bg-white shadow-sm d-flex justify-content-around align-items-center rounded">
                             <div>
-                                <h3 class="fs-2">720</h3>
+                                <h3 class="fs-2">0</h3>
                                 <p class="fs-5">Users</p>
                             </div>
                             <i class="fa-sharp fa-solid fa-users fs-1 primary-text border rounded-full secondary-bg p-3"></i>

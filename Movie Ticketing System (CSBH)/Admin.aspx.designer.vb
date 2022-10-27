@@ -32,6 +32,15 @@ Partial Public Class Admin
     Protected WithEvents btnLogout1 As Global.System.Web.UI.WebControls.LinkButton
 
     '''<summary>
+    '''txtusername control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents txtusername As Global.System.Web.UI.WebControls.Label
+
+    '''<summary>
     '''btnLogout2 control.
     '''</summary>
     '''<remarks>

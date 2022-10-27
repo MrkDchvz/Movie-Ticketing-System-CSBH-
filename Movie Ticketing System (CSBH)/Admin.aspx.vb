@@ -5,6 +5,8 @@
         If Session("username") = Nothing Then
             Response.Redirect("~/login.aspx")
         End If
+
+        txtusername.Text = Session("username").ToString
     End Sub
     Protected Sub btnLogout2_Click(sender As Object, e As EventArgs) Handles btnLogout2.Click
         Session.RemoveAll()
