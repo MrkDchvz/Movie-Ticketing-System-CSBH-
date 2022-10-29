@@ -1,0 +1,264 @@
+﻿@import url('https://fonts.googleapis.com/css2?family=Sora:wght@100;200;400;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@700&display=swap');
+
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+/* Remove default margin */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+ul,
+dd {
+    margin: 0;
+}
+
+:root {
+    --main-bg-color: #331d82;
+    --main-text-color: #a4161a;
+    --second-text-color: #fff;
+    --second-bg-color: #cbc1ef;
+}
+
+/*-------------------------*/
+/*---------Colors----------*/
+/*------------------------*/
+
+
+.primary-text {
+    color: var(--main-text-color);
+}
+
+.second-text {
+    color: var(--second-text-color);
+}
+
+.primary-bg {
+    background-color: var(--main-bg-color);
+}
+
+.secondary-bg {
+    background-color: var(--second-bg-color);
+}
+
+/*-------------------------*/
+/*------- -Layout----------*/
+/*------------------------*/
+
+.main-container {
+    width: 100%;
+    height: 100vh;
+    min-height: 100vh;
+    background-image: url('../img/theater.jpg');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.second-container {
+    width: 100%;
+    height: 100vh;
+    min-height: 100vh;
+    background: black;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+
+#body.isactive {
+    overflow: hidden;
+}
+
+/*-------------------------*/
+/*-------Typography-------*/
+/*------------------------*/
+
+#body {
+    font-family: sora, sans-serif;
+}
+
+#logo {
+    letter-spacing: 2px;
+    font-size: 1.5rem;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 700;
+    color: var(--second-text-color);
+}
+
+
+/*-------------------------*/
+/*-----Navigation bar-----*/
+/*------------------------*/
+
+.nav-bar {
+    display: flex;
+    position: fixed;
+    width: 100%;
+    justify-content: space-between;
+    padding: 3rem 3rem;
+    align-items: center;
+    z-index: 100;
+    transition: all 0.6s;
+}
+
+
+/*-----Navigation bar scroll animation-----*/
+.nav-bar.sticky {
+    background: white;
+    color: #2b2b2b;
+    padding: .5rem 3rem;
+}
+
+.nav-bar.sticky a {
+   color: #2b2b2b;
+}
+.nav-bar.sticky #logo {
+    color: #080808 ;
+}
+
+.nav-bar.sticky .hamburger:before,
+.nav-bar.sticky .hamburger .bar,
+.nav-bar.sticky .hamburger:after{
+    background: #2b2b2b;
+}
+
+
+
+
+.nav-link ul li{
+    display: none;
+}
+
+
+
+/*-----Navigation bar hamburger menu-----*/
+.hamburger {
+    display: block;
+    width: 2.1875rem;
+    cursor: pointer;
+
+    border: none;
+    outline: none;
+    background: none;
+}
+
+.hamburger .bar, 
+.hamburger:before, 
+.hamburger:after {
+    display:block;
+    content: "";
+    height: 3px;
+    margin: 6px 0px;
+    background: white;
+    transition: 0.4s;
+}
+
+.hamburger .bar, 
+.hamburger:after {
+    width: 100%;
+}
+
+.hamburger:before {
+    width: 50%;
+}
+
+
+
+
+/*-----Navigation bar hamburger menu when active-----*/
+
+.hamburger.isactive:before {
+    opacity: 0;
+}
+
+.hamburger.isactive .bar {
+      transform: rotate(-45deg) translate(10px, 8px);
+    }
+
+.hamburger.isactive::after {
+    transform: rotate(45deg) translate(2px, -16px);
+    }
+
+.mobile-nav {
+    width: 100%;
+    min-height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: rgba(0,0,0,0.6);
+    backdrop-filter: blur(5px);
+    left: 100%;
+    transition: 0.4s;
+    z-index: 98;
+    padding-top: 120px;
+}
+
+.mobile-nav.isactive {
+    left: 0;
+}
+
+.mobile-nav a {
+    display: block;
+    padding: 1rem;
+    text-align: center;
+    text-decoration: none;
+    color: #fff;
+}
+
+@media (min-width: 47.9375rem) {
+    .mobile-nav {
+        display: none;
+    }
+    .hamburger {
+        display: none;
+    }
+
+    .nav-link ul {
+        margin-bottom: 0;
+    }
+
+    .nav-link ul li {
+        display: inline;
+        list-style: none;
+        
+    }
+
+    .nav-link li a {
+        display: inline-block;
+        color: #fff;
+        position: relative;
+        margin: 0 1rem;
+        text-decoration: none;
+        color: var(--second-text-color);
+    }
+
+    li a:after {
+        position: absolute;
+        bottom: -2px;
+        left: 0px;
+        content: "";
+        width: 0%;
+        height: 3px;
+        background: #a4161a;
+        transition: width .5s ease-in-out;
+    }
+
+    li:hover a:after {
+        width: 100%;
+    } 
+  
+    .nav-bar.sticky .nav-link{
+        color: #2b2b2b;
+    }
+}
