@@ -12,13 +12,4 @@ Option Explicit On
 
 
 Partial Public Class User
-
-    '''<summary>
-    '''form2 control.
-    '''</summary>
-    '''<remarks>
-    '''Auto-generated field.
-    '''To modify move field declaration from designer file to code-behind file.
-    '''</remarks>
-    Protected WithEvents form2 As Global.System.Web.UI.HtmlControls.HtmlForm
 End Class

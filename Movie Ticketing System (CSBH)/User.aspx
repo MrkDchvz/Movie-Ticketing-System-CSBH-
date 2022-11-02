@@ -40,9 +40,14 @@
             <a href="#">Movies</a>
             <a href="#">Profile</a>
         </nav>
-     <form id="form2" runat="server">       
-     </form>
+
+        <div class="content">
+            <h1 class="content--heading">Always here for your <span class="primary-text">entertainment.</span></h1>
+            <p class="content--sub-heading">The cinema that answers all of your needs and provides best watching experience.</p>
+            <button type="button" class="content--button"><span></span>Book now!</button>
+        </div>
    </div>
+
 
     <div class="second-container"></div>
 
