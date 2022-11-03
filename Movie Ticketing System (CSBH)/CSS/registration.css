@@ -1,13 +1,11 @@
 ﻿@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800&display=swap');
 /* Root */
 :root {
-    /*Text colors*/
-    --clr-white: hsl(0, 0%, 98%);
-    --clr-grey: hsl(225, 7%, 53%);
-    --clr-dark-purple: hsl(253, 64%, 31%);
-    /*Background Colors*/
-    --bg-color-white: hsl(0, 0%, 98%);
-    --bg-dark-purple: hsl(253, 64%, 31%);
+    --main-bg-color: #170505;
+    --main-text-color: #f2f2f2;
+    --second-text-color: #ABACB1;
+    --second-bg-color: #f2f2f2;
+    --accent-color: #630110;
 }
 
 
@@ -40,17 +38,14 @@ body {
     height: 100vh;
     justify-content: center;
     align-items: center;
-    background-image: url('../img/cinemablur.jpg');
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat;
-    color: #2b2b2b;
+    background: var(--main-bg-color);
+    color: var(--main-bg-color);
 }
 
 .container {
     max-width: 700px;
     width: 100%;
-    background: var(--bg-color-white);
+    background: var(--second-bg-color);
     padding: 25px 30px;
     border-radius: 5px;
 }
@@ -68,14 +63,14 @@ body {
     position: absolute;
     width: 10%;
     height: 3.5px;
-    background-color: var(--bg-dark-purple);
+    background-color: var(--accent-color);
     bottom: -6px;
 }
 
 .txterror {
     position: relative;
     top: -25px;
-    color:tomato;
+    color: var(--accent-color);
 }
 
 /* Layout */
@@ -96,7 +91,7 @@ body {
     width: 100%;
     outline: none;
     border-radius: 5px;
-    border: 1px solid var(--clr-grey);
+    border: 1px solid var(--second-text-color);
 }
 
 .user__details {
@@ -106,10 +101,7 @@ body {
     transition: all 0.5s ease;
 }
 
-.input:focus,
-.input:valid {
-    border: 1px solid var(--bg-dark-purple);
-}
+
 
 .user__input-box--gender-details {
     width: 80%;
@@ -147,7 +139,7 @@ body {
 #radio2:checked ~ .user__details--category .dot-two,
 #radio3:checked ~ .user__details--category .dot-three {
     border-color: #d9d9d9;
-    background: var(--bg-dark-purple);
+    background: var(--accent-color);
 }
 
 
@@ -158,18 +150,18 @@ form input[type="radio"] {
 .btn {
     width: 100%;
     height: 50px;
-    background: #331d82;
+    background: var(--accent-color);
     border-radius: 25px;
     font-size: 18px;
-    color: #e9f4fb;
+    color: var(--main-text-color);
     font-weight: 300;
     transition: all 0.5s ease;
-    border: 2px solid #331d82
+    border: 2px solid var(--accent-color)
 }
 
     .btn:hover {
-        color: #331d82;
-        background: #fbfbfb;
+        color: var(--accent-color);
+        background: var(--second-bg-color);
     }
 
 @media (max-width: 555px) {
@@ -200,7 +192,7 @@ form input[type="radio"] {
 
 .signup {
     text-decoration: none;
-    color: var(--clr-grey);
+    color: var(--main-bg-color);
     text-align: center;
     margin-top: 1rem;
     display: inline-block;
@@ -210,7 +202,7 @@ form input[type="radio"] {
 
     .signup:hover {
         transition: 0.5s;
-        color: var(--clr-dark-purple);
+        color: var(--accent-color);
     }
 
 @media (min-width: 555px) {

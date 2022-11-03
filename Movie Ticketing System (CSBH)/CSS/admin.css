@@ -1,10 +1,10 @@
 ﻿:root {
-    --main-bg-color: #331d82;
-    --main-text-color: #331d82;
-    --second-text-color: #868991;
-    --second-bg-color: #cbc1ef;
+    --main-bg-color: #170505;
+    --main-text-color: #f2f2f2;
+    --second-text-color: #ABACB1;
+    --second-bg-color: #f2f2f2;
+    --accent-color: #630110;
 }
-
 
 
 .primary-text {
@@ -23,19 +23,27 @@
     background-color: var(--second-bg-color);
 }
 
+.accent-text {
+    color: var(--accent-color);
+}
+
+.accent-bg {
+    color: var(--accent-color);
+}
+
 .rounded-full {
     border-radius: 100%;
 }
 
 #wrapper {
     overflow-x: hidden;
-    background-image: linear-gradient( to right, #c6baf3, #cdc1f5,#d4cbf7, #dad2f7, #e2dcfa );
 }
 
 #sidebar-wrapper {
     min-height: 100vh;
-    margin-left: -15rem;
+    margin-left: 0rem;
     transition: margin 0.25s ease-out;
+    background: #f8f6f2;
 }
 
 #sidebar-wrapper .sidebar-heading {
@@ -52,19 +60,19 @@
 }
 
 #wrapper.toggled #sidebar-wrapper {
-    margin-left: 0;
+    margin-left: 0rem;
 }
 
 #menu-toggle {
     cursor: pointer;
     transition: all 1s;
     transform: rotate(180deg);
-    color: var(--main-text-color);
+    color: var(--accent-color);
 }
 
 #wrapper.toggled #menu-toggle {
     -webkit-transform: rotate(0deg) translateZ(0);
-    color: #212529;
+    color: var(--main-bg-color);
 }
 
 .list-group-item {
@@ -72,11 +80,13 @@
     padding: 20px 30px;
 }
 
-
+.list-group-item:hover {
+    color: var(--second-text-color);
+}
 
 .list-group-item.active {
     background-color: transparent;
-    color: var(--main-text-color);
+    color: var(--accent-color);
     font-weight: bold;
     border: none;
 }

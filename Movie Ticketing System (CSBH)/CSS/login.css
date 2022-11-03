@@ -1,13 +1,11 @@
 ﻿@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800&display=swap');
 /* Root */
 :root {
-    /*Text colors*/
-    --clr-white: hsl(0, 0%, 98%);
-    --clr-grey: hsl(225, 7%, 53%);
-    --clr-dark-purple: hsl(253, 64%, 31%);
-    /*Background Colors*/
-    --bg-color-white: hsl(0, 0%, 98%);
-    --bg-dark-purple: hsl(253, 64%, 31%);
+    --main-bg-color: #170505;
+    --main-text-color: #f2f2f2;
+    --second-text-color: #ABACB1;
+    --second-bg-color: #f2f2f2;
+    --accent-color: #630110;
 }
 
 
@@ -41,42 +39,42 @@ dd {
 .login_header {
     text-align: center;
     font-size: 2.5rem;
-    font-weight: 300;
-    color: var(--clr-dark-purple);
+    font-weight: 400;
+    color: var(--accent-color);
     padding-bottom: 0.2em;
 }
 
 .login-subheader {
     max-width: 400px;
     text-align: center;
-    color: var(--clr-grey);
+    color: var(--second-text-color);
 }
 
 .login_input--label {
     position: absolute;
     top: 50%;
     left: 5px;
-    color: var(--clr-grey);
+    color: var(--second-text-color);
     transform: translateY(-50%);
     pointer-events: none;
     transition: .5s;
 }
 
 .login_input--textbox {
-    color: #2b2b2b;
+    
 }
 
 .login_input--textbox:focus ~ label,
 .login_input--textbox:valid ~ label {
     top: -5px;
-    color: var(--clr-dark-purple);
+    color: var(--accent-color);
 }
 
 
 .signup {
     position: relative;
     text-decoration: none;
-    color: var(--clr-grey);
+    color: var(--second-text-color);
     text-align: center;
     margin-top: 1rem;
     display: inline-block;
@@ -86,7 +84,7 @@ dd {
 
     .signup:hover {
         transition: 0.5s;
-        color: var(--clr-dark-purple);
+        color: var(--accent-color);
     }
 
 @media (min-width: 542px) {
@@ -100,7 +98,7 @@ dd {
     height: 16px;
     margin: 0;
     font-size: 16px;
-    color: tomato;
+    color: var(--main-text-color);
 }
 
 /*----------*/
@@ -111,10 +109,7 @@ section {
     width: 100%;
     min-height: 100vh;
     position: relative;
-    background-image: url('../img/cinemablur.jpg');
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat;
+    background: var(--main-bg-color);
     justify-content: center;
     align-items: center;
     display: flex;
@@ -155,7 +150,7 @@ section {
 
 /*Promo image*/
 .promoimg {
-    background-image: url('../img/cinema3.jpg');
+    background-image: url('../img/Projector.jpg');
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
@@ -189,7 +184,7 @@ section {
     min-width: 100px;
     backdrop-filter: blur(5px);
     border-radius: 10px;
-    background: var(--bg-color-white);
+    background: var(--second-bg-color);
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -202,7 +197,6 @@ section {
         min-width: 200px;
         height: 500px;
         min-height: 150px;
-        background: white;
         border-radius: 10px;
     }
 }
@@ -233,7 +227,7 @@ section {
     left: 0;
     width: 0%;
     height: 2px;
-    background-color: var(--bg-dark-purple);
+    background-color: var(--accent-color);
     transition: .5s;
     }
 
@@ -264,18 +258,18 @@ section {
 .btn {
     width: 100%;
     height: 50px;
-    background: #331d82;
+    background: var(--accent-color);
     border-radius: 25px;
     margin-top: 10px;
     font-size: 18px;
-    color: #e9f4fb;
+    color: var(--main-text-color);
     font-weight: 300;
     transition: all 0.5s ease;
-    border: 2px solid #331d82
+    border: 2px solid #801b1b
 }
 
-.btn:hover {
-    color: #331d82;
-    background: #fbfbfb;
+    .btn:hover {
+        color: var(--accent-color) ;
+        background: var(--second-bg-color);
     }
 

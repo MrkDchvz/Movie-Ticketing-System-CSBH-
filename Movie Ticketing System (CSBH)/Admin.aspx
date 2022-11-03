@@ -9,19 +9,21 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title></title>
     <!-- CSS only -->
-<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+
     <link href="CSS/admin.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+ 
 
 
 </head>
 <body>
     <form id="form1" runat="server">
-        <div class="d-flex text-dark" id="wrapper">
+        <div class="d-flex" id="wrapper">
             <!--Sidebar START-->
-            <div class="bg-white" id="sidebar-wrapper">
+            <div  id="sidebar-wrapper">
 
-                <div class="sidebar-heading text-center py-4 primary-text fs-4 fw-bold text-uppercase">
+                <div class="sidebar-heading text-center py-4 accent-text fs-4 fw-bold text-uppercase">
                     <i class="logo fa-sharp fa-solid fa-bug-slash"></i> CSBH
                 </div>
 
@@ -29,7 +31,7 @@
                     <a href="#" class="list-group-item list-group-item-action bg-transparent second-text active">
                         <i class="fa-sharp fa-solid fa-gauge-high me-2"></i>Dashboard
                     </a>
-                    <a href="#" class="list-group-item list-group-item-action bg-transparent second-text fw-bold">
+                    <a href="#" class=" rounded-pill list-group-item list-group-item-action bg-transparent second-text fw-bold">
                         <i class="fa-sharp fa-solid fa-user-tie me-2"></i>Profile
                     </a>
                     <a href="#" class="list-group-item list-group-item-action bg-transparent second-text fw-bold">
@@ -89,7 +91,7 @@
                                 <h3 class="fs-2">0</h3>
                                 <p class="fs-5">Bookings</p>
                             </div>
-                            <i class="fa-solid fa-ticket fs-1 primary-text border rounded-full secondary-bg p-3"></i>
+                            <i class="fa-solid fa-ticket fs-1  accent-text border rounded-full secondary-bg p-3"></i>
                             </div>
                         </div>
 
@@ -99,7 +101,7 @@
                                 <h3 class="fs-2">0</h3>
                                 <p class="fs-5">Movies</p>
                             </div>
-                            <i class=" fa-sharp fa-solid fa-film fs-1 primary-text border rounded-full secondary-bg p-3"></i>
+                            <i class=" fa-sharp fa-solid fa-film fs-1  accent-text border rounded-full secondary-bg p-3"></i>
                             </div>
                         </div>
 
@@ -109,7 +111,7 @@
                                 <h3 class="fs-2">0</h3>
                                 <p class="fs-5">Users</p>
                             </div>
-                            <i class="fa-sharp fa-solid fa-users fs-1 primary-text border rounded-full secondary-bg p-3"></i>
+                            <i class="fa-sharp fa-solid fa-users  fs-1 accent-text border rounded-full secondary-bg p-3"></i>
                             </div>
                         </div>
 

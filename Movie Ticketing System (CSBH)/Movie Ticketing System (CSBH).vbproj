@@ -112,14 +112,9 @@
     <Content Include="CSS\login.css" />
     <Content Include="CSS\registration.css" />
     <Content Include="CSS\admin.css" />
+    <Content Include="CSS\Movies.css" />
     <Content Include="CSS\user.css" />
-    <Content Include="img\Cinema Background %281%29.jpg" />
-    <Content Include="img\Cinema Background.png" />
-    <Content Include="img\cinema.jpg" />
-    <Content Include="img\cinema2.jpg" />
-    <Content Include="img\cinema3.jpg" />
-    <Content Include="img\cinema4.jpeg" />
-    <Content Include="img\cinemablur.jpg" />
+    <Content Include="img\Projector.jpg" />
     <Content Include="img\theater.jpg" />
     <Content Include="Registration.aspx" />
     <Content Include="Scripts\bootstrap.bundle.js" />
@@ -131,6 +126,7 @@
     <Content Include="User.aspx" />
     <Content Include="Web.config" />
     <Content Include="Login.aspx" />
+    <Content Include="Movies.aspx" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Admin.aspx.designer.vb">
@@ -178,6 +174,13 @@
     </Compile>
     <Compile Include="User.aspx.vb">
       <DependentUpon>User.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Movies.aspx.designer.vb">
+      <DependentUpon>Movies.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Movies.aspx.vb">
+      <DependentUpon>Movies.aspx</DependentUpon>
       <SubType>ASPXCodebehind</SubType>
     </Compile>
   </ItemGroup>
