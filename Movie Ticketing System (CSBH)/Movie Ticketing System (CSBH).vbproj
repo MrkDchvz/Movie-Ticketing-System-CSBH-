@@ -115,6 +115,7 @@
     <Content Include="CSS\Movies.css" />
     <Content Include="CSS\user.css" />
     <Content Include="img\Projector.jpg" />
+    <Content Include="img\Sample.jpg" />
     <Content Include="img\theater.jpg" />
     <Content Include="Registration.aspx" />
     <Content Include="Scripts\bootstrap.bundle.js" />

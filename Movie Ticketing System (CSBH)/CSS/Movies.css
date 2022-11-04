@@ -24,7 +24,7 @@ dd {
 }
 
 body {
-    background: #660708;
+    background: var(--main-bg-color);
 }
 
 #body.isactive {
@@ -38,6 +38,8 @@ body {
     --main-text-color: #f2f2f2;
     --second-text-color: #ABACB1;
     --second-bg-color: #f2f2f2;
+    --accent-color: #630110;
+    --light-grey-color: #361f1f;
 }
 
 /*-------------------------*/
@@ -45,7 +47,9 @@ body {
 /*------------------------*/
 .nav-section a,
 .mobile-nav a,
-#nav-logo-section {
+#nav-logo-section,
+.article-title-section,
+main > article > .article-title-section > button {
     font-family: 'Rubik', sans-serif;
 }
 
@@ -70,7 +74,17 @@ body {
     text-align: center;
 }
 
+.article-title-section {
+    color:var(--main-text-color);
+    font-weight: 600;
+    text-transform: uppercase;
+    font-size: 1.2rem;
+}
 
+main > article > .article-title-section > button {
+    font-size: 1rem;
+    font-weight: 500;
+}
 /*-------------------------*/
 /*-----Navigation Bar-----*/
 /*------------------------*/
@@ -83,9 +97,10 @@ body {
     background: var(--main-bg-color);
     position: sticky;
     top: 0;
+    border-bottom: 1px solid var(--light-grey-color);
 }
 
-#nav-link-section,
+#nav-link-section, 
 #nav-profile-section{
     display: none;
 }
@@ -159,22 +174,131 @@ body {
    left: 0;
 }
 
-.container {
-    width: 100%;
-    min-height: 100vh;
-    background: black;
+
+/*-------------------------*/
+/*------Main Content------*/
+/*------------------------*/
+
+
+/*------Grid Layout------*/
+/*-----------------------*/
+main > article {
+    display: grid;
+    height: 100vh;
+    grid-template-rows: 1fr repeat(3, 0.5fr);
+}
+
+main > article > .article-section {
+    border: 1px solid var(--light-grey-color);
+    border-top: none;
+    border-left: none;
+    border-right: none;
+}
+
+/*------Image section------*/
+/*------------------------*/
+main > article:first-child > .article-image-section {
+    background-image: url('../img/Sample.jpg');
 }
 
 
+main > article > .article-image-section {
+    background-size: cover;
+    background-position: center;
+    order: 1;
+}
+
+/*------Description section------*/
+/*-------------------------------*/
+main > article > .article-description-section {
+    order: 3;
+}
+
+
+/*------Title section------*/
+/*-------------------------*/
+main > article > .article-title-section {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 2rem;
+    order: 2;
+}
+
+/*----Title section-button----*/
+main > article > .article-title-section > button {
+    padding: .5rem 1rem;
+    outline: none;
+    background: none;
+    border: 2px solid white;
+    color: white;
+    cursor: pointer;
+    position: relative;
+}
+
+main > article > .article-title-section > button:before {
+    content: "";
+    width: 0;
+    height: 100%;
+    background: var(--accent-color);
+    z-index: -1;
+
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    transition: all .4s ease-in-out;
+}
+
+main > article > .article-title-section > button:hover:before {
+    width: 100%
+}
+main > article > .article-title-section > h2 {
+    flex-basis: 70%;
+}
+
+
+/*------Button section------*/
+main > article > .article-button-section {
+    display: flex;
+    order: 4;
+}
+
+.article-button-section > button {
+    width: calc(100% / 2);
+    border: none;
+    outline: none;
+    background: transparent;
+    color: var(--second-text-color);
+    transition: all .2s ease-in-out;
+}
+
+.article-button-section > button:hover {
+    color: var(--accent-color);
+}
+
+.article-button-section > .button-left {
+    border-right: 1px solid var(--light-grey-color);  
+}
+/*------------------------------------DESKTOP-----------------------------------*/
 @media (min-width: 47.9375rem) {
+
+
+    /*-----Disable hamburger menu -----*/
     .hamburger,
     .mobile-nav {
         display: none;
     }
 
+
+    /*-------------------------*/
+    /*-----Navigation Bar-----*/
+    /*------------------------*/
+
     #nav-logo-section {
         display: block;
         justify-content: start;
+        border: none;
     }
 
     #nav-link-section,
@@ -202,7 +326,7 @@ body {
     nav > .nav-section {
         display: flex;
         text-align: start;
-        border-left: 1px solid #361f1f;
+        border-left: 1px solid var(--light-grey-color);
         padding: 1.5rem 1rem;
         justify-content: center;
         align-items: center;
@@ -217,6 +341,32 @@ body {
         width: 100%;
         padding: 0;
     }
-    
+
+
+    /*-------------------------*/
+    /*-----Main Articles------*/
+    /*------------------------*/
+
+
+    /*-----Grid Layout------*/
+    /*----------------------*/
+    main > article {
+        grid-template-columns: 2fr 1fr;
+        grid-template-rows: 2fr 1fr;
+    }
+
+    main > article > .article-section {
+        border: 1px solid var(--light-grey-color);
+        border-left: none;
+        border-top: none;
+    }
+
+    /*-----Articles------*/
+    /*-------------------*/
+
+    main > article > .article-title-section {
+        order: 3;
+    }
 
 }
+

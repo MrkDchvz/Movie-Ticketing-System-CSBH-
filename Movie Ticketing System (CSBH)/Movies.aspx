@@ -32,7 +32,26 @@
         <a href="#">Movie</a>
         <a href="#">Profile</a>
     </nav>
-    <div class="container"></div>
+
+    <main>
+        <article>
+            <div class="article-image-section article-section"></div>
+            <div class="article-description-section article-section"></div>
+            <div class="article-title-section article-section">
+                <h2>Recreation From Scratch</h2>
+                <button class="button-booknow ">
+                    <p>Book now</p>
+                </button>
+            </div>
+            <div class="article-button-section article-section">
+                <button class="button-left button"><i class="fa-solid fa-left-long fa-3x"></i></button>
+                <button class="button-right button"><i class="fa-solid fa-right-long fa-3x"></i></button>
+            </div>
+        </article>
+    </main>
+
+
+
     <script>
         const hamburger = document.querySelector(".hamburger");
         const container = document.querySelector("#body");
