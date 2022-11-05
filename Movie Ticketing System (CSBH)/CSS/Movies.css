@@ -1,6 +1,6 @@
 ﻿/* Google Font */
 @import url('https://fonts.googleapis.com/css2?family=Exo+2:wght@900&family=Rubik:wght@300;400;500;600&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400&display=swap');
 /* Box sizing rules */
 *,
 *::before,
@@ -23,8 +23,14 @@ dd {
     margin: 0;
 }
 
+.content-wrapper {
+    overflow: hidden;
+    height: 100vh;
+}
+
 body {
     background: var(--main-bg-color);
+    flex-direction: column;
 }
 
 #body.isactive {
@@ -49,10 +55,15 @@ body {
 .mobile-nav a,
 #nav-logo-section,
 .article-title-section,
-main > article > .article-title-section > button {
+main > article > .article-title-section > button,
+main > article > .article-description-section > h2 {
     font-family: 'Rubik', sans-serif;
 }
 
+.mobile-nav a,
+main > article > .article-description-section > p {
+
+}
 
 .nav-section a,
 .mobile-nav a {
@@ -85,6 +96,20 @@ main > article > .article-title-section > button {
     font-size: 1rem;
     font-weight: 500;
 }
+
+main > article > .article-description-section > p,
+main > article > .article-description-section > h2 {
+    color: var(--main-text-color);
+}
+
+main > article > .article-description-section > h2 {
+    text-transform: uppercase;
+    color: var(--second-text-color);
+}
+main > article > .article-description-section > p {
+    font-family: 'Roboto', sans-serif;
+}
+
 /*-------------------------*/
 /*-----Navigation Bar-----*/
 /*------------------------*/
@@ -182,10 +207,19 @@ main > article > .article-title-section > button {
 
 /*------Grid Layout------*/
 /*-----------------------*/
+main {
+    overflow-x: hidden;
+    position: relative;
+    height: 130vh;
+}
+
 main > article {
-    display: grid;
-    height: 100vh;
-    grid-template-rows: 1fr repeat(3, 0.5fr);
+    display: grid;  
+    height: 130vh;
+    grid-template-rows: 1fr repeat(4, 0.5fr);
+    position: absolute;
+    transition: transform 300ms ease-in;
+    
 }
 
 main > article > .article-section {
@@ -197,9 +231,21 @@ main > article > .article-section {
 
 /*------Image section------*/
 /*------------------------*/
-main > article:first-child > .article-image-section {
-    background-image: url('../img/Sample.jpg');
-}
+    main > article:nth-child(1) > .article-image-section {
+        background-image: url('../img/Sample Pictures/1. Saekano.jpg');
+    }
+    main > article:nth-child(2) > .article-image-section {
+        background-image: url('../img/Sample Pictures/2. Bakemonogatari.jpg');
+    }
+    main > article:nth-child(3) > .article-image-section {
+        background-image: url('../img/Sample Pictures/3. Code geass.jpg');
+    }
+    main > article:nth-child(4) > .article-image-section {
+        background-image: url('../img/Sample Pictures/steins-gate.jpg');
+    }
+    main > article:nth-child(5) > .article-image-section {
+        background-image: url('../img/Sample Pictures/Love is war.jpg');
+    }
 
 
 main > article > .article-image-section {
@@ -212,6 +258,12 @@ main > article > .article-image-section {
 /*-------------------------------*/
 main > article > .article-description-section {
     order: 3;
+    padding: 1.5rem;
+    
+}
+
+main > article > .article-description-section > h2 {
+    margin-bottom: .5rem;
 }
 
 
@@ -221,7 +273,9 @@ main > article > .article-title-section {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 2rem;
+    gap: 0.5rem;
+    flex-wrap:wrap;
+    padding: 1.7rem;
     order: 2;
 }
 
@@ -270,7 +324,7 @@ main > article > .article-button-section {
     outline: none;
     background: transparent;
     color: var(--second-text-color);
-    transition: all .2s ease-in-out;
+    transition: all .2s ease-in;
 }
 
 .article-button-section > button:hover {
@@ -280,6 +334,35 @@ main > article > .article-button-section {
 .article-button-section > .button-left {
     border-right: 1px solid var(--light-grey-color);  
 }
+
+/*-------------------------*/
+/*------Article Slider-----*/
+/*------------------------*/
+main > article[data-status="inactive"] {
+    transform: translateX(100%);
+}
+
+/*------Right/After Slider-----*/
+main > article[data-status="after"] {
+    transform: translateX(100%);
+}
+
+main > article[data-status="initial-after"] {
+    transform: translateX(-100%);
+    transition: none;
+}
+
+/*------Left/Before Slider-----*/
+main > article[data-status="before"] {
+    transform: translateX(-100%);
+}
+
+main > article[data-status="initial-before"] {
+    transform: translateX(100%);
+    transition: none;
+}
+
+
 /*------------------------------------DESKTOP-----------------------------------*/
 @media (min-width: 47.9375rem) {
 
@@ -350,7 +433,12 @@ main > article > .article-button-section {
 
     /*-----Grid Layout------*/
     /*----------------------*/
+    main {
+        height: 100vh;
+    }
+
     main > article {
+        height: 89vh;
         grid-template-columns: 2fr 1fr;
         grid-template-rows: 2fr 1fr;
     }
@@ -361,11 +449,12 @@ main > article > .article-button-section {
         border-top: none;
     }
 
-    /*-----Articles------*/
-    /*-------------------*/
+    /*-----Title section------*/
+    /*-----------------------*/
 
     main > article > .article-title-section {
         order: 3;
+        padding: 2rem;
     }
 
 }

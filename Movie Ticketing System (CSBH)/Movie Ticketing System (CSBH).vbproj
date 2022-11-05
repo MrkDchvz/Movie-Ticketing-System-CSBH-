@@ -115,6 +115,11 @@
     <Content Include="CSS\Movies.css" />
     <Content Include="CSS\user.css" />
     <Content Include="img\Projector.jpg" />
+    <Content Include="img\Sample Pictures\1. Saekano.jpg" />
+    <Content Include="img\Sample Pictures\2. Bakemonogatari.jpg" />
+    <Content Include="img\Sample Pictures\3. Code geass.jpg" />
+    <Content Include="img\Sample Pictures\Love is war.jpg" />
+    <Content Include="img\Sample Pictures\steins-gate.jpg" />
     <Content Include="img\Sample.jpg" />
     <Content Include="img\theater.jpg" />
     <Content Include="Registration.aspx" />
