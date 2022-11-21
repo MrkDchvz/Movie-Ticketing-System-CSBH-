@@ -180,7 +180,7 @@ dd {
 /*-----Navigation bar hamburger menu-----*/
 .hamburger {
     display: block;
-    width: 2.1875rem;
+    width: 1.7rem;
     cursor: pointer;
 
     border: none;
@@ -301,6 +301,8 @@ dd {
 /*------------------------*/
 
 .content--button {
+    display: inline-block;
+    text-decoration: none;
     outline: none;
     border: none;
     cursor: pointer;
