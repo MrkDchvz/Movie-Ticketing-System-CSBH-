@@ -2,16 +2,17 @@
 
 Public Class WebForm1
     Inherits System.Web.UI.Page
-
-    Dim con As New SqlConnection("Data Source=DESKTOP-62PB5DH;Initial Catalog=Movie_System;Integrated Security=True")
+    Dim cs As String = ConfigurationManager.ConnectionStrings("MTDB").ConnectionString
+    Dim con As New SqlConnection(cs)
     Protected Sub Page_Load(ByVal sender As Object, ByVal e As System.EventArgs) Handles Me.Load
         Notpostback()
         If Session("username") IsNot Nothing Then
             If Session("rank") = "1" Then
-                Response.Redirect("~/user.aspx")
+                Response.Redirect("~/home.aspx")
             ElseIf Session("rank") = "2" Then
-                Response.Redirect("~/admin.aspx")
+                Response.Redirect("~/dashboard/admin.aspx")
             End If
+        
         End If
     End Sub
 
@@ -31,7 +32,6 @@ Public Class WebForm1
             For Each row In dt.Rows
                 Session("fullname") = row("fullname").ToString
                 Session("username") = row("username").ToString
-                Session("password") = row("password").ToString
                 Session("email") = row("email").ToString
                 Session("phone_num") = row("phone_num").ToString
                 Session("rank") = row("rank").ToString
@@ -39,20 +39,13 @@ Public Class WebForm1
             Next
 
             If Session("rank") = "1" Then
-                Response.Redirect("~/user.aspx")
+                Response.Redirect("~/home.aspx")
             ElseIf Session("rank") = "2" Then
-                Response.Redirect("~/admin.aspx")
+                Response.Redirect("~/dashboard/admin.aspx")
             End If
         Else
-            txterror.Text = "Invalid username or password "
+            txterror.Text = "Invalid username or password"
         End If
-
-
-
-
-
-
-
 
     End Sub
 End Class

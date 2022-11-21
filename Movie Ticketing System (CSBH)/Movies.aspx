@@ -4,186 +4,121 @@
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title></title>
-
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Movies</title>
+ 
+  <!-- SwiperJS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"/>
+  <!-- Font-Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <!-- Bootstrap -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <!-- CSS -->
     <link href="CSS/Movies.css" rel="stylesheet" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
 </head>
-<body id="body">
-    <nav class="nav-bar">
-        <div id="nav-logo-section" class="nav-section"><i class="fa-solid fa-bug-slash"></i>CSBH</div>
-        <div id="nav-link-section" class="nav-section">
-            <a href="#">Home</a>
-            <a href="#">Movie</a>
+<body>
+    <form id="form1" runat="server">
+  <!--Navigation-bar-->
+      <nav class="nav-bar">
+        <div class="nav-logo"><i class="nav-icon-logo fa-solid fa-bug-slash"></i></div>
+        <div class="nav-links">
+          <a href="#">Home</a>
+          <a href="#">Profile</a>
+            
         </div>
-        <div id="nav-profile-section" class="nav-section">
+        <div class="nav-user"></div>
+        <a role="button" class="nav-hamburger">
+          <div class="nav-hamburger-bar"></div>
+        </a>
+      </nav>
+
+      <!--Mobile Navigation-menu-->
+      <nav class="nav-mobile-menu">
+          <div class="nav-mobile-links">
+            <a href="Home.aspx">Home</a>
             <a href="#">Profile</a>
+             <asp:LinkButton ID="logoutButton" CssClass="text-danger" runat="server"><i class="bi bi-box-arrow-in-right me-2 fa-sm"></i><span>Logout</span></asp:LinkButton>
+          </div>
+      </nav>
+
+      <!-- Slider main container -->
+    <div class="swiper">
+      <!-- Additional required wrapper -->
+      <div class="swiper-wrapper">
+        <!-- Slides -->
+        <div class="slide-list slide-1 swiper-slide">
+          <article>
+            <div class="article-title-section article-section"><h1>Avengers: End Game</h1></div>
+            <div class="article-description-section article-section">Adrift in space with no food or water, Tony Stark sends a message to Pepper Potts as his oxygen supply starts to dwindle. Meanwhile, the remaining Avengers must figure out a way to bring back their  allies for an epic showdown with Thanos.</div>
+            <div class="article-button-section article-section"><button>Book Now</button></div>
+          </article>
         </div>
-        <button class="hamburger">
-            <div class="bar"></div>
-        </button>
-    </nav>
-    <nav class="mobile-nav">
-        <a href="#">Home</a>
-        <a href="#">Movie</a>
-        <a href="#">Profile</a>
-    </nav>
 
-    <main>
-        <!-- ARTICLE 1 -->
-        <article class="article-group" data-index ="0" data-status ="active">
-            <div class="article-image-section article-section"></div>
-            <div class="article-description-section article-section">
-                <h2>Movie Info</h2>
-                <p>
-                Tomoya Aki, an otaku, has been obsessed with collecting anime and light novels for years, attaching himself to various series with captivating stories and characters. Now, he wants to have a chance of providing the same experience for others by creating his own game, but unfortunately, Tomoya cannot do this task by himself.
-                </p>
-            </div>
-            <div class="article-title-section article-section">
-                <h2>Saekano: How to raise a boring girlfriend</h2>
-                <button class="button-booknow ">
-                    <p>Book now</p>
-                </button>
-            </div>
-            <div class="article-button-section article-section">
-                <button class="button-left button" type="button" onclick="handleLeftClick()"><i class="fa-solid fa-left-long fa-3x"></i></button>
-                <button class="button-right button" type="button" onclick="handleRightClick()"><i class="fa-solid fa-right-long fa-3x"></i></button>
-            </div>
-        </article>
-        <!-- ARTICLE 2 -->
-        <article class="article-group" data-index ="1" data-status ="inactive">
-            <div class="article-image-section article-section"></div>
-            <div class="article-description-section article-section">
-                <h2>Movie Info</h2>
-                <p>
-                When fellow classmate Hitagi Senjougahara falls down the stairs and is caught by Araragi, the boy realizes that the girl is unnaturally weightless. Despite Senjougahara's protests, Araragi insists he help her, deciding to enlist the aid of Oshino, the very man who had once helped him with his own predicament.
-                </p>
-            </div>
-            <div class="article-title-section article-section">
-                <h2>Bakemonogatari</h2>
-                <button class="button-booknow ">
-                    <p>Book now</p>
-                </button>
-            </div>
-            <div class="article-button-section article-section">
-                <button class="button-left button" type="button" onclick="handleLeftClick()"><i class="fa-solid fa-left-long fa-3x"></i></button>
-                <button class="button-right button" type="button" onclick="handleRightClick()"><i class="fa-solid fa-right-long fa-3x"></i></button>
-            </div>
-        </article>
-        <!-- ARTICLE 3 -->
-        <article class="article-group" data-index ="2" data-status ="inactive">
-            <div class="article-image-section article-section"></div>
-            <div class="article-description-section article-section">
-                <h2>Movie Info</h2>
-                <p>
-                In the year 2010, the Holy Empire of Britannia is establishing itself as a dominant military nation, starting with the conquest of Japan. Renamed to Area 11 after its swift defeat, Japan has seen significant resistance against these tyrants in an attempt to regain independence.
-                </p>
-            </div>
-            <div class="article-title-section article-section">
-                <h2>Code:geass</h2>
-                <button class="button-booknow ">
-                    <p>Book now</p>
-                </button>
-            </div>
-            <div class="article-button-section article-section">
-                <button class="button-left button" type="button" onclick="handleLeftClick()"><i class="fa-solid fa-left-long fa-3x"></i></button>
-                <button class="button-right button" type="button" onclick="handleRightClick()"><i class="fa-solid fa-right-long fa-3x"></i></button>
-            </div>
-        </article>
-        <!-- ARTICLE 4 -->
-        <article class="article-group" data-index ="3" data-status ="inactive">
-            <div class="article-image-section article-section"></div>
-            <div class="article-description-section article-section">
-                <h2>Movie Info</h2>
-                <p>
-                Eccentric scientist Rintarou Okabe has a never-ending thirst for scientific exploration. Together with his ditzy but well-meaning friend Mayuri Shiina and his roommate Itaru Hashida, Rintarou founds the Future Gadget Laboratory in the hopes of creating technological innovations that baffle the human psyche. Despite claims of grandeur, the only notable "gadget" the trio have created is a microwave that has the mystifying power to turn bananas into green goo.
-                </p>
-            </div>
-            <div class="article-title-section article-section">
-                <h2>Steins;Gate</h2>
-                <button class="button-booknow ">
-                    <p>Book now</p>
-                </button>
-            </div>
-            <div class="article-button-section article-section">
-                <button class="button-left button" type="button" onclick="handleLeftClick()"><i class="fa-solid fa-left-long fa-3x"></i></button>
-                <button class="button-right button" type="button" onclick="handleRightClick()"><i class="fa-solid fa-right-long fa-3x"></i></button>
-            </div>
-        </article>
-        <!-- ARTICLE 5 -->
-        <article class="article-group" data-index ="4" data-status ="inactive">
-            <div class="article-image-section article-section"></div>
-            <div class="article-description-section article-section">
-                <h2>Movie Info</h2>
-                <p>
-                At the renowned Shuchiin Academy, Miyuki Shirogane and Kaguya Shinomiya are the student body's top representatives. Ranked the top student in the nation and respected by peers and mentors alike, Miyuki serves as the student council president. Alongside him, the vice president Kaguya—eldest daughter of the wealthy Shinomiya family—excels in every field imaginable. They are the envy of the entire student body, regarded as the perfect couple.
-                </p>
-            </div>
-            <div class="article-title-section article-section">
-                <h2>Love is war</h2>
-                <button class="button-booknow ">
-                    <p>Book now</p>
-                </button>
-            </div>
-            <div class="article-button-section article-section">
-                <button class="button-left button" type="button" onclick="handleLeftClick()"><i class="fa-solid fa-left-long fa-3x"></i></button>
-                <button class="button-right button" type="button" onclick="handleRightClick()"><i class="fa-solid fa-right-long fa-3x"></i></button>
-            </div>
-        </article>
-    </main>
+        <div class="slide-list slide-2 swiper-slide">
+            <article>
+            <div class="article-title-section article-section"><h1>Joker</h1></div>
+            <div class="article-description-section article-section">Forever alone in a crowd, failed comedian Arthur Fleck seeks connection as he walks the streets of Gotham City. Isolated, bullied and disregarded by society, Fleck begins a slow descent into madness as he transforms into the criminal mastermind known as the Joker.</div>
+            <div class="article-button-section article-section"><button>Book Now</button></div>
+          </article>
+        </div>
+        <div class="slide-list slide-3 swiper-slide"><article>
+            <div class="article-title-section article-section"><h1>Venom</h1></div>
+            <div class="article-description-section article-section">Journalist Eddie Brock is trying to take down Carlton Drake, the founder of the Life Foundation. While investigating one of Drake's experiments, Eddie's body merges with the alien Venom. Venom tries to control the new and dangerous abilities that Eddie finds so intoxicating.</div>
+            <div class="article-button-section article-section"><button>Book Now</button></div>
+          </article></div>
 
+      </div>
+      <!--pagination -->
+      <div class="swiper-pagination"></div>
 
-    <!-- Hamburg Menu Logic -->
-    <script>
-        const hamburger = document.querySelector(".hamburger");
-        const container = document.querySelector("#body");
-        const mobilenav = document.querySelector(".mobile-nav")
-        hamburger.addEventListener('click', function () {
-            hamburger.classList.toggle("isactive");
-            mobilenav.classList.toggle("isactive");
-            body.classList.toggle("isactive");
-        })
-    </script>
+      <!--navigation buttons -->
+      <div class="nav-button swiper-button-prev"></div>
+      <div class="nav-button swiper-button-next"></div>
 
-    <!-- Slider Logic -->
-    <script>
-        let activeIndex = 0;
-        const groups = document.getElementsByClassName("article-group");
+      <!-- scrollbar -->
+      <div class="swiper-scrollbar"></div>
+    </div>
 
-        const handleRightClick = () => {
-            const newIndex = activeIndex < groups.length - 1 ? activeIndex + 1 : 0;
+    </form>
+  <script>
+      const hamburger = document.querySelector(".nav-hamburger");
+      const mobileNav = document.querySelector(".nav-mobile-menu");
+      hamburger.addEventListener('click', () => {
+          hamburger.classList.toggle("isactive");
+          mobileNav.classList.toggle("isactive");
+      })
+  </script>
+  <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
 
-            let currentArticle = document.querySelector(`[data-index="${activeIndex}"]`);
-            let nextArticle = document.querySelector(`[data-index="${newIndex}"]`);
+  <script>
+      const swiper = new Swiper('.swiper', {
+          // Optional parameters
+          loop: true,
 
-            nextArticle.dataset.status = "initial-after"
+          // If we need pagination
+          pagination: {
+              el: '.swiper-pagination',
+          },
 
-            currentArticle.dataset.status = "after";
-            setTimeout(() => {
-                nextArticle.dataset.status = "active";
-                activeIndex = newIndex;
-            });
-        }
-        const handleLeftClick = () => {
-            const newIndex = activeIndex > 0 ? activeIndex - 1 : groups.length - 1;
+          // Navigation arrows
+          navigation: {
+              nextEl: '.swiper-button-next',
+              prevEl: '.swiper-button-prev',
+          },
 
-            let currentArticle = document.querySelector(`[data-index="${activeIndex}"]`);
-            let nextArticle = document.querySelector(`[data-index="${newIndex}"]`);
+          // And if we need scrollbar
+          scrollbar: {
+              el: '.swiper-scrollbar',
+          },
 
-            nextArticle.dataset.status = "initial-before"
-
-            currentArticle.dataset.status = "before";
-      
-            setTimeout(() => {
-                nextArticle.dataset.status = "active";
-                activeIndex = newIndex;
-        
-            });
-        }
-    </script>
+          /*autoplay: {
+            delay: 2500,
+            disableoninteraction: false,
+          } */
+      });
+  </script>
 </body>
 </html>

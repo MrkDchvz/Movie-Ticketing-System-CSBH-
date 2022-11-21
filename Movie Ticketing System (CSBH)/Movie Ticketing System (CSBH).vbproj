@@ -92,7 +92,7 @@
     <Import Include="System.Web.UI.HtmlControls" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Admin.aspx" />
+    <Content Include="Dashboard\Admin.aspx" />
     <Content Include="Content\bootstrap-grid.css" />
     <Content Include="Content\bootstrap-grid.min.css" />
     <Content Include="Content\bootstrap-grid.rtl.css" />
@@ -111,17 +111,17 @@
     <Content Include="Content\bootstrap.rtl.min.css" />
     <Content Include="CSS\login.css" />
     <Content Include="CSS\registration.css" />
-    <Content Include="CSS\admin.css" />
+    <Content Include="Dashboard\CSS\admin.css" />
     <Content Include="CSS\Movies.css" />
-    <Content Include="CSS\user.css" />
+    <Content Include="CSS\home.css" />
+    <Content Include="Dashboard\CSS\users.css" />
     <Content Include="img\Projector.jpg" />
-    <Content Include="img\Sample Pictures\1. Saekano.jpg" />
-    <Content Include="img\Sample Pictures\2. Bakemonogatari.jpg" />
-    <Content Include="img\Sample Pictures\3. Code geass.jpg" />
-    <Content Include="img\Sample Pictures\Love is war.jpg" />
-    <Content Include="img\Sample Pictures\steins-gate.jpg" />
+    <Content Include="img\Sample Pictures\Endgame.jpg" />
+    <Content Include="img\Sample Pictures\joker.jpg" />
+    <Content Include="img\Sample Pictures\Venom.jpg" />
     <Content Include="img\Sample.jpg" />
     <Content Include="img\theater.jpg" />
+    <Content Include="img\ujptuqbm.png" />
     <Content Include="Registration.aspx" />
     <Content Include="Scripts\bootstrap.bundle.js" />
     <Content Include="Scripts\bootstrap.bundle.min.js" />
@@ -129,16 +129,18 @@
     <Content Include="Scripts\bootstrap.esm.min.js" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
-    <Content Include="User.aspx" />
+    <Content Include="Home.aspx" />
+    <Content Include="Dashboard\UsersService.asmx" />
     <Content Include="Web.config" />
     <Content Include="Login.aspx" />
     <Content Include="Movies.aspx" />
+    <Content Include="Dashboard\Users.aspx" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Admin.aspx.designer.vb">
+    <Compile Include="Dashboard\Admin.aspx.designer.vb">
       <DependentUpon>Admin.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Admin.aspx.vb">
+    <Compile Include="Dashboard\Admin.aspx.vb">
       <DependentUpon>Admin.aspx</DependentUpon>
       <SubType>ASPXCodebehind</SubType>
     </Compile>
@@ -175,11 +177,11 @@
       <DependentUpon>Registration.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="User.aspx.designer.vb">
-      <DependentUpon>User.aspx</DependentUpon>
+    <Compile Include="Home.aspx.designer.vb">
+      <DependentUpon>Home.aspx</DependentUpon>
     </Compile>
-    <Compile Include="User.aspx.vb">
-      <DependentUpon>User.aspx</DependentUpon>
+    <Compile Include="Home.aspx.vb">
+      <DependentUpon>Home.aspx</DependentUpon>
       <SubType>ASPXCodebehind</SubType>
     </Compile>
     <Compile Include="Movies.aspx.designer.vb">
@@ -188,6 +190,18 @@
     <Compile Include="Movies.aspx.vb">
       <DependentUpon>Movies.aspx</DependentUpon>
       <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Dashboard\Users.aspx.designer.vb">
+      <DependentUpon>Users.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Dashboard\Users.aspx.vb">
+      <DependentUpon>Users.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Dashboard\usersClass.vb" />
+    <Compile Include="Dashboard\UsersService.asmx.vb">
+      <DependentUpon>UsersService.asmx</DependentUpon>
+      <SubType>Component</SubType>
     </Compile>
   </ItemGroup>
   <ItemGroup>
@@ -238,6 +252,7 @@
       <DependentUpon>Web.config</DependentUpon>
     </None>
   </ItemGroup>
+  <ItemGroup />
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>

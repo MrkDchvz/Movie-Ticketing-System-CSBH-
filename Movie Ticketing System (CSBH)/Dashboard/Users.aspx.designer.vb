@@ -11,7 +11,7 @@ Option Strict On
 Option Explicit On
 
 
-Partial Public Class Admin
+Partial Public Class WebForm3
 
     '''<summary>
     '''form1 control.
@@ -23,29 +23,20 @@ Partial Public Class Admin
     Protected WithEvents form1 As Global.System.Web.UI.HtmlControls.HtmlForm
 
     '''<summary>
-    '''btnLogout1 control.
+    '''DashboardSessionEnd control.
     '''</summary>
     '''<remarks>
     '''Auto-generated field.
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
-    Protected WithEvents btnLogout1 As Global.System.Web.UI.WebControls.LinkButton
+    Protected WithEvents DashboardSessionEnd As Global.System.Web.UI.WebControls.LinkButton
 
     '''<summary>
-    '''txtusername control.
+    '''logoutButton control.
     '''</summary>
     '''<remarks>
     '''Auto-generated field.
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
-    Protected WithEvents txtusername As Global.System.Web.UI.WebControls.Label
-
-    '''<summary>
-    '''btnLogout2 control.
-    '''</summary>
-    '''<remarks>
-    '''Auto-generated field.
-    '''To modify move field declaration from designer file to code-behind file.
-    '''</remarks>
-    Protected WithEvents btnLogout2 As Global.System.Web.UI.WebControls.LinkButton
+    Protected WithEvents logoutButton As Global.System.Web.UI.WebControls.LinkButton
 End Class

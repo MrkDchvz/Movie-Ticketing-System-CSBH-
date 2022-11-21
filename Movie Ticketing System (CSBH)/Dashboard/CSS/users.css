@@ -1,0 +1,157 @@
+﻿@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;900&display=swap');
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+/* Remove default margin */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+ul,
+dd {
+    margin: 0;
+}
+
+:root {
+    /*-----Var Colors-----*/
+    --main-color: hsl(357, 77%, 41%);
+    --white-color: hsl(60, 3%, 94%);
+    --black-color: hsl(0, 3%, 12%);
+}
+
+/*-----Text Colors-----*/
+.text-main-color {
+    color: var(--main-color);
+}
+
+.text-white-color {
+    color: var(--white-color);
+}
+
+.text-black-color {
+    color: var(--black-color);
+}
+
+/*-----Background Colors-----*/
+.bg-main-color {
+    background: var(--main-color);
+}
+
+.bg-white-color {
+    background: var(--white-color);
+}
+
+.bg-black-color {
+    background: var(--black-color);
+}
+
+/*----------------*/
+/*---Typography---*/
+/*----------------*/
+
+
+body {
+    font-family: 'Poppins', sans-serif;
+    color: var(--black-color);
+}
+
+#logo {
+    font-size: 30px;
+    text-decoration: none;
+    font-weight: 900;
+}
+
+#logo,
+.nav-link {
+    color: var(--white-color);
+}
+
+    .nav-link:hover {
+        color: var(--main-color);
+    }
+
+    .nav-link .bi {
+        text-align: center;
+    }
+
+#dropDownUser {
+    color: hsl(0, 3%, 12%);
+}
+
+li .nav-link {
+    text-align: center;
+}
+
+/*----------------*/
+/*-----Layout-----*/
+/*----------------*/
+
+/*-----Sidebar-----*/
+#sidebar {
+    background-color: var(--black-color);
+    border: 1px solid var(--black-color);
+    width: 12rem;
+    min-height: 100vh;
+    margin-left: 0rem;
+    transition: all 0.3s ease-in-out;
+}
+
+#wrapper.toggled #sidebar {
+    margin-left: -12rem;
+}
+
+
+.nav-pills .nav-link.active {
+    background-color: var(--main-color);
+}
+
+.nav-link,
+#dropDownUser {
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+    .nav-link .bi {
+        display: block;
+    }
+
+/*-----Content Container-----*/
+.content {
+    width: 100%;
+    background-color: hsla(357, 77%, 41%,0.10);
+}
+
+/*-----Navigation Bar-----*/
+.navbar {
+    height: 4.375rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.dropdown-menu {
+    min-width: 100%;
+    transform: translate(-70px, 20px);
+}
+
+
+#sidebarToggleTop {
+    color: hsl(357, 77%, 41%);
+    transition: all .3s ease-in-out;
+    cursor: pointer;
+}
+
+/* Card Component */
+
+.card-component > .card {
+    border-left: 4px solid var(--main-color);
+}

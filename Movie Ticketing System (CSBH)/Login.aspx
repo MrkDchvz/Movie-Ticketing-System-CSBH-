@@ -52,7 +52,7 @@
                                 <span></span>
                                 <label class="login_input--label" >Password</label>
                             </div>
-                        <asp:Label CssClass="txt" ID="txterror" runat="server"></asp:Label>
+                        <asp:Label CssClass="txt" ID="txterror" runat="server" ForeColor="#CC0000"></asp:Label>
                         <asp:Button ID="Button1" runat="server" Text="login" CssClass="btn" />
                         <br />
                         <asp:HyperLink ID="HyperLink2" runat="server" CssClass="signup" NavigateUrl="~/Registration.aspx">Dont have account? Sign up</asp:HyperLink>
