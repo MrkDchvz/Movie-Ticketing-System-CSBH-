@@ -111,10 +111,14 @@
     <Content Include="Content\bootstrap.rtl.min.css" />
     <Content Include="CSS\login.css" />
     <Content Include="CSS\registration.css" />
+    <Content Include="Dashboard\bookingList.aspx" />
     <Content Include="Dashboard\CSS\admin.css" />
     <Content Include="CSS\Movies.css" />
     <Content Include="CSS\home.css" />
+    <Content Include="Dashboard\CSS\bookinglist.css" />
+    <Content Include="Dashboard\CSS\movielist.css" />
     <Content Include="Dashboard\CSS\users.css" />
+    <Content Include="Dashboard\MovieList.aspx" />
     <Content Include="img\Projector.jpg" />
     <Content Include="img\Sample Pictures\Endgame.jpg" />
     <Content Include="img\Sample Pictures\joker.jpg" />
@@ -142,6 +146,20 @@
     </Compile>
     <Compile Include="Dashboard\Admin.aspx.vb">
       <DependentUpon>Admin.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Dashboard\bookingList.aspx.designer.vb">
+      <DependentUpon>bookingList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Dashboard\bookingList.aspx.vb">
+      <DependentUpon>bookingList.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Dashboard\MovieList.aspx.designer.vb">
+      <DependentUpon>MovieList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Dashboard\MovieList.aspx.vb">
+      <DependentUpon>MovieList.aspx</DependentUpon>
       <SubType>ASPXCodebehind</SubType>
     </Compile>
     <Compile Include="My Project\AssemblyInfo.vb" />

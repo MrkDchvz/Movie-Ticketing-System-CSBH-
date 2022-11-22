@@ -44,7 +44,7 @@
            </header>
             <nav class="mobile-nav">
                 <a href="#">Home</a>
-                <a href="#">Movies</a>
+                <a href="Movies.aspx">Movies</a>
                 <a href="#">Profile</a>
                 <asp:LinkButton ID="logoutButtonMobile" CssClass="text-danger" runat="server"><i class="bi bi-box-arrow-in-right me-2 fa-sm"></i><span>Logout</span></asp:LinkButton>
             </nav>

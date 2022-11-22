@@ -23,11 +23,20 @@ Partial Public Class WebForm2
     Protected WithEvents form1 As Global.System.Web.UI.HtmlControls.HtmlForm
 
     '''<summary>
-    '''logoutButton control.
+    '''LogoutButtonDesktop control.
     '''</summary>
     '''<remarks>
     '''Auto-generated field.
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
-    Protected WithEvents logoutButton As Global.System.Web.UI.WebControls.LinkButton
+    Protected WithEvents LogoutButtonDesktop As Global.System.Web.UI.WebControls.LinkButton
+
+    '''<summary>
+    '''logoutButtonMobile control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents logoutButtonMobile As Global.System.Web.UI.WebControls.LinkButton
 End Class

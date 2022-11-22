@@ -20,7 +20,7 @@
     <!-- DataTables for Bootstrap 5 -->
     <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/v/bs5/dt-1.13.1/sl-1.5.0/sr-1.2.0/datatables.min.css"/>
     <!-- CSS -->
-    <link href="~/dashboard/CSS/users.css" rel="stylesheet" />
+    <link href="~/dashboard/CSS/movielist.css" rel="stylesheet" />
    
 
 </head>
@@ -36,8 +36,8 @@
           <hr>
           <ul id="side-bar-nav" class="nav nav-pills flex-column mb-auto">
             <li><asp:LinkButton ID="DashboardSessionEnd" runat="server"  Cssclass="nav-link"><i class="bi bi-speedometer2 me-2 fa-sm"></i><span>Dashboard</span></asp:LinkButton></li>
-            <li><a href="MovieList.aspx" class="nav-link"><i class="bi bi-film me-2 fa-sm"></i><span>Movies</span></a></li>
-            <li class="nav-item"><a href="Users.aspx" class="nav-link active"><i class="bi bi-people me-2 fa-sm"></i><span>Users</span></a></li>
+            <li class="nav-item"><a href="MovieList.aspx" class="nav-link active"><i class="bi bi-film me-2 fa-sm"></i><span>Movies</span></a></li>
+            <li><a href="Users.aspx" class="nav-link"><i class="bi bi-people me-2 fa-sm"></i><span>Users</span></a></li>
             <li><a href="bookingList.aspx" class="nav-link"><i class="bi bi-ticket-detailed me-2 fa-sm"></i><span>Booking</span></a></li>
           </ul>
         </div>
@@ -76,14 +76,16 @@
               <div class="card shadow">
                   <div class="card-body">
                       <div class="table-responsive">
-                          <table id="table_users" class="table table-striped">
+                          <table id="table_movies" class="table table-striped">
                               <thead>
                                   <tr>
-                                    <th>fullname</th>
-                                    <th>username</th>
-                                    <th>email</th>
-                                    <th>number</th>
-                                    <th>gender</th>
+                                    <th>ID</th>
+                                    <th>Movie Name</th>
+                                    <th>Language</th>
+                                    <th>Duration(Mins)</th>
+                                    <th>Genre</th>
+                                    <th>Release Date</th>
+                                    <th>Tickets</th>
                                   </tr>
                               </thead>
                           </table>
@@ -125,18 +127,28 @@
     <script type="text/javascript">
         $(document).ready(function () {
             $.ajax({
-                url: 'UsersService.asmx/GetUsers',
+                url: 'UsersService.asmx/GetMovies',
                 method: 'post',
                 dataType: 'json',
                 success: function (data) {
-                    $('#table_users').DataTable({
+                    $('#table_movies').DataTable({
                         data: data,
                         columns: [
-                            { 'data': 'fullName' },
-                            { 'data': 'userName' },
-                            { 'data': 'email' },
-                            { 'data': 'phone_num' },
-                            { 'data': 'gender' }
+                            { 'data': 'movie_id' },
+                            { 'data': 'movie_name' },
+                            { 'data': 'movie_language' },
+                            { 'data': 'movie_duration' },
+                            { 'data': 'movie_type' },
+                            {
+                                'data': 'movie_release_date',
+                                'render': function (jsonDate) {
+                                    const date = new Date(parseInt(jsonDate.substr(6)))
+                                    const month = date.getMonth() + 1
+                                    return month + "/" + date.getDate() + "/" + date.getFullYear()
+                                }
+                            },
+
+                            { 'data': 'movie_tickets' }
                         ],
                         "lengthChange": false
                     })
@@ -146,3 +158,4 @@
     </script>
 </body>
 </html>
+

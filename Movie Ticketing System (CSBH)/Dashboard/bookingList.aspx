@@ -20,7 +20,7 @@
     <!-- DataTables for Bootstrap 5 -->
     <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/v/bs5/dt-1.13.1/sl-1.5.0/sr-1.2.0/datatables.min.css"/>
     <!-- CSS -->
-    <link href="~/dashboard/CSS/users.css" rel="stylesheet" />
+    <link href="~/dashboard/CSS/bookinglist.css" rel="stylesheet" />
    
 
 </head>
@@ -37,8 +37,8 @@
           <ul id="side-bar-nav" class="nav nav-pills flex-column mb-auto">
             <li><asp:LinkButton ID="DashboardSessionEnd" runat="server"  Cssclass="nav-link"><i class="bi bi-speedometer2 me-2 fa-sm"></i><span>Dashboard</span></asp:LinkButton></li>
             <li><a href="MovieList.aspx" class="nav-link"><i class="bi bi-film me-2 fa-sm"></i><span>Movies</span></a></li>
-            <li class="nav-item"><a href="Users.aspx" class="nav-link active"><i class="bi bi-people me-2 fa-sm"></i><span>Users</span></a></li>
-            <li><a href="bookingList.aspx" class="nav-link"><i class="bi bi-ticket-detailed me-2 fa-sm"></i><span>Booking</span></a></li>
+            <li><a href="Users.aspx" class="nav-link"><i class="bi bi-people me-2 fa-sm"></i><span>Users</span></a></li>
+            <li class="nav-item"><a class="nav-link active"><i class="bi bi-ticket-detailed me-2 fa-sm"></i><span>Booking</span></a></li>
           </ul>
         </div>
         <!-- Sidebar END -->
@@ -76,14 +76,13 @@
               <div class="card shadow">
                   <div class="card-body">
                       <div class="table-responsive">
-                          <table id="table_users" class="table table-striped">
+                          <table id="tableBooking" class="table table-striped">
                               <thead>
                                   <tr>
-                                    <th>fullname</th>
-                                    <th>username</th>
-                                    <th>email</th>
-                                    <th>number</th>
-                                    <th>gender</th>
+                                    <th>ID</th>
+                                    <th>Username</th>
+                                     <th>Movie</th>
+                                    <th>Paid</th>
                                   </tr>
                               </thead>
                           </table>
@@ -125,18 +124,18 @@
     <script type="text/javascript">
         $(document).ready(function () {
             $.ajax({
-                url: 'UsersService.asmx/GetUsers',
+                url: 'UsersService.asmx/GetBookings',
                 method: 'post',
                 dataType: 'json',
                 success: function (data) {
-                    $('#table_users').DataTable({
+                    $('#tableBooking').DataTable({
                         data: data,
                         columns: [
-                            { 'data': 'fullName' },
-                            { 'data': 'userName' },
-                            { 'data': 'email' },
-                            { 'data': 'phone_num' },
-                            { 'data': 'gender' }
+                            { 'data': 'booking_id' },
+                            { 'data': 'username' },
+                            { 'data': 'movie_name' },
+                            { 'data': 'has_paid' },
+                           
                         ],
                         "lengthChange": false
                     })
@@ -146,3 +145,5 @@
     </script>
 </body>
 </html>
+
+

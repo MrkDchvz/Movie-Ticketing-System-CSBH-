@@ -7,7 +7,7 @@
         End If
     End Sub
 
-    Protected Sub LogoutButton_Click(sender As Object, e As EventArgs) Handles logoutButton.Click
+    Protected Sub LogoutButtonMobile_Click(sender As Object, e As EventArgs) Handles logoutButtonMobile.Click
         Session.Clear()
         Session.RemoveAll()
         Session.Abandon()
@@ -15,4 +15,11 @@
 
     End Sub
 
+    Protected Sub LogoutButtonDesktop_Click(sender As Object, e As EventArgs) Handles LogoutButtonDesktop.Click
+        Session.Clear()
+        Session.RemoveAll()
+        Session.Abandon()
+        Response.Redirect("~/Login.aspx")
+
+    End Sub
 End Class

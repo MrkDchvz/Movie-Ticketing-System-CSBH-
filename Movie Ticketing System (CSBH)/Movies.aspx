@@ -25,11 +25,11 @@
       <nav class="nav-bar">
         <div class="nav-logo"><i class="nav-icon-logo fa-solid fa-bug-slash"></i></div>
         <div class="nav-links">
-          <a href="#">Home</a>
+          <a href="Home.aspx">Home</a>
           <a href="#">Profile</a>
+          <asp:LinkButton ID="LogoutButtonDesktop" CssClass="text-danger" runat="server"><span>Logout</span></asp:LinkButton>
             
         </div>
-        <div class="nav-user"></div>
         <a role="button" class="nav-hamburger">
           <div class="nav-hamburger-bar"></div>
         </a>
@@ -40,7 +40,7 @@
           <div class="nav-mobile-links">
             <a href="Home.aspx">Home</a>
             <a href="#">Profile</a>
-             <asp:LinkButton ID="logoutButton" CssClass="text-danger" runat="server"><i class="bi bi-box-arrow-in-right me-2 fa-sm"></i><span>Logout</span></asp:LinkButton>
+             <asp:LinkButton ID="logoutButtonMobile" CssClass="text-danger" runat="server"><i class="bi bi-box-arrow-in-right me-2 fa-sm"></i><span>Logout</span></asp:LinkButton>
           </div>
       </nav>
 

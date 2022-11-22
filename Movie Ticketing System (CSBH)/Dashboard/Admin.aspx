@@ -29,9 +29,9 @@
           <hr>
           <ul id="side-bar-nav" class="nav nav-pills flex-column mb-auto">
             <li class="nav-item"><a class="nav-link active"><i class="bi bi-speedometer2 me-2 fa-sm"></i></i><span>Dashboard</span></a></li>
-            <li><a class="nav-link"><i class="bi bi-film me-2 fa-sm"></i></i><span>Movies</span></a></li>
+            <li><a href="MovieList.aspx" class="nav-link"><i class="bi bi-film me-2 fa-sm"></i></i><span>Movies</span></a></li>
             <li><a href="Users.aspx" class="nav-link"><i class="bi bi-people me-2 fa-sm"></i><span>Users</span></a></li>
-            <li><a class="nav-link"><i class="bi bi-ticket-detailed me-2 fa-sm"></i><span>Booking</span></a></li>
+            <li><a  href="bookingList.aspx" class="nav-link"><i class="bi bi-ticket-detailed me-2 fa-sm"></i><span>Booking</span></a></li>
           </ul>
         </div>
         <!-- Sidebar END -->

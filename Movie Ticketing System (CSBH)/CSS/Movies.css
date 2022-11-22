@@ -226,9 +226,36 @@ article {
 
 
 
-
+/*-------------------------------------------------*/
 /*---------------------DESKTOP---------------------*/
+/*-------------------------------------------------*/
 @media (min-width: 768px) {
+
+    /*-------------------*/
+    /*-----Typography-----*/
+    /* -------------------*/
+    .nav-links a {
+        text-decoration: none;
+        color: var(--white-color);
+    }
+
+    /*-------------------*/
+    /*-----Navigation-----*/
+    /* -------------------*/
+    .nav-hamburger {
+
+        display: none;
+    }
+
+    .nav-links {
+        display: flex;
+        gap: 1rem;
+        opacity: .70;
+    }
+
+
+
+
     .swiper-wrapper .slide-list:before {
         opacity: .25;
     }
