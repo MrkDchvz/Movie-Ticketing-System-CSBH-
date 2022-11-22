@@ -12,12 +12,25 @@ VALUES
 
 
 CREATE TABLE users (
-	fullname VARCHAR(50),
-	username VARCHAR(50) PRIMARY KEY,
-	password VARCHAR(50),
-	email VARCHAR(255),
-	phone_num VARCHAR(50),
-	rank  INT not null default 1,
-	gender VARCHAR(1),
-	constraint fk_user_rank foreign key (rank) references user_rank (id)
+	username VARCHAR(50) NOT NULL.
+	fullname VARCHAR(50) NOT NULL.
+	password VARCHAR(50) NOT NULL,
+	email VARCHAR(255) NOT NULL,
+	phone_num VARCHAR(50) NOT NULL,
+	rank  INT DEFAULT 1 NOT NULL,
+	gender VARCHAR(1) NOT NULL,
+	PRIMARY KEY (username)
+	FOREIGN KEY (rank) REFERENCES user_rank(id)
 	);
+
+
+CREATE TABLE movies (
+	movie_id INT NOT NULL IDENTITY(1,1),
+	movie_name VARCHAR(50) NOT NULL,
+	movie_language VARCHAR(50) NOT NULL,
+	movie_duration INT NOT NULL,
+	movie_type VARCHAR(50) NOT NULL,
+	movie_release_date DATE NOT NULL,
+	movie_tickets INT NOT NULL DEFAULT 50,
+	PRIMARY KEY (movie_id),
+	)
