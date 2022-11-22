@@ -70,7 +70,7 @@
           <div class="container-fluid">
               <!--Header-->
             <div class="header mb-4">
-              <h1 class="h3 mb-0 fw-800 text-black-color">Users</h1>
+              <h1 class="h3 mb-0 fw-800 text-black-color">Movies</h1>
             </div>
               <!--Datatable-->
               <div class="card shadow">

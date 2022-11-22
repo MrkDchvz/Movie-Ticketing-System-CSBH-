@@ -4,19 +4,19 @@
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
-     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
      
     <!-- Bootstrap-->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous" />
     <!-- Bootstrap Icons-->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.2/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.2/font/bootstrap-icons.css" />
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
    <!-- DataTables -->
-    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.13.1/css/jquery.dataTables.css">
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.13.1/css/jquery.dataTables.css" />
     <!-- DataTables for Bootstrap 5 -->
     <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/v/bs5/dt-1.13.1/sl-1.5.0/sr-1.2.0/datatables.min.css"/>
     <!-- CSS -->
@@ -33,7 +33,7 @@
         <!-- Sidebar -->
         <div class="side-bar d-flex flex-column p-3" id="sidebar">
           <a href="#" id="logo" class="mb-1">CSBH</a>
-          <hr>
+          <hr/>
           <ul id="side-bar-nav" class="nav nav-pills flex-column mb-auto">
             <li><asp:LinkButton ID="DashboardSessionEnd" runat="server"  Cssclass="nav-link"><i class="bi bi-speedometer2 me-2 fa-sm"></i><span>Dashboard</span></asp:LinkButton></li>
             <li><a href="MovieList.aspx" class="nav-link"><i class="bi bi-film me-2 fa-sm"></i><span>Movies</span></a></li>
@@ -70,7 +70,7 @@
           <div class="container-fluid">
               <!--Header-->
             <div class="header mb-4">
-              <h1 class="h3 mb-0 fw-800 text-black-color">Users</h1>
+              <h1 class="h3 mb-0 fw-800 text-black-color">Bookings</h1>
             </div>
               <!--Datatable-->
               <div class="card shadow">

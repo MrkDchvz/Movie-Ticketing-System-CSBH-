@@ -1,11 +1,13 @@
 ﻿Public Class WebForm3
     Inherits System.Web.UI.Page
 
-    Protected Sub Page_Load(ByVal sender As Object, ByVal e As System.EventArgs) Handles Me.Load
+
+    Private Sub WebForm3_Init(sender As Object, e As EventArgs) Handles Me.Init
         If Session("username") = Nothing Then
             Response.Redirect("~/login.aspx")
         End If
     End Sub
+
 
 
 
@@ -19,4 +21,6 @@
     Protected Sub DashboardSessionEnd_Click(sender As Object, e As EventArgs) Handles DashboardSessionEnd.Click
         Response.Redirect("~/Dashboard/Admin.aspx")
     End Sub
+
+
 End Class
