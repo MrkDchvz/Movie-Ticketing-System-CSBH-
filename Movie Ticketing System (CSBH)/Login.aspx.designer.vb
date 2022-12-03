@@ -23,31 +23,31 @@ Partial Public Class WebForm1
     Protected WithEvents form1 As Global.System.Web.UI.HtmlControls.HtmlForm
 
     '''<summary>
-    '''txtuser control.
+    '''loginUsername control.
     '''</summary>
     '''<remarks>
     '''Auto-generated field.
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
-    Protected WithEvents txtuser As Global.System.Web.UI.WebControls.TextBox
+    Protected WithEvents loginUsername As Global.System.Web.UI.WebControls.TextBox
 
     '''<summary>
-    '''txtpass control.
+    '''loginPassword control.
     '''</summary>
     '''<remarks>
     '''Auto-generated field.
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
-    Protected WithEvents txtpass As Global.System.Web.UI.HtmlControls.HtmlInputPassword
+    Protected WithEvents loginPassword As Global.System.Web.UI.WebControls.TextBox
 
     '''<summary>
-    '''txterror control.
+    '''loginError control.
     '''</summary>
     '''<remarks>
     '''Auto-generated field.
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
-    Protected WithEvents txterror As Global.System.Web.UI.WebControls.Label
+    Protected WithEvents loginError As Global.System.Web.UI.WebControls.Label
 
     '''<summary>
     '''Button1 control.
@@ -57,13 +57,4 @@ Partial Public Class WebForm1
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
     Protected WithEvents Button1 As Global.System.Web.UI.WebControls.Button
-
-    '''<summary>
-    '''HyperLink2 control.
-    '''</summary>
-    '''<remarks>
-    '''Auto-generated field.
-    '''To modify move field declaration from designer file to code-behind file.
-    '''</remarks>
-    Protected WithEvents HyperLink2 As Global.System.Web.UI.WebControls.HyperLink
 End Class

@@ -26,11 +26,8 @@ Public Class UsersService
             'Creates instances of usersClass and put those instances on UserList List'
             While (rdr.Read())
                 Dim user As UsersClass = New UsersClass()
-                user.fullName = rdr("fullname").ToString()
                 user.userName = rdr("username").ToString()
                 user.email = rdr("email").ToString()
-                user.phone_num = rdr("phone_num").ToString()
-                user.gender = rdr("gender").ToString()
                 userList.Add(user)
 
             End While

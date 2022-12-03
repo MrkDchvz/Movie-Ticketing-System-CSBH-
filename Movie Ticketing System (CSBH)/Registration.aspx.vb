@@ -6,29 +6,57 @@ Public Class Registration
 
     End Sub
 
-    Private Function gender() As String
-        If radio1.Checked Then
-            Return radio1.Value
-        ElseIf radio2.Checked Then
-            Return radio2.Value
-        ElseIf radio3.Checked Then
-            Return radio3.Value
 
-        End If
-    End Function
 
-    Protected Sub btnregister_Click(sender As Object, e As EventArgs) Handles btnregister.Click
-        Try
-            Dim gndr As String = gender()
-            Dim strquery As String = "INSERT INTO users VALUES('" & txtfullname.Text & "', '" & txtusername.Text & "', '" & txtpass.Value & "', '" & txtemail.Text & "', '" & txtnum.Text & "', '" & 1 & "', '" & gndr.ToLower & "' );"
-            con.Open()
-            Dim cmd As New SqlCommand(strquery, con)
-            cmd.ExecuteNonQuery()
-            con.Close()
+    Protected Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
+        Dim conString As String = "Data Source=DESKTOP-62PB5DH;Initial Catalog=Movie_System;Integrated Security=True"
+        Dim checkUser As String = "SELECT * FROM users WHERE username = '" & loginUsername.Text.ToLower & "';"
+        Dim addUser As String = "INSERT INTO users VALUES( '" & loginUsername.Text & "', '" & loginPassword.Text & "', '" & loginEmail.Text & "', '" & 1 & "');"
+        Using con As New SqlConnection(conString)
+            Using cmd As New SqlCommand(checkUser)
+                Using sa As New SqlDataAdapter()
+                    Dim dt As New DataTable
+                    cmd.Connection = con
+                    sa.SelectCommand = cmd
+                    sa.Fill(dt)
+                    If dt.Rows.Count > 0 Then
+                        loginError.Text = "Username already taken"
+                    Else
+                        cmd.CommandText = addUser
+                        con.Open()
+                        cmd.ExecuteNonQuery()
+                        loginError.Text = "Account Created!"
+                        Response.Redirect("~/login.aspx")
+                    End If
 
-        Catch ex As Exception
-            txterror.Text = "Invalid Input"
-        End Try
+                End Using
+            End Using
+        End Using
+
+        ' Try
+
+        ' strquery As String = "INSERT INTO users VALUES('" & txtfullname.Text & "', '" & txtusername.Text & "', '" & txtpass.Text & "', '" & txtemail.Text & "', '" & txtnum.Text & "', '" & 1 & "', '" & gndr.ToLower & "' );"
+
+
+        ' dt As New DataTable
+
+        'If dt.Rows.Count > 0 Then
+        '  txterror.Text = "Username already taken"
+        ' Else
+        '   con.Open()
+        ' Dim cmdAdd As New SqlCommand(strquery, con)
+        ' cmdAdd.ExecuteNonQuery()
+        '  con.Close()
+
+        '  End If
+
+
+
+        'cmd.ExecuteNonQuery()
+
+        '  Catch ex As Exception
+        'txterror.Text = ex.ToString
+        '   End Try
 
     End Sub
 End Class

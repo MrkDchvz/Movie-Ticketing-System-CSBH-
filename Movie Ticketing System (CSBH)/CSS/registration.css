@@ -67,10 +67,21 @@ body {
     bottom: -6px;
 }
 
-.txterror {
+
+.validation-container {
     position: relative;
-    top: -25px;
+    top: 20px;
+    width: 50%;
+}
+
+
+.txterror {
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
     color: var(--accent-color);
+
 }
 
 /* Layout */

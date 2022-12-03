@@ -1,0 +1,10 @@
+﻿[
+  {
+    "outputFile": "SASS/registration.css",
+    "inputFile": "SASS/registration.scss"
+  },
+  {
+    "outputFile": "SASS/login.css",
+    "inputFile": "SASS/login.scss"
+  }
+]

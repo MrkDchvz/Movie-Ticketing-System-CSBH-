@@ -8,13 +8,13 @@
 
     End Sub
 
+
     Protected Sub LogoutButton_Click(sender As Object, e As EventArgs) Handles logoutButton.Click
         Session.Clear()
         Session.RemoveAll()
+        Session.Remove("Username")
         Session.Abandon()
         Response.Redirect("~/Login.aspx")
 
     End Sub
-
-
 End Class

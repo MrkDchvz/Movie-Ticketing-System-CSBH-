@@ -119,14 +119,31 @@
     <Content Include="Dashboard\CSS\movielist.css" />
     <Content Include="Dashboard\CSS\users.css" />
     <Content Include="Dashboard\MovieList.aspx" />
+    <Content Include="Global.asax" />
     <Content Include="img\Projector.jpg" />
     <Content Include="img\Sample Pictures\Endgame.jpg" />
     <Content Include="img\Sample Pictures\joker.jpg" />
+    <Content Include="img\Sample Pictures\sampl1.jpg" />
+    <Content Include="img\Sample Pictures\sampl2.jpg" />
     <Content Include="img\Sample Pictures\Venom.jpg" />
+    <Content Include="img\wallpaper2.jpg" />
     <Content Include="img\Sample.jpg" />
     <Content Include="img\theater.jpg" />
     <Content Include="img\ujptuqbm.png" />
+    <Content Include="img\wallpaper1.jpg" />
     <Content Include="Registration.aspx" />
+    <Content Include="SASS\login.css">
+      <DependentUpon>login.scss</DependentUpon>
+    </Content>
+    <Content Include="SASS\login.min.css">
+      <DependentUpon>login.css</DependentUpon>
+    </Content>
+    <Content Include="SASS\registration.css">
+      <DependentUpon>registration.scss</DependentUpon>
+    </Content>
+    <Content Include="SASS\registration.min.css">
+      <DependentUpon>registration.css</DependentUpon>
+    </Content>
     <Content Include="Scripts\bootstrap.bundle.js" />
     <Content Include="Scripts\bootstrap.bundle.min.js" />
     <Content Include="Scripts\bootstrap.esm.js" />
@@ -161,6 +178,9 @@
     <Compile Include="Dashboard\MovieList.aspx.vb">
       <DependentUpon>MovieList.aspx</DependentUpon>
       <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Global.asax.vb">
+      <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="My Project\AssemblyInfo.vb" />
     <Compile Include="My Project\Application.Designer.vb">
@@ -247,6 +267,13 @@
     <Content Include="Content\bootstrap-grid.rtl.css.map" />
     <Content Include="Content\bootstrap-grid.min.css.map" />
     <Content Include="Content\bootstrap-grid.css.map" />
+    <None Include="compilerconfig.json" />
+    <Content Include="compilerconfig.json.bindings">
+      <DependentUpon>compilerconfig.json</DependentUpon>
+    </Content>
+    <None Include="compilerconfig.json.defaults">
+      <DependentUpon>compilerconfig.json</DependentUpon>
+    </None>
     <None Include="My Project\Application.myapp">
       <Generator>MyApplicationCodeGenerator</Generator>
       <LastGenOutput>Application.Designer.vb</LastGenOutput>
@@ -263,6 +290,10 @@
     <Content Include="Scripts\bootstrap.esm.js.map" />
     <Content Include="Scripts\bootstrap.bundle.min.js.map" />
     <Content Include="Scripts\bootstrap.bundle.js.map" />
+    <Content Include="SASS\login.scss" />
+    <Content Include="SASS\registration.scss" />
+    <Content Include="SASS\_variables.scss" />
+    <Content Include="SASS\_reset.scss" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

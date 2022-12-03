@@ -4,25 +4,28 @@ Public Class WebForm1
     Inherits System.Web.UI.Page
     Dim cs As String = ConfigurationManager.ConnectionStrings("MTDB").ConnectionString
     Dim con As New SqlConnection(cs)
-    Protected Sub Page_Load(ByVal sender As Object, ByVal e As System.EventArgs) Handles Me.Load
-        Notpostback()
+
+    Private Sub WebForm1_Init(sender As Object, e As EventArgs) Handles Me.Init
         If Session("username") IsNot Nothing Then
             If Session("rank") = "1" Then
                 Response.Redirect("~/home.aspx")
             ElseIf Session("rank") = "2" Then
                 Response.Redirect("~/dashboard/admin.aspx")
             End If
-        
         End If
+        Notpostback()
     End Sub
+
+
+
 
     Private Sub Notpostback()
         If Not Page.IsPostBack Then
-            txterror.Text = ""
+            loginError.Text = ""
         End If
     End Sub
     Protected Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
-        Dim query As String = "SELECT * FROM users WHERE username = '" & txtuser.Text & "' AND password = '" & txtpass.Value.ToString & "';"
+        Dim query As String = "SELECT * FROM users WHERE username = '" & loginUsername.Text & "' AND password = '" & loginPassword.Text & "';"
         Dim cmd As New SqlCommand(query, con)
         Dim sa As New SqlDataAdapter(cmd)
         Dim dt As New DataTable
@@ -30,12 +33,9 @@ Public Class WebForm1
 
         If dt.Rows.Count > 0 Then 'Check if pass and username is correct'
             For Each row In dt.Rows
-                Session("fullname") = row("fullname").ToString
                 Session("username") = row("username").ToString
                 Session("email") = row("email").ToString
-                Session("phone_num") = row("phone_num").ToString
                 Session("rank") = row("rank").ToString
-                Session("gender") = row("gender").ToString
             Next
 
             If Session("rank") = "1" Then
@@ -44,8 +44,9 @@ Public Class WebForm1
                 Response.Redirect("~/dashboard/admin.aspx")
             End If
         Else
-            txterror.Text = "Invalid username or password"
+            loginError.Text = "Invalid username or password"
         End If
 
     End Sub
+
 End Class

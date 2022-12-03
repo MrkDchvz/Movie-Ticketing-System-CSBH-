@@ -10,16 +10,11 @@
 
 
 
-
     Protected Sub LogoutButton_Click(sender As Object, e As EventArgs) Handles logoutButton.Click
         Session.Clear()
         Session.RemoveAll()
         Session.Abandon()
         Response.Redirect("~/login.aspx")
-    End Sub
-
-    Protected Sub DashboardSessionEnd_Click(sender As Object, e As EventArgs) Handles DashboardSessionEnd.Click
-        Response.Redirect("~/Dashboard/Admin.aspx")
     End Sub
 
 
