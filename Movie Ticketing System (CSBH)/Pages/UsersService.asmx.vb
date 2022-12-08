@@ -26,6 +26,7 @@ Public Class UsersService
             'Creates instances of usersClass and put those instances on UserList List'
             While (rdr.Read())
                 Dim user As UsersClass = New UsersClass()
+                user.userId = rdr("user_id").ToString()
                 user.userName = rdr("username").ToString()
                 user.email = rdr("email").ToString()
                 userList.Add(user)
@@ -85,6 +86,7 @@ Public Class UsersService
                 booking.booking_id = Convert.ToInt32(rdr("booking_id"))
                 booking.username = rdr("username").ToString
                 booking.movie_name = rdr("movie_name").ToString
+                booking.booking_date = Convert.ToDateTime(rdr("booking_date"))
                 booking.has_paid = rdr("has_paid").ToString
 
                 bookingList.Add(booking)

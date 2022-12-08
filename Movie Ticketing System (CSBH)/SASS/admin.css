@@ -1,0 +1,139 @@
+﻿@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;900&display=swap");
+/* Box sizing rules */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;500;700;800;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Work+Sans:wght@100;200;300;400;500;600;700;800;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@300&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Literata:opsz,wght@7..72,500;7..72,600;7..72,700;7..72,800;7..72,900&display=swap");
+*,
+*::before,
+*::after {
+  box-sizing: border-box; }
+
+/* Remove default margin */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd {
+  margin: 0; }
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role='list'],
+ol[role='list'] {
+  list-style: none;
+  padding: 0; }
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box; }
+
+:root {
+  /*-----Var Colors-----*/
+  --main-color: #b91820;
+  --white-color: #f0f0ef;
+  --black-color: #201e1e; }
+
+/*-----Text Colors-----*/
+.text-main-color {
+  color: #dd2e44; }
+
+.text-white-color {
+  color: #ffffff; }
+
+.text-black-color {
+  color: #1c1c1c; }
+
+/*-----Background Colors-----*/
+.bg-main-color {
+  background: #dd2e44; }
+
+.bg-white-color {
+  background: #ffffff; }
+
+.bg-black-color {
+  background: #1c1c1c; }
+
+/*----------------*/
+/*---Typography---*/
+/*----------------*/
+body {
+  font-family: 'Poppins', sans-serif;
+  color: #ffffff; }
+
+#logo {
+  font-size: 30px;
+  text-decoration: none;
+  font-weight: 900; }
+
+#logo,
+.nav-link {
+  color: #ffffff; }
+
+.nav-link:hover {
+  color: #dd2e44; }
+
+.nav-link .bi {
+  text-align: center; }
+
+#dropDownUser {
+  color: #201e1e; }
+
+li .nav-link {
+  text-align: center; }
+
+/*----------------*/
+/*-----Layout-----*/
+/*----------------*/
+/*-----Sidebar-----*/
+#sidebar {
+  background-color: #1c1c1c;
+  border: 1px solid #1c1c1c;
+  width: 12rem;
+  min-height: 100vh;
+  margin-left: 0rem;
+  transition: all 0.3s ease-in-out; }
+
+#wrapper.toggled #sidebar {
+  margin-left: -12rem; }
+
+.nav-pills .nav-link.active {
+  background-color: #dd2e44; }
+
+.nav-link,
+#dropDownUser {
+  cursor: pointer;
+  transition: all 0.2s ease; }
+
+.nav-link .bi {
+  display: block; }
+
+/*-----Content Container-----*/
+.content {
+  width: 100%;
+  background-color: rgba(185, 24, 32, 0.1); }
+
+/*-----Navigation Bar-----*/
+.navbar {
+  height: 4.375rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between; }
+
+.dropdown-menu {
+  min-width: 100%;
+  transform: translate(-70px, 20px); }
+
+#sidebarToggleTop {
+  color: #dd2e44;
+  transition: all .3s ease-in-out;
+  cursor: pointer; }
+
+/* Card Component */
+.card-component > .card {
+  border-left: 4px solid #dd2e44; }

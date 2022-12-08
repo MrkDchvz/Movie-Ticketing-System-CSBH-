@@ -1,4 +1,5 @@
 ﻿Public Class UsersClass
+    Public Property userId As Integer
     Public Property userName As String
     Public Property email As String
 
@@ -20,6 +21,8 @@ Public Class BookingsClass
     Public Property booking_id As Integer
     Public Property username As String
     Public Property movie_name As String
+    Public Property booking_date As Date
     Public Property has_paid As String
+
 End Class
 

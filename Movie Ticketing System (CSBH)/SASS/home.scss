@@ -1,0 +1,232 @@
+﻿@import '_reset.scss';
+@import '_variables.scss';
+
+// Global
+.accent-color {
+    color: $accent-color;
+}
+
+.link-style {
+    text-decoration: none;
+    color: $text-color;
+}
+
+.link-style--danger {
+    color: $danger-color;
+}
+
+
+body {
+    font-family: 'Poppins', sans-serif;
+    color: $text-color;
+    background-color: $primary-color;
+}
+
+// Layout
+.container {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+
+
+
+    &::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        z-index: -999;
+        background-image: url('../img/wallpaper3.jpg');
+        background-size: cover;
+        background-position: top;
+        opacity: .80;
+    }
+}
+
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 2rem 2rem;
+
+
+    .navbar__logo {
+        font-family: 'Literata', serif;
+        font-weight: 800;
+        font-size: 1.1rem;
+
+        .navbar__logo--title {
+            margin-left: 3px;
+        }
+    }
+
+    .hamburger {
+        width: 30px;
+        height: 30px;
+        cursor: pointer;
+        padding: 4px;
+        outline: none;
+        border: none;
+        background: none;
+        z-index: 2;
+
+
+        &::before,
+        &::after {
+            width: 60%;
+            display: block;
+            content: '';
+        }
+
+        &::before,
+        &::after,
+        .hamburger__bar {
+            height: 2px;
+            background-color: white;
+            transition: all 200ms ease;
+        }
+
+        &::after {
+            transform: translateX(7px);
+        }
+
+        .hamburger__bar {
+            margin: 4px 0;
+        }
+        // Active state
+        &.active::before {
+            transform: translate(1px, 3px) rotate(45deg);
+        }
+
+        &.active::after {
+            transform: translate(7px, -3px) rotate(45deg);
+        }
+
+        &.active .hamburger__bar {
+            transform: rotate(-45deg);
+        }
+    }
+
+    .navbar--desktop {
+        display: none;
+    }
+}
+
+.navbar--mobile {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    min-height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 100%;
+    z-index: 1;
+    background-color: rgba($color: #000000, $alpha: .40);
+    backdrop-filter: blur(20px);
+    transition: 200ms;
+
+    &.active {
+        left: 0;
+    }
+
+    .navbar--mobile__list {
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+        width: 100%;
+        font-size: 2rem;
+        text-align: center;
+    }
+}
+
+
+.content {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    margin-top: 1.4rem;
+    align-items: center;
+    text-align: center;
+    width: 100%;
+    flex-grow: 1;
+
+
+    .content__main {
+        display: flex;
+        width: 80%;
+        flex-direction: column;
+        align-items: center;
+        margin: 1rem;
+        gap: 1rem;
+    }
+
+    .content__heading {
+        font-size: 2.3rem;
+    }
+
+    .content__sub-heading {
+        color: #d3d0cf;
+        font-size: 1.1rem;
+    }
+}
+
+.content__button {
+    outline: none;
+    background: $accent-color;
+    border: none;
+    padding: .6rem 2rem;
+    color: white;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 500;
+    border-radius: 10px;
+    margin-top: 1rem;
+}
+
+
+
+
+@media (min-width: 46.25rem) {
+    body {
+        background-color: black;
+    }
+
+    .navbar {
+
+        .navbar--desktop {
+            display: block;
+
+            .navbar--desktop__list {
+                display: flex;
+                gap: 2rem;
+
+                .navbar--desktop__item {
+                    list-style: none;
+                }
+            }
+        }
+
+        .hamburger {
+            display: none;
+        }
+    }
+
+    .content__main {
+        width: 100%;
+
+        .content__heading {
+            font-size: 3rem;
+        }
+    }
+}
+
+
+@media (min-width: 56.25rem) {
+    .content__main {
+        .content__heading {
+            font-size: 4rem;
+        }
+    }
+}

@@ -6,5 +6,13 @@
   {
     "outputFile": "SASS/login.css",
     "inputFile": "SASS/login.scss"
+  },
+  {
+    "outputFile": "SASS/home.css",
+    "inputFile": "SASS/home.scss"
+  },
+  {
+    "outputFile": "SASS/admin.css",
+    "inputFile": "SASS/admin.scss"
   }
 ]

@@ -14,7 +14,8 @@
   <!-- Font Awesome -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
   <!-- CSS -->
-    <link href="CSS/admin.css" rel="stylesheet" />
+    <link href="../SASS/admin.css" rel="stylesheet" />
+    <link href="../SASS/admin.min.css" rel="stylesheet" />
 </head>
 
 <body>
@@ -28,9 +29,9 @@
           <hr>
           <ul id="side-bar-nav" class="nav nav-pills flex-column mb-auto">
             <li class="nav-item"><a href="Admin.aspx" class="nav-link active"><i class="bi bi-speedometer2 me-2 fa-sm"></i><span>Dashboard</span></a></li>
-            <li><a href="MovieList.aspx" class="nav-link"><i class="bi bi-film me-2 fa-sm"></i></i><span>Movies</span></a></li>
+            <li><a href="Movielist.aspx" class="nav-link"><i class="bi bi-film me-2 fa-sm"></i></i><span>Movies</span></a></li>
             <li><a href="Users.aspx" class="nav-link"><i class="bi bi-people me-2 fa-sm"></i><span>Users</span></a></li>
-            <li><a  href="bookingList.aspx" class="nav-link"><i class="bi bi-ticket-detailed me-2 fa-sm"></i><span>Booking</span></a></li>
+            <li><a  href="bookinglist.aspx" class="nav-link"><i class="bi bi-ticket-detailed me-2 fa-sm"></i><span>Booking</span></a></li>
           </ul>
         </div>
         <!-- Sidebar END -->
@@ -67,22 +68,6 @@
 
             <!--Card Container-->
             <div class="row">
-
-              <!--Card Component (Earnings)-->
-              <div class="card-component col-xl-4 col-md-6 mb-4">
-                <div class="card shadow h-100 py-2">
-                  <div class="card-body">
-                    <div class="row no-gutters align-items-center">
-                      <div class="col mr-2">
-                        <div class=" font-weight-bold text-main-color text-uppercase mb-1">Earnings</div>
-                        <div class="h5 text-black-color font-weight-800 ">4000</div>
-                      </div>
-                      <div class="col-auto"><i class="bi bi-bank2 fa-3x  text-main-color"></i>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
               <!--Card Component (Bookings)-->
               <div class=" card-component col-xl-4 col-md-6 mb-4">
                 <div class="card shadow h-100 py-2">
@@ -90,7 +75,7 @@
                     <div class="row no-gutters align-items-center">
                       <div class="col mr-2">
                         <div class=" font-weight-bold text-main-color text-uppercase mb-1">Bookings</div>
-                        <div class="h5 text-black-color font-weight-800 ">4000</div>
+                        <div class="h5 text-black-color font-weight-800 "><asp:Label ID="TxtBookings" runat="server" Text="Label"></asp:Label></div>
                       </div>
                       <div class="col-auto"><i class="bi bi-ticket-detailed-fill fa-3x  text-main-color"></i>
                       </div>
@@ -105,7 +90,7 @@
                     <div class="row no-gutters align-items-center">
                       <div class="col mr-2">
                         <div class=" font-weight-bold text-main-color text-uppercase mb-1">Users</div>
-                        <div class="h5 text-black-color font-weight-800 ">4000</div>
+                        <div class="h5 text-black-color font-weight-800 "><asp:Label ID="TxtUsers" runat="server" Text="Label"></asp:Label></div>
                       </div>
                       <div class="col-auto"><i class="bi bi-people-fill fa-3x  text-main-color"></i>
                       </div>

@@ -26,7 +26,7 @@ Public Class Registration
                         con.Open()
                         cmd.ExecuteNonQuery()
                         loginError.Text = "Account Created!"
-                        Response.Redirect("~/login.aspx")
+                        Response.Redirect("login.aspx")
                     End If
 
                 End Using

@@ -92,7 +92,7 @@
     <Import Include="System.Web.UI.HtmlControls" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Dashboard\Admin.aspx" />
+    <Content Include="Pages\Admin.aspx" />
     <Content Include="Content\bootstrap-grid.css" />
     <Content Include="Content\bootstrap-grid.min.css" />
     <Content Include="Content\bootstrap-grid.rtl.css" />
@@ -111,14 +111,12 @@
     <Content Include="Content\bootstrap.rtl.min.css" />
     <Content Include="CSS\login.css" />
     <Content Include="CSS\registration.css" />
-    <Content Include="Dashboard\bookingList.aspx" />
     <Content Include="Dashboard\CSS\admin.css" />
     <Content Include="CSS\Movies.css" />
     <Content Include="CSS\home.css" />
     <Content Include="Dashboard\CSS\bookinglist.css" />
     <Content Include="Dashboard\CSS\movielist.css" />
     <Content Include="Dashboard\CSS\users.css" />
-    <Content Include="Dashboard\MovieList.aspx" />
     <Content Include="Global.asax" />
     <Content Include="img\Projector.jpg" />
     <Content Include="img\Sample Pictures\Endgame.jpg" />
@@ -129,9 +127,22 @@
     <Content Include="img\wallpaper2.jpg" />
     <Content Include="img\Sample.jpg" />
     <Content Include="img\theater.jpg" />
-    <Content Include="img\ujptuqbm.png" />
     <Content Include="img\wallpaper1.jpg" />
-    <Content Include="Registration.aspx" />
+    <Content Include="img\wallpaper3.jpg" />
+    <Content Include="Pages\Movielist.aspx" />
+    <Content Include="Pages\Registration.aspx" />
+    <Content Include="SASS\admin.css">
+      <DependentUpon>admin.scss</DependentUpon>
+    </Content>
+    <Content Include="SASS\admin.min.css">
+      <DependentUpon>admin.css</DependentUpon>
+    </Content>
+    <Content Include="SASS\home.css">
+      <DependentUpon>home.scss</DependentUpon>
+    </Content>
+    <Content Include="SASS\home.min.css">
+      <DependentUpon>home.css</DependentUpon>
+    </Content>
     <Content Include="SASS\login.css">
       <DependentUpon>login.scss</DependentUpon>
     </Content>
@@ -150,37 +161,31 @@
     <Content Include="Scripts\bootstrap.esm.min.js" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
-    <Content Include="Home.aspx" />
-    <Content Include="Dashboard\UsersService.asmx" />
+    <Content Include="Pages\Home.aspx" />
+    <Content Include="Pages\UsersService.asmx" />
     <Content Include="Web.config" />
-    <Content Include="Login.aspx" />
-    <Content Include="Movies.aspx" />
-    <Content Include="Dashboard\Users.aspx" />
+    <Content Include="Pages\Login.aspx" />
+    <Content Include="Pages\Movies.aspx" />
+    <Content Include="Pages\Users.aspx" />
+    <Content Include="Pages\bookinglist.aspx" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Dashboard\Admin.aspx.designer.vb">
+    <Compile Include="Pages\Admin.aspx.designer.vb">
       <DependentUpon>Admin.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Dashboard\Admin.aspx.vb">
+    <Compile Include="Pages\Admin.aspx.vb">
       <DependentUpon>Admin.aspx</DependentUpon>
-      <SubType>ASPXCodebehind</SubType>
-    </Compile>
-    <Compile Include="Dashboard\bookingList.aspx.designer.vb">
-      <DependentUpon>bookingList.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="Dashboard\bookingList.aspx.vb">
-      <DependentUpon>bookingList.aspx</DependentUpon>
-      <SubType>ASPXCodebehind</SubType>
-    </Compile>
-    <Compile Include="Dashboard\MovieList.aspx.designer.vb">
-      <DependentUpon>MovieList.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="Dashboard\MovieList.aspx.vb">
-      <DependentUpon>MovieList.aspx</DependentUpon>
       <SubType>ASPXCodebehind</SubType>
     </Compile>
     <Compile Include="Global.asax.vb">
       <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Movielist.aspx.designer.vb">
+      <DependentUpon>Movielist.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Movielist.aspx.vb">
+      <DependentUpon>Movielist.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
     </Compile>
     <Compile Include="My Project\AssemblyInfo.vb" />
     <Compile Include="My Project\Application.Designer.vb">
@@ -201,45 +206,52 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
-    <Compile Include="Login.aspx.designer.vb">
+    <Compile Include="Pages\Login.aspx.designer.vb">
       <DependentUpon>Login.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Login.aspx.vb">
+    <Compile Include="Pages\Login.aspx.vb">
       <DependentUpon>Login.aspx</DependentUpon>
       <SubType>ASPXCodebehind</SubType>
     </Compile>
-    <Compile Include="Registration.aspx.designer.vb">
+    <Compile Include="Pages\Registration.aspx.designer.vb">
       <DependentUpon>Registration.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Registration.aspx.vb">
+    <Compile Include="Pages\Registration.aspx.vb">
       <DependentUpon>Registration.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Home.aspx.designer.vb">
+    <Compile Include="Pages\Home.aspx.designer.vb">
       <DependentUpon>Home.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Home.aspx.vb">
+    <Compile Include="Pages\Home.aspx.vb">
       <DependentUpon>Home.aspx</DependentUpon>
-      <SubType>ASPXCodebehind</SubType>
+      <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Movies.aspx.designer.vb">
+    <Compile Include="Pages\Movies.aspx.designer.vb">
       <DependentUpon>Movies.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Movies.aspx.vb">
+    <Compile Include="Pages\Movies.aspx.vb">
       <DependentUpon>Movies.aspx</DependentUpon>
       <SubType>ASPXCodebehind</SubType>
     </Compile>
-    <Compile Include="Dashboard\Users.aspx.designer.vb">
+    <Compile Include="Pages\Users.aspx.designer.vb">
       <DependentUpon>Users.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Dashboard\Users.aspx.vb">
+    <Compile Include="Pages\Users.aspx.vb">
       <DependentUpon>Users.aspx</DependentUpon>
       <SubType>ASPXCodebehind</SubType>
     </Compile>
-    <Compile Include="Dashboard\usersClass.vb" />
-    <Compile Include="Dashboard\UsersService.asmx.vb">
+    <Compile Include="Pages\usersClass.vb" />
+    <Compile Include="Pages\UsersService.asmx.vb">
       <DependentUpon>UsersService.asmx</DependentUpon>
       <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Pages\bookinglist.aspx.designer.vb">
+      <DependentUpon>bookinglist.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\bookinglist.aspx.vb">
+      <DependentUpon>bookinglist.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
     </Compile>
   </ItemGroup>
   <ItemGroup>
@@ -294,6 +306,8 @@
     <Content Include="SASS\registration.scss" />
     <Content Include="SASS\_variables.scss" />
     <Content Include="SASS\_reset.scss" />
+    <Content Include="SASS\home.scss" />
+    <Content Include="SASS\admin.scss" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -301,7 +315,9 @@
       <DependentUpon>Web.config</DependentUpon>
     </None>
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Folder Include="Dashboard\NewFolder1\" />
+  </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>

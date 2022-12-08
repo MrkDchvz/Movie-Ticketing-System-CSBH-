@@ -11,7 +11,7 @@ Option Strict On
 Option Explicit On
 
 
-Partial Public Class WebForm3
+Partial Public Class Admin
 
     '''<summary>
     '''form1 control.
@@ -30,4 +30,22 @@ Partial Public Class WebForm3
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
     Protected WithEvents logoutButton As Global.System.Web.UI.WebControls.LinkButton
+
+    '''<summary>
+    '''TxtBookings control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents TxtBookings As Global.System.Web.UI.WebControls.Label
+
+    '''<summary>
+    '''TxtUsers control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents TxtUsers As Global.System.Web.UI.WebControls.Label
 End Class

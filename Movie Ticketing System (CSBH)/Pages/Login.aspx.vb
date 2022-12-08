@@ -8,9 +8,9 @@ Public Class WebForm1
     Private Sub WebForm1_Init(sender As Object, e As EventArgs) Handles Me.Init
         If Session("username") IsNot Nothing Then
             If Session("rank") = "1" Then
-                Response.Redirect("~/home.aspx")
+                Response.Redirect("home.aspx")
             ElseIf Session("rank") = "2" Then
-                Response.Redirect("~/dashboard/admin.aspx")
+                Response.Redirect("admin.aspx")
             End If
         End If
         Notpostback()
@@ -39,9 +39,9 @@ Public Class WebForm1
             Next
 
             If Session("rank") = "1" Then
-                Response.Redirect("~/home.aspx")
+                Response.Redirect("home.aspx")
             ElseIf Session("rank") = "2" Then
-                Response.Redirect("~/dashboard/admin.aspx")
+                Response.Redirect("admin.aspx")
             End If
         Else
             loginError.Text = "Invalid username or password"

@@ -1,0 +1,145 @@
+﻿@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;900&display=swap');
+@import '_reset.scss';
+@import '_variables.scss';
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+
+:root {
+    /*-----Var Colors-----*/
+    --main-color: hsl(357, 77%, 41%);
+    --white-color: hsl(60, 3%, 94%);
+    --black-color: hsl(0, 3%, 12%);
+}
+
+/*-----Text Colors-----*/
+.text-main-color {
+    color: $accent-color;
+}
+
+.text-white-color {
+    color: $text-color;
+}
+
+.text-black-color {
+    color: $primary-color;
+}
+
+/*-----Background Colors-----*/
+.bg-main-color {
+    background: $accent-color;
+}
+
+.bg-white-color {
+    background: $text-color;
+}
+
+.bg-black-color {
+    background: $primary-color;
+}
+
+/*----------------*/
+/*---Typography---*/
+/*----------------*/
+
+
+body {
+    font-family: 'Poppins', sans-serif;
+    color: $text-color;
+}
+
+#logo {
+    font-size: 30px;
+    text-decoration: none;
+    font-weight: 900;
+}
+
+#logo,
+.nav-link {
+    color: $text-color;
+}
+
+.nav-link:hover {
+    color: $accent-color;
+}
+
+.nav-link .bi {
+    text-align: center;
+}
+
+#dropDownUser {
+    color: hsl(0, 3%, 12%);
+}
+
+li .nav-link {
+    text-align: center;
+}
+
+/*----------------*/
+/*-----Layout-----*/
+/*----------------*/
+
+/*-----Sidebar-----*/
+#sidebar {
+    background-color: $primary-color;
+    border: 1px solid $primary-color;
+    width: 12rem;
+    min-height: 100vh;
+    margin-left: 0rem;
+    transition: all 0.3s ease-in-out;
+}
+
+#wrapper.toggled #sidebar {
+    margin-left: -12rem;
+}
+
+
+.nav-pills .nav-link.active {
+    background-color: $accent-color;
+}
+
+.nav-link,
+#dropDownUser {
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.nav-link .bi {
+    display: block;
+}
+
+/*-----Content Container-----*/
+.content {
+    width: 100%;
+    background-color: hsla(357, 77%, 41%,0.10);
+}
+
+/*-----Navigation Bar-----*/
+.navbar {
+    height: 4.375rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.dropdown-menu {
+    min-width: 100%;
+    transform: translate(-70px, 20px);
+}
+
+
+#sidebarToggleTop {
+    color: $accent-color;
+    transition: all .3s ease-in-out;
+    cursor: pointer;
+}
+
+/* Card Component */
+
+.card-component > .card {
+    border-left: 4px solid $accent-color;
+}
