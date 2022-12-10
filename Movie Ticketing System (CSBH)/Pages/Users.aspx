@@ -20,7 +20,8 @@
     <!-- DataTables for Bootstrap 5 -->
     <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/v/bs5/dt-1.13.1/sl-1.5.0/sr-1.2.0/datatables.min.css"/>
     <!-- CSS -->
-    <link href="~/dashboard/CSS/users.css" rel="stylesheet" />
+    <link href="../SASS/userlist.css" rel="stylesheet" />
+    <link href="../SASS/userlist.min.css" rel="stylesheet" />
    
 
 </head>
@@ -93,6 +94,7 @@
 
  
           </div>
+            <!-- Modal -->
          <div class="modal fade" data-bs-backdrop="static" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
              <div class="modal-dialog">
                  <div class="modal-content">
@@ -153,7 +155,7 @@
                 method: 'post',
                 dataType: 'json',
                 success: function (data) {
-                    $('#table_users').DataTable({
+                    $('#table_users').DataTable({ 
                         data: data,
                         columns: [
                             { 'data' : 'userId'},

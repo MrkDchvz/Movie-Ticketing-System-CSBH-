@@ -14,5 +14,13 @@
   {
     "outputFile": "SASS/admin.css",
     "inputFile": "SASS/admin.scss"
+  },
+  {
+    "outputFile": "SASS/userlist.css",
+    "inputFile": "SASS/userlist.scss"
+  },
+  {
+    "outputFile": "SASS/movielist.css",
+    "inputFile": "SASS/movielist.scss"
   }
 ]

@@ -149,11 +149,23 @@
     <Content Include="SASS\login.min.css">
       <DependentUpon>login.css</DependentUpon>
     </Content>
+    <Content Include="SASS\movielist.css">
+      <DependentUpon>movielist.scss</DependentUpon>
+    </Content>
+    <Content Include="SASS\movielist.min.css">
+      <DependentUpon>movielist.css</DependentUpon>
+    </Content>
     <Content Include="SASS\registration.css">
       <DependentUpon>registration.scss</DependentUpon>
     </Content>
     <Content Include="SASS\registration.min.css">
       <DependentUpon>registration.css</DependentUpon>
+    </Content>
+    <Content Include="SASS\userlist.css">
+      <DependentUpon>users.scss</DependentUpon>
+    </Content>
+    <Content Include="SASS\userlist.min.css">
+      <DependentUpon>userlist.css</DependentUpon>
     </Content>
     <Content Include="Scripts\bootstrap.bundle.js" />
     <Content Include="Scripts\bootstrap.bundle.min.js" />
@@ -308,6 +320,10 @@
     <Content Include="SASS\_reset.scss" />
     <Content Include="SASS\home.scss" />
     <Content Include="SASS\admin.scss" />
+    <Content Include="SASS\movielist.scss" />
+    <Content Include="SASS\users.scss" />
+    <Content Include="SASS\bookinglist.scss" />
+    <Content Include="SASS\Movies.scss" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

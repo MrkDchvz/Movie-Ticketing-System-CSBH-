@@ -34,7 +34,7 @@
 
 body {
     font-family: 'Poppins', sans-serif;
-    color: $text-color;
+    color: $primary-color;
 }
 
 #logo {
@@ -123,8 +123,19 @@ li .nav-link {
     cursor: pointer;
 }
 
-/* Card Component */
+.profile-logo {
+    display: grid;
+    font-size: 10rem;
+    text-align: center;
 
+}
+/* Card Component */
 .card-component > .card {
     border-left: 4px solid $accent-color;
+}
+
+.btn--add-movie {
+    position: relative;
+    top: 1.9rem;
+    z-index: 1;
 }

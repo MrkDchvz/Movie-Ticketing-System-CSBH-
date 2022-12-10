@@ -52,7 +52,7 @@ ol[role='list'] {
 /*----------------*/
 body {
   font-family: 'Poppins', sans-serif;
-  color: #ffffff; }
+  color: #1c1c1c; }
 
 #logo {
   font-size: 30px;
@@ -122,6 +122,16 @@ li .nav-link {
   transition: all .3s ease-in-out;
   cursor: pointer; }
 
+.profile-logo {
+  display: grid;
+  font-size: 10rem;
+  text-align: center; }
+
 /* Card Component */
 .card-component > .card {
   border-left: 4px solid #dd2e44; }
+
+.btn--add-movie {
+  position: relative;
+  top: 1.9rem;
+  z-index: 1; }

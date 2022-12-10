@@ -23,6 +23,15 @@ Partial Public Class Movieslist
     Protected WithEvents form1 As Global.System.Web.UI.HtmlControls.HtmlForm
 
     '''<summary>
+    '''LinkButton1 control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents LinkButton1 As Global.System.Web.UI.WebControls.LinkButton
+
+    '''<summary>
     '''logoutButton control.
     '''</summary>
     '''<remarks>
@@ -30,4 +39,184 @@ Partial Public Class Movieslist
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
     Protected WithEvents logoutButton As Global.System.Web.UI.WebControls.LinkButton
+
+    '''<summary>
+    '''SelectedMovie control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents SelectedMovie As Global.System.Web.UI.WebControls.Label
+
+    '''<summary>
+    '''hdnLabelId control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents hdnLabelId As Global.System.Web.UI.HtmlControls.HtmlInputHidden
+
+    '''<summary>
+    '''SelectedMovieId control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents SelectedMovieId As Global.System.Web.UI.WebControls.Label
+
+    '''<summary>
+    '''SubmitModalDelete control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents SubmitModalDelete As Global.System.Web.UI.WebControls.Button
+
+    '''<summary>
+    '''EditName control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents EditName As Global.System.Web.UI.WebControls.TextBox
+
+    '''<summary>
+    '''EditLang control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents EditLang As Global.System.Web.UI.WebControls.TextBox
+
+    '''<summary>
+    '''EditDuration control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents EditDuration As Global.System.Web.UI.WebControls.TextBox
+
+    '''<summary>
+    '''EditGenre control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents EditGenre As Global.System.Web.UI.WebControls.TextBox
+
+    '''<summary>
+    '''EditDate control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents EditDate As Global.System.Web.UI.WebControls.TextBox
+
+    '''<summary>
+    '''EditTicket control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents EditTicket As Global.System.Web.UI.WebControls.TextBox
+
+    '''<summary>
+    '''RequiredFieldValidator1 control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents RequiredFieldValidator1 As Global.System.Web.UI.WebControls.RequiredFieldValidator
+
+    '''<summary>
+    '''SubmitModalEdit control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents SubmitModalEdit As Global.System.Web.UI.WebControls.Button
+
+    '''<summary>
+    '''AddName control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents AddName As Global.System.Web.UI.WebControls.TextBox
+
+    '''<summary>
+    '''AddLang control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents AddLang As Global.System.Web.UI.WebControls.TextBox
+
+    '''<summary>
+    '''AddDuration control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents AddDuration As Global.System.Web.UI.WebControls.TextBox
+
+    '''<summary>
+    '''AddGenre control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents AddGenre As Global.System.Web.UI.WebControls.TextBox
+
+    '''<summary>
+    '''AddDate control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents AddDate As Global.System.Web.UI.WebControls.TextBox
+
+    '''<summary>
+    '''AddTicket control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents AddTicket As Global.System.Web.UI.WebControls.TextBox
+
+    '''<summary>
+    '''RequiredFieldValidator2 control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents RequiredFieldValidator2 As Global.System.Web.UI.WebControls.RequiredFieldValidator
+
+    '''<summary>
+    '''SubmitModalAdd control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents SubmitModalAdd As Global.System.Web.UI.WebControls.Button
 End Class
