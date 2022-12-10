@@ -22,5 +22,9 @@
   {
     "outputFile": "SASS/movielist.css",
     "inputFile": "SASS/movielist.scss"
+  },
+  {
+    "outputFile": "SASS/AdminProfile.css",
+    "inputFile": "SASS/AdminProfile.scss"
   }
 ]

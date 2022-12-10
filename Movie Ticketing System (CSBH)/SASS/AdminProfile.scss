@@ -14,6 +14,14 @@
     color: $primary-color;
 }
 
+.text-danger-color {
+    color: $danger-color;
+}
+
+.text-danger-color {
+    color: $danger-color;
+}
+
 /*-----Background Colors-----*/
 .bg-main-color {
     background: $accent-color;
@@ -27,14 +35,7 @@
     background: $primary-color;
 }
 
-/*Layouts*/
-.width {
-    width: 100%;
-}
 
-.row {
-    margin: 0;
-}
 
 /*----------------*/
 /*---Typography---*/
@@ -132,19 +133,56 @@ li .nav-link {
     cursor: pointer;
 }
 
-.profile-logo {
-    display: grid;
-    font-size: 10rem;
-    text-align: center;
 
-}
-/* Card Component */
-.card-component > .card {
-    border-left: 4px solid $accent-color;
+
+.card-body {
+  background-color:  rgba(237,241,245,255);
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-.btn--add-movie {
-    position: relative;
-    top: 1.9rem;
-    z-index: 1;
+/* User Configuration */
+
+
+
+.admin__input-container {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    width: 60%;
+    padding: 0 2rem;
+    background-color: rgba(250,250,250,255);
+
+
+    .primary-logo {
+        display: block;
+        font-size: 10rem;
+        text-align: center;
+    }
+
+    .admin__field {
+        width: 100%;
+        margin-top: 1rem;
+        padding: .6rem .4rem;
+        outline: none;
+        border: none;
+        border-radius: 4px;
+        background-color: rgba(237,241,245,255);
+    }
+
+    .admin__button {
+        outline: none;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        padding: 1rem 2rem;
+
+        color: $text-color;
+        background-color: $btn-primary-color;
+
+        margin: 2rem 0;
+    }
 }
+
+

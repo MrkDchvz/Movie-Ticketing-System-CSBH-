@@ -30,9 +30,7 @@
                         <asp:TextBox ID="loginPassword" CssClass="login__input login__input--password" autocomplete="off"  runat="server" TextMode="Password" required></asp:TextBox>
                         <label for="loginPassword">Passsword</label>
                         <asp:Label ID="loginError" runat="server" Text="" CssClass="login__error"></asp:Label>
-                        
 
-                        
                     </div>
                 </div>
                 <asp:Button ID="Button1" runat="server" CssClass="login__button" Text="Login" />

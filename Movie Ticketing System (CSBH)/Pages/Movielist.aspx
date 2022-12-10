@@ -56,7 +56,7 @@
                                 <i src="#" class="rounded-circle me-2 bi bi-person-circle fa-2x" width="32" height="32"></i>
                             </a>
                             <div class="dropdown-menu dropdown-menu-right shadow" aria-labelledby="dropDownUser">
-                                <asp:LinkButton ID="LinkButton1" runat="server" CssClass="dropdown-item" data-bs-toggle="modal" data-bs-target="#exampleModal"><i class="bi bi-person me-2 "></i><span>Profile</span></asp:LinkButton>
+                                <a class="dropdown-item" href="AdminProfile.aspx"><i class="bi bi-person me-2 "></i><span>Profile</span></a>
                                 <asp:LinkButton ID="logoutButton" CssClass="dropdown-item text-danger" runat="server"><i class="bi bi-box-arrow-in-right me-2 fa-sm"></i><span>Logout</span></asp:LinkButton>
 
                             </div>
@@ -64,34 +64,6 @@
                     </ul>
                 </nav>
 
-                <!-- Edit Profile Modal -->
-
-                <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                    <div class="modal-dialog">
-                        <div class="modal-content">
-                            <div class="modal-header">
-                                <h5 class="modal-title" id="exampleModalLabel">Edit profile</h5>
-                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                            </div>
-                            <div class="modal-body">
-                               <div class="container-fluid">
-                                   <div class="row">
-                                       <div class="col-md-12">
-                                           <i src="#" class="profile-logo rounded-circle me-2 bi bi-person-circle fa-2x"></i>
-                                       </div>
-                                       <div class="row">
-                                               <p ></p>
-                                       </div>
-                                   </div>
-                               </div>
-                            </div>
-                            <div class="modal-footer">
-                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                                <button type="button" class="btn btn-primary">Save changes</button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
 
                 <!-- Navbar END -->
 

@@ -36,6 +36,7 @@ Public Class WebForm1
                 Session("username") = row("username").ToString
                 Session("email") = row("email").ToString
                 Session("rank") = row("rank").ToString
+                Session("password") = row("password").ToString
             Next
 
             If Session("rank") = "1" Then

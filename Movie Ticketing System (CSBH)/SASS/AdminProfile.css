@@ -37,6 +37,12 @@ ol[role='list'] {
 .text-black-color {
   color: #1c1c1c; }
 
+.text-danger-color {
+  color: #f7607a; }
+
+.text-danger-color {
+  color: #f7607a; }
+
 /*-----Background Colors-----*/
 .bg-main-color {
   background: #dd2e44; }
@@ -46,13 +52,6 @@ ol[role='list'] {
 
 .bg-black-color {
   background: #1c1c1c; }
-
-/*Layouts*/
-.width {
-  width: 100%; }
-
-.row {
-  margin: 0; }
 
 /*----------------*/
 /*---Typography---*/
@@ -129,16 +128,38 @@ li .nav-link {
   transition: all .3s ease-in-out;
   cursor: pointer; }
 
-.profile-logo {
-  display: grid;
-  font-size: 10rem;
-  text-align: center; }
+.card-body {
+  background-color: #edf1f5;
+  display: flex;
+  justify-content: center;
+  align-items: center; }
 
-/* Card Component */
-.card-component > .card {
-  border-left: 4px solid #dd2e44; }
-
-.btn--add-movie {
-  position: relative;
-  top: 1.9rem;
-  z-index: 1; }
+/* User Configuration */
+.admin__input-container {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  width: 60%;
+  padding: 0 2rem;
+  background-color: #fafafa; }
+  .admin__input-container .primary-logo {
+    display: block;
+    font-size: 10rem;
+    text-align: center; }
+  .admin__input-container .admin__field {
+    width: 100%;
+    margin-top: 1rem;
+    padding: .6rem .4rem;
+    outline: none;
+    border: none;
+    border-radius: 4px;
+    background-color: #edf1f5; }
+  .admin__input-container .admin__button {
+    outline: none;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    padding: 1rem 2rem;
+    color: #ffffff;
+    background-color: #3db4f2;
+    margin: 2rem 0; }

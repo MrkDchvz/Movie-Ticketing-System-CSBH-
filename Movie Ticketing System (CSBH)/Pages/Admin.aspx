@@ -3,7 +3,7 @@
 <!DOCTYPE html>
 <html lang="en" xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
-     <meta charset="UTF-8">
+    <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
@@ -29,7 +29,7 @@
           <hr>
           <ul id="side-bar-nav" class="nav nav-pills flex-column mb-auto">
             <li class="nav-item"><a href="Admin.aspx" class="nav-link active"><i class="bi bi-speedometer2 me-2 fa-sm"></i><span>Dashboard</span></a></li>
-            <li><a href="Movielist.aspx" class="nav-link"><i class="bi bi-film me-2 fa-sm"></i></i><span>Movies</span></a></li>
+            <li><a href="Movielist.aspx" class="nav-link"><i class="bi bi-film me-2 fa-sm"></i><span>Movies</span></a></li>
             <li><a href="Users.aspx" class="nav-link"><i class="bi bi-people me-2 fa-sm"></i><span>Users</span></a></li>
             <li><a  href="bookinglist.aspx" class="nav-link"><i class="bi bi-ticket-detailed me-2 fa-sm"></i><span>Booking</span></a></li>
           </ul>
@@ -51,7 +51,7 @@
                     <i src="#" class="rounded-circle me-2 bi bi-person-circle fa-2x"  width="32" height="32"></i>
                 </a>
                 <div  class="dropdown-menu dropdown-menu-right shadow" aria-labelledby="dropDownUser">
-                  <a class="dropdown-item" href="#"><i class="bi bi-person me-2 "></i><span>Profile</span></a>
+                  <a class="dropdown-item" href="AdminProfile.aspx"><i class="bi bi-person me-2 "></i><span>Profile</span></a>
                   <asp:LinkButton ID="logoutButton" CssClass="dropdown-item text-danger" runat="server"><i class="bi bi-box-arrow-in-right me-2 fa-sm"></i><span>Logout</span></asp:LinkButton>
                 </div>
               </li>

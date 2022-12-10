@@ -55,7 +55,7 @@
                     <i src="#" class="rounded-circle me-2 bi bi-person-circle fa-2x"  width="32" height="32"></i>
                 </a>
                 <div  class="dropdown-menu dropdown-menu-right shadow" aria-labelledby="dropDownUser">
-                  <a class="dropdown-item" href="#"><i class="bi bi-person me-2 "></i><span>Profile</span></a>
+                 <a class="dropdown-item" href="AdminProfile.aspx"><i class="bi bi-person me-2 "></i><span>Profile</span></a>
                   <asp:LinkButton ID="logoutButton" CssClass="dropdown-item text-danger" runat="server"><i class="bi bi-box-arrow-in-right me-2 fa-sm"></i><span>Logout</span></asp:LinkButton>
                 </div>
               </li>
