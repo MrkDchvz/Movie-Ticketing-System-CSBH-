@@ -77,39 +77,39 @@
 
                                     <i src="#" class="primary-logo rounded-circle me-2 bi bi-person-circle fa-2x" width="32" height="32"></i>
                                 </div>
-
+                                <%-- Username Input --%>
                                 <div class="admin__input admin__input--username">
-                                    <p class="admin__label">Username</p>
-                                    <asp:TextBox ID="AdminNameInput" CssClass="admin__field" runat="server" ClientIDMode="Static" required></asp:TextBox>
-                                </div>
+                                    <p class="admin__label">Change Username</p>
+                                    <asp:TextBox ID="AdminNameInput" CssClass="admin__field" runat="server" ClientIDMode="Static" placeholder="Username" ></asp:TextBox>
+                                    <asp:Button ID="UsernameSubmit" runat="server" Text="Save Username" CssClass="admin__btn admin__btn--username" />
 
-                                <div class="admin__input admin__input--current-pass">
-                                    <p class="admin__label">Current Password</p>
-                                    <asp:TextBox ID="AdminCurrentPassInput" CssClass="admin__field" runat="server" TextMode="Password" required></asp:TextBox>
-                                    <asp:Label ID="TxtError" runat="server" CssClass="text-danger-color mt-2" Text=""></asp:Label>
                                 </div>
+                                    <%-- Password Input --%>
+                                <div class="container__change-pass">
+                                    <p class="admin__label">Change Password</p>
+                                    <div class="admin__input admin__input--current-pass">
 
-                                <div class="admin__input__new-pass">
-                                    <p class="admin__label">New Password</p>
-                                    <asp:TextBox ID="AdminNewPassInput" CssClass="admin__field" runat="server" TextMode="Password"></asp:TextBox>
-                                </div>
+                                        <asp:TextBox ID="AdminCurrentPassInput" CssClass="admin__field" runat="server" TextMode="Password" placeholder="Current Password" oninput="PassInputEvent()"></asp:TextBox>
+                                        <asp:Label ID="TxtError" runat="server" CssClass="text-danger-color mt-2" Text=""></asp:Label>
+                                    </div>
 
-                                <div class="admin__input__confirm-pass">
-                                    <p class="admin__label">Confirm Password</p>
-                                    <asp:TextBox ID="AdminConfirmPassInput" CssClass="admin__field" runat="server" TextMode="Password"></asp:TextBox>
-                                    <asp:CompareValidator ID="CompareValidator1"
-                                        runat="server" 
-                                        ErrorMessage="Passwords don't match"
-                                        ControlToValidate="AdminConfirmPassInput"
-                                        CssClass="text-danger-color"
-                                        ControlToCompare="AdminNewPassInput">
+                                    <div class="admin__input__new-pass">
+                                        <asp:TextBox ID="AdminNewPassInput" CssClass="admin__field" runat="server" placeholder="New Password" TextMode="Password" oninput="PassInputEvent()"></asp:TextBox>
+                                    </div>
+
+                                    <div class="admin__input__confirm-pass">
+                                        <asp:TextBox ID="AdminConfirmPassInput" CssClass="admin__field" runat="server" TextMode="Password" placeholder="Confirm Password" oninput="PassInputEvent()"></asp:TextBox>
+                                        <asp:CompareValidator ID="CompareValidator1"
+                                            runat="server"
+                                            ErrorMessage="Passwords don't match"
+                                            ControlToValidate="AdminConfirmPassInput"
+                                            CssClass="text-danger-color"
+                                            ControlToCompare="AdminNewPassInput">
                                         
-                                    </asp:CompareValidator>
-                                    
+                                        </asp:CompareValidator>
+                                    </div>
+                                    <asp:Button ID="PasswordSubmit" runat="server" Text="Save password" CssClass="admin__btn admin__btn--password"  />
                                 </div>
-
-                                <asp:Button ID="SubmitButtonAdmin" CssClass="admin__button" runat="server" Text="Save" />
-
 
 
                             </div>
@@ -126,9 +126,9 @@
 
     <!-- Jquery script-->
     <script
-  src="https://code.jquery.com/jquery-3.6.1.js"
-  integrity="sha256-3zlB5s2uwoUzrXK3BT7AX3FyvojsraNFxCc2vC/7pNI="
-  crossorigin="anonymous"></script>
+        src="https://code.jquery.com/jquery-3.6.1.js"
+        integrity="sha256-3zlB5s2uwoUzrXK3BT7AX3FyvojsraNFxCc2vC/7pNI="
+        crossorigin="anonymous"></script>
 
     <script type="text/javascript">
         const el = document.getElementById("wrapper");
@@ -142,7 +142,54 @@
             icon.classList.toggle("bi-x-circle")
         })
     </script>
+    <%-- Button Input Events --%>
+    <script>
+        // Username Button
+        const userbtn = document.getElementById("UsernameSubmit");
+        const userInput = document.getElementById("AdminNameInput");
+        const prevInput = userInput.value;
 
+        // Username Input Event
+        userInput.addEventListener('input', () => {
+            if (userInput.value != prevInput && userInput.value.length != 0) {
+                userbtn.classList.add("show");
+            } else {
+                userbtn.classList.remove("show");
+            }
+
+        })
+
+        //Password Input Event
+        function PassInputEvent() {
+            const passbtn = document.getElementById("PasswordSubmit");
+            const currentInput = document.getElementById("AdminCurrentPassInput");
+            const newInput = document.getElementById("AdminNewPassInput");
+            const confirmInput = document.getElementById("AdminConfirmPassInput");
+
+            if (currentInput.value.length != 0 && newInput.value.length != 0 && confirmInput.value.length) {
+                passbtn.classList.add("show");
+            } else {
+                passbtn.classList.remove("show");
+            }
+        }
+
+     
+    </script>
+
+
+
+    <%-- Incorrect password label--%>
+    <script>
+        const txtError = document.getElementById("TxtError");
+        const currentPassInput = document.getElementById("AdminCurrentPassInput");
+        let s = true;
+        if (s) {
+            currentPassInput.addEventListener('input', () => {
+                txtError.textContent = "";
+                s = false;
+            })
+        }
+    </script>
 
 
 </body>

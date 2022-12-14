@@ -1,2 +1,298 @@
-﻿body {
+﻿@import '_reset.scss';
+@import '_variables.scss';
+
+:root {
+    /*-----Colors-----*/
+    --main-color: hsl(357, 77%, 41%);
+    --white-color: hsl(60, 3%, 94%);
+    --black-color: hsl(0, 3%, 12%);
+    /*---pagination settings----*/
+    --swiper-pagination-color: var(--main-color);
+    --swiper-pagination-bullet-size: 8px;
+    --swiper-pagination-bullet-width: 8px;
+    --swiper-pagination-bullet-height: 8px;
+    --swiper-pagination-bullet-inactive-color: #000;
+    --swiper-pagination-bullet-inactive-opacity: 0.2;
+    --swiper-pagination-bullet-opacity: 1;
+    --swiper-pagination-bullet-horizontal-gap: 4px;
+    --swiper-pagination-bullet-vertical-gap: 6px;
+    /* Slide Background settings*/
+    --bg-linear-gradient: linear-gradient(to top, var(--black-color) 40%, rgba(0,0,0,0) 50%);
+}
+/*-------------------*/
+/*-----Typography-----*/
+/* -------------------*/
+body {
+    font-family: 'Poppins', sans-serif;
+    color: $text-color;
+}
+
+
+.article__content {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+    text-align: center;
+    gap: 1.6rem;
+    padding: 2rem;
+
+    .movie__title {
+        font-family: 'Literata', serif;
+        font-size: 2.5rem;
+    }
+
+    .movie__description {
+        display: none;
+        text-align: center;
+        color: #999696;
+        position: relative;
+    }
+
+    .movie__tags {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: .8rem;
+
+
+        .tags {
+            color: $grey-color;
+            padding: .2rem .5rem;
+            border: 1px solid $grey-color;
+        }
+    }
+}
+
+
+/*-------------------*/
+/*-----Navigation----*/
+/*-------------------*/
+.nav-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2rem 3rem;
+    background-color: none;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 9999;
+}
+
+.nav-icon-logo {
+    color: $accent-color;
+    font-size: 1.6rem;
+    opacity: .80;
+}
+
+.nav-links {
+    display: none;
+}
+
+.nav-hamburger {
+    display: block;
+    border: none;
+    background: none;
+    width: 1.7rem;
+    outline: none;
+    cursor: pointer;
+}
+
+.nav-hamburger-bar,
+.nav-hamburger::before,
+.nav-hamburger::after {
+    content: "";
+    display: block;
+    height: 3px;
+    background-color: hsla(60, 3%, 94%,0.50);
+    margin: 6px 0;
+    transition: all 200ms ease-in;
+    border-radius: 25px;
+}
+
+.nav-hamburger.isactive .nav-hamburger-bar {
+    opacity: 0;
+}
+
+.nav-hamburger.isactive::before {
+    transform: rotate(-45deg) translate(-6px, 6.4px);
+}
+
+.nav-hamburger.isactive::after {
+    transform: rotate(45deg) translate(-6px, -6px);
+}
+
+/*-------------------*/
+/*----Mobile Menu----*/
+/*-------------------*/
+.nav-mobile-menu {
+    width: 100%;
+    min-height: 100vh;
+    position: fixed;
+    top: 0;
+    background: rgba(0,0,0,0.8);
+    backdrop-filter: blur(6px);
+    left: 100%;
+    transition: 0.4s;
+    z-index: 98;
+    padding-top: 120px;
+}
+
+.nav-mobile-menu.isactive {
+    left: 0%;
+}
+
+.nav-mobile-links {
+    position: relative;
+    top: -50%;
+    transform: translateY(70%);
+}
+
+.nav-mobile-links a {
+    display: block;
+    padding: 1rem;
+    text-align: center;
+    text-decoration: none;
+    color: $text-color;
+}
+
+
+/*-------------------*/
+/*------Buttons------*/
+/*-------------------*/
+
+/*----slider arrows---*/
+.nav-button::before,
+.nav-button::after {
+    display: none;
+    color: $text-color;
+    font-size: 25px !important;
+}
+/*----Book now btn---*/
+.article__button {
+    max-width: 100%;
+    display: block;
+    outline: none;
+    border: 1px solid $accent-color;
+    background: $accent-color;
+    padding: .8rem 3rem;
+    cursor: pointer;
+    color: $text-color;
+    overflow: hidden;
+    position: relative;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 500;
+    text-transform: uppercase;
+    transition: all .4s cubic-bezier(0.39, 0.575, 0.565, 1);
+
+    &:hover {
+        background-color: $text-color;
+        color: $text-color;
+    }
+}
+
+
+
+/*-------------------*/
+/*----Slides layout---*/
+/*-------------------*/
+.swiper {
+    height: 100vh;
+}
+
+.swiper-slide {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    justify-content: flex-end;
+    background-color: black;
+    background-position: top;
+}
+
+
+
+.swiper-wrapper .slide-list:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-size: cover;
+    background-position: center;
+    opacity: 0.25;
+}
+
+/*-------------------*/
+/*----Slides Images---*/
+/*-------------------*/
+
+.slide-1:before {
+    background-image: var(--bg-linear-gradient), url('../img/Sample Pictures/Endgame.jpg');
+}
+
+.slide-2:before {
+    background-image: var(--bg-linear-gradient), url('../img/Sample Pictures/joker.jpg');
+}
+
+.slide-3:before {
+    background-image: var(--bg-linear-gradient), url('../img/Sample Pictures/Venom.jpg');
+}
+
+
+
+/*-------------------------------------------------*/
+/*---------------------DESKTOP---------------------*/
+/*-------------------------------------------------*/
+@media (min-width: 768px) {
+
+    /*-------------------*/
+    /*-----Typography-----*/
+    /* -------------------*/
+    .nav-links a {
+        text-decoration: none;
+        color: $text-color;
+    }
+
+    /*-------------------*/
+    /*-----Navigation-----*/
+    /* -------------------*/
+    .nav-hamburger {
+        display: none;
+    }
+
+    .nav-links {
+        display: flex;
+        gap: 1rem;
+        opacity: .70;
+    }
+
+
+
+
+    .swiper-wrapper .slide-list:before {
+        opacity: .25;
+    }
+
+    article {
+        width: 100%;   
+    }
+
+    .article-section {
+        text-align: left;
+    }
+
+    .article__content {
+        width: 60%;
+        padding: 0 1.5rem;
+        margin: 0 2rem;
+        border-left: 2px solid hsla(0°, 0%, 100%, 0.5);
+    }
+
+    .movie__title {
+        font-family: 'Literata', serif;
+        font-size: 3rem;
+        font-weight: 900;
+    }
 }

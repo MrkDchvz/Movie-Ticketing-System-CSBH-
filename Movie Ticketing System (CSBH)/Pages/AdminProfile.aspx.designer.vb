@@ -41,6 +41,15 @@ Partial Public Class AdminProfile
     Protected WithEvents AdminNameInput As Global.System.Web.UI.WebControls.TextBox
 
     '''<summary>
+    '''UsernameSubmit control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents UsernameSubmit As Global.System.Web.UI.WebControls.Button
+
+    '''<summary>
     '''AdminCurrentPassInput control.
     '''</summary>
     '''<remarks>
@@ -86,11 +95,11 @@ Partial Public Class AdminProfile
     Protected WithEvents CompareValidator1 As Global.System.Web.UI.WebControls.CompareValidator
 
     '''<summary>
-    '''SubmitButtonAdmin control.
+    '''PasswordSubmit control.
     '''</summary>
     '''<remarks>
     '''Auto-generated field.
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
-    Protected WithEvents SubmitButtonAdmin As Global.System.Web.UI.WebControls.Button
+    Protected WithEvents PasswordSubmit As Global.System.Web.UI.WebControls.Button
 End Class

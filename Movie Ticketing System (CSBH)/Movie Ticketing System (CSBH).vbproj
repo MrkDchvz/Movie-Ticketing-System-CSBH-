@@ -162,6 +162,12 @@
     <Content Include="SASS\movielist.min.css">
       <DependentUpon>movielist.css</DependentUpon>
     </Content>
+    <Content Include="SASS\Movies.css">
+      <DependentUpon>Movies.scss</DependentUpon>
+    </Content>
+    <Content Include="SASS\Movies.min.css">
+      <DependentUpon>Movies.css</DependentUpon>
+    </Content>
     <Content Include="SASS\registration.css">
       <DependentUpon>registration.scss</DependentUpon>
     </Content>

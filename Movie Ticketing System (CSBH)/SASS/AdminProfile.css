@@ -140,7 +140,7 @@ li .nav-link {
   flex-direction: column;
   gap: 1rem;
   width: 60%;
-  padding: 0 2rem;
+  padding: 2rem 2rem;
   background-color: #fafafa; }
   .admin__input-container .primary-logo {
     display: block;
@@ -154,12 +154,24 @@ li .nav-link {
     border: none;
     border-radius: 4px;
     background-color: #edf1f5; }
-  .admin__input-container .admin__button {
+  .admin__input-container .admin__btn {
     outline: none;
     border: none;
     border-radius: 4px;
     cursor: pointer;
-    padding: 1rem 2rem;
+    padding: 10px 15px;
     color: #ffffff;
-    background-color: #3db4f2;
-    margin: 2rem 0; }
+    background-color: #3db4f2; }
+
+/* Button Input events*/
+.admin__btn--username {
+  display: none;
+  margin-top: .9rem; }
+  .admin__btn--username.show {
+    display: inline-block; }
+
+.admin__btn--password {
+  display: none;
+  margin-top: .4rem; }
+  .admin__btn--password.show {
+    display: inline-block; }
