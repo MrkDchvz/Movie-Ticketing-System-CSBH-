@@ -7,7 +7,7 @@
     --white-color: hsl(60, 3%, 94%);
     --black-color: hsl(0, 3%, 12%);
     /*---pagination settings----*/
-    --swiper-pagination-color: var(--main-color);
+    --swiper-pagination-color: $accent-color;
     --swiper-pagination-bullet-size: 8px;
     --swiper-pagination-bullet-width: 8px;
     --swiper-pagination-bullet-height: 8px;
@@ -17,7 +17,7 @@
     --swiper-pagination-bullet-horizontal-gap: 4px;
     --swiper-pagination-bullet-vertical-gap: 6px;
     /* Slide Background settings*/
-    --bg-linear-gradient: linear-gradient(to top, var(--black-color) 40%, rgba(0,0,0,0) 50%);
+    --bg-linear-gradient: linear-gradient(to top, var(--black-color) 20%, rgba(0,0,0,0) 50%);
 }
 /*-------------------*/
 /*-----Typography-----*/
@@ -44,7 +44,6 @@ body {
 
     .movie__description {
         display: none;
-        text-align: center;
         color: #999696;
         position: relative;
     }
@@ -176,7 +175,8 @@ body {
     outline: none;
     border: 1px solid $accent-color;
     background: $accent-color;
-    padding: .8rem 3rem;
+    padding: .7rem 3rem;
+    border-radius: 10px;
     cursor: pointer;
     color: $text-color;
     overflow: hidden;
@@ -221,7 +221,8 @@ body {
     bottom: 0;
     background-size: cover;
     background-position: center;
-    opacity: 0.25;
+    opacity: .47;
+    z-index: -1;
 }
 
 /*-------------------*/
@@ -247,6 +248,10 @@ body {
 /*-------------------------------------------------*/
 @media (min-width: 768px) {
 
+    :root {
+        --bg-linear-gradient: linear-gradient(to top, var(--black-color), rgba(0,0,0,0) );
+    }
+
     /*-------------------*/
     /*-----Typography-----*/
     /* -------------------*/
@@ -269,7 +274,10 @@ body {
     }
 
 
-
+    .swiper-slide {
+        justify-content: flex-end;
+        padding: 4rem 0;
+    }
 
     .swiper-wrapper .slide-list:before {
         opacity: .25;
@@ -279,20 +287,27 @@ body {
         width: 100%;   
     }
 
-    .article-section {
-        text-align: left;
-    }
 
     .article__content {
         width: 60%;
         padding: 0 1.5rem;
+        gap: 1rem;
         margin: 0 2rem;
         border-left: 2px solid hsla(0°, 0%, 100%, 0.5);
+        align-items: flex-start;
+
+        .movie__title {
+            font-family: 'Literata', serif;
+            font-size: 2.3rem;
+            font-weight: 900;
+        }
+
+        .movie__description {
+            width: 80%;
+            display: block;
+            text-align: start;
+        }
     }
 
-    .movie__title {
-        font-family: 'Literata', serif;
-        font-size: 3rem;
-        font-weight: 900;
-    }
+    
 }
