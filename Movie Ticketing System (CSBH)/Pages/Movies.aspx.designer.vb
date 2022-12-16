@@ -39,4 +39,58 @@ Partial Public Class WebForm2
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
     Protected WithEvents logoutButtonMobile As Global.System.Web.UI.WebControls.LinkButton
+
+    '''<summary>
+    '''BookingAccount control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents BookingAccount As Global.System.Web.UI.WebControls.Label
+
+    '''<summary>
+    '''BookingDate control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents BookingDate As Global.System.Web.UI.WebControls.Label
+
+    '''<summary>
+    '''BookingMovie control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents BookingMovie As Global.System.Web.UI.WebControls.Label
+
+    '''<summary>
+    '''HdnLabelDate control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents HdnLabelDate As Global.System.Web.UI.HtmlControls.HtmlInputHidden
+
+    '''<summary>
+    '''HdnLabelName control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents HdnLabelName As Global.System.Web.UI.HtmlControls.HtmlInputHidden
+
+    '''<summary>
+    '''SubmitBooking control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents SubmitBooking As Global.System.Web.UI.WebControls.Button
 End Class

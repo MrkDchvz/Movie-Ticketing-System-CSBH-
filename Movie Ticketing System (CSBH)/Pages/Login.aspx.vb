@@ -33,6 +33,7 @@ Public Class WebForm1
 
         If dt.Rows.Count > 0 Then 'Check if pass and username is correct'
             For Each row In dt.Rows
+                Session("id") = Convert.ToInt32(row("user_id"))
                 Session("username") = row("username").ToString
                 Session("email") = row("email").ToString
                 Session("rank") = row("rank").ToString

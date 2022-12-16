@@ -80,7 +80,6 @@
                                     <th>Username</th>
                                      <th>Movie</th>
                                      <th>Booking Date</th>
-                                    <th>Paid</th>
                                   </tr>
                               </thead>
                           </table>
@@ -139,9 +138,7 @@
                                     const month = date.getMonth() + 1
                                     return month + "/" + date.getDate() + "/" + date.getFullYear()
                                 },
-                            },
-                            { 'data': 'has_paid' }
-                           
+                            }                
                         ],
                         "lengthChange": false
                     })

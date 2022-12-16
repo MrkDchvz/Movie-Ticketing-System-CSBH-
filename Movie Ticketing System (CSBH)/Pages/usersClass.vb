@@ -22,7 +22,6 @@ Public Class BookingsClass
     Public Property username As String
     Public Property movie_name As String
     Public Property booking_date As Date
-    Public Property has_paid As String
 
 End Class
 

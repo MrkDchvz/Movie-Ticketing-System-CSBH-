@@ -87,7 +87,7 @@ Public Class UsersService
                 booking.username = rdr("username").ToString
                 booking.movie_name = rdr("movie_name").ToString
                 booking.booking_date = Convert.ToDateTime(rdr("booking_date"))
-                booking.has_paid = rdr("has_paid").ToString
+
 
                 bookingList.Add(booking)
 
