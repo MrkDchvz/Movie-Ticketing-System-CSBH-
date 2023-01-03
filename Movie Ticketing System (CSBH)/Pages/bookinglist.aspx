@@ -15,10 +15,8 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.2/font/bootstrap-icons.css" />
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-   <!-- DataTables -->
-    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.13.1/css/jquery.dataTables.css" />
-    <!-- DataTables for Bootstrap 5 -->
-    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/v/bs5/dt-1.13.1/sl-1.5.0/sr-1.2.0/datatables.min.css"/>
+    <!-- DataTables -->
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/v/bs5/dt-1.13.1/b-2.3.3/r-2.4.0/datatables.min.css" />
     <!-- CSS -->
     <link href="~/dashboard/CSS/bookinglist.css" rel="stylesheet" />
    
@@ -113,10 +111,8 @@
     <script src="https://code.jquery.com/jquery-3.6.1.js" integrity="sha256-3zlB5s2uwoUzrXK3BT7AX3FyvojsraNFxCc2vC/7pNI=" crossorigin="anonymous"></script>
 
     <!-- Datatables script -->
-    <script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.13.1/js/jquery.dataTables.js"></script>
+    <script type="text/javascript" src="https://cdn.datatables.net/v/bs5/dt-1.13.1/b-2.3.3/r-2.4.0/sb-1.4.0/datatables.min.js"></script>
 
-    <!--Datatables for boostrap 5 script -->
-    <script type="text/javascript" src="https://cdn.datatables.net/v/bs5/dt-1.13.1/sl-1.5.0/sr-1.2.0/datatables.min.js"></script>
     <!-- insert JSON to table-->
     <script type="text/javascript">
         $(document).ready(function () {
@@ -140,7 +136,8 @@
                                 },
                             }                
                         ],
-                        "lengthChange": false
+                        "lengthChange": false,
+                        responsive: true
                     })
                 }
             })

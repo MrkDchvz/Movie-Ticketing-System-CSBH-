@@ -11,6 +11,7 @@ Public Class AdminProfile
     Private Sub AdminProfile_Load(sender As Object, e As EventArgs) Handles Me.Load
         If Not IsPostBack Then
             AdminNameInput.Text = Session("username")
+            HiddenUsername.Value = Session("username")
         End If
 
     End Sub
@@ -24,6 +25,8 @@ Public Class AdminProfile
                 con.Open()
                 cmd.ExecuteNonQuery()
                 con.Close()
+                Session("username") = AdminNameInput.Text
+                Response.Redirect(Request.RawUrl)
             End Using
         End Using
     End Sub
@@ -52,6 +55,14 @@ Public Class AdminProfile
                 End If
             End Using
         End Using
+    End Sub
+
+    Private Sub logoutButton_Click(sender As Object, e As EventArgs) Handles logoutButton.Click
+        Session.Clear()
+        Session.RemoveAll()
+        Session.Remove("Username")
+        Session.Abandon()
+        Response.Redirect("Login.aspx")
     End Sub
 
 
@@ -98,13 +109,7 @@ Public Class AdminProfile
 
 
 
-    Private Sub logoutButton_Click(sender As Object, e As EventArgs) Handles logoutButton.Click
-        Session.Clear()
-        Session.RemoveAll()
-        Session.Remove("Username")
-        Session.Abandon()
-        Response.Redirect("Login.aspx")
-    End Sub
+
 
 
 End Class

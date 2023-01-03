@@ -28,10 +28,6 @@ ol[role='list'] {
   padding: 0; }
 
 :root {
-  /*-----Colors-----*/
-  --main-color: #b91820;
-  --white-color: #f0f0ef;
-  --black-color: #201e1e;
   /*---pagination settings----*/
   --swiper-pagination-color: #dd2e44;
   --swiper-pagination-bullet-size: 8px;
@@ -43,7 +39,10 @@ ol[role='list'] {
   --swiper-pagination-bullet-horizontal-gap: 4px;
   --swiper-pagination-bullet-vertical-gap: 6px;
   /* Slide Background settings*/
-  --bg-linear-gradient: linear-gradient(to top, var(--black-color) 20%, transparent 50%); }
+  --bg-linear-gradient: linear-gradient(to top, #000 20%, transparent 50%); }
+
+.active-link {
+  border-bottom: 2px solid #dd2e44; }
 
 /*-------------------*/
 /*-----Typography-----*/
@@ -143,8 +142,7 @@ body {
   backdrop-filter: blur(6px);
   left: 100%;
   transition: 0.4s;
-  z-index: 98;
-  padding-top: 120px; }
+  z-index: 98; }
 
 .nav-mobile-menu.isactive {
   left: 0%; }
@@ -152,7 +150,8 @@ body {
 .nav-mobile-links {
   position: relative;
   top: -50%;
-  transform: translateY(70%); }
+  transform: translateY(50%);
+  font-size: 2rem; }
 
 .nav-mobile-links a {
   display: block;
@@ -232,7 +231,7 @@ body {
 /*-------------------------------------------------*/
 @media (min-width: 768px) {
   :root {
-    --bg-linear-gradient: linear-gradient(to top, var(--black-color), transparent); }
+    --bg-linear-gradient: linear-gradient(to top, rgba(0, 0, 0, 0.5), transparent); }
   /*-------------------*/
   /*-----Typography-----*/
   /* -------------------*/

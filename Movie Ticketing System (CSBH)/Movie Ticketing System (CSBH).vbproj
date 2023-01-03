@@ -132,6 +132,7 @@
     <Content Include="img\wallpaper3.jpg" />
     <Content Include="Pages\Movielist.aspx" />
     <Content Include="Pages\Registration.aspx" />
+    <Content Include="Pages\UserProfile.aspx" />
     <Content Include="SASS\admin.css">
       <DependentUpon>admin.scss</DependentUpon>
     </Content>
@@ -179,6 +180,12 @@
     </Content>
     <Content Include="SASS\userlist.min.css">
       <DependentUpon>userlist.css</DependentUpon>
+    </Content>
+    <Content Include="SASS\UserProfile.css">
+      <DependentUpon>UserProfile.scss</DependentUpon>
+    </Content>
+    <Content Include="SASS\UserProfile.min.css">
+      <DependentUpon>UserProfile.css</DependentUpon>
     </Content>
     <Content Include="Scripts\bootstrap.bundle.js" />
     <Content Include="Scripts\bootstrap.bundle.min.js" />
@@ -266,6 +273,13 @@
       <DependentUpon>Movies.aspx</DependentUpon>
       <SubType>ASPXCodebehind</SubType>
     </Compile>
+    <Compile Include="Pages\UserProfile.aspx.designer.vb">
+      <DependentUpon>UserProfile.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\UserProfile.aspx.vb">
+      <DependentUpon>UserProfile.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
     <Compile Include="Pages\Users.aspx.designer.vb">
       <DependentUpon>Users.aspx</DependentUpon>
     </Compile>
@@ -345,6 +359,7 @@
     <Content Include="SASS\bookinglist.scss" />
     <Content Include="SASS\Movies.scss" />
     <Content Include="SASS\AdminProfile.scss" />
+    <Content Include="SASS\UserProfile.scss" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

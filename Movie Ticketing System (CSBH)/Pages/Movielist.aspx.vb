@@ -36,7 +36,7 @@ Public Class Movieslist
     Private Sub SubmitModalEdit_Click(sender As Object, e As EventArgs) Handles SubmitModalEdit.Click
 
         Dim conString As String = "Data Source=DESKTOP-62PB5DH;Initial Catalog=Movie_System;Integrated Security=True"
-        Dim editMovie As String = "UPDATE movies SET movie_name = '" & EditName.Text & "', movie_language = '" & EditLang.Text & "', movie_duration = '" & EditDuration.Text & "', movie_type = '" & EditGenre.Text & "', movie_release_date = '" & EditDate.Text & "', movie_tickets = '" & EditTicket.Text & "' WHERE movie_id = '" & hdnLabelId.Value & "'; "
+        Dim editMovie As String = "UPDATE movies SET movie_name = '" & EditName.Text & "', movie_language = '" & EditLang.Text & "', movie_duration = '" & EditDuration.Text & "', movie_type = '" & EditGenre.Text & "', movie_release_date = '" & EditDate.Text & "' WHERE movie_id = '" & hdnLabelId.Value & "'; "
 
         Using con As New SqlConnection(conString)
             Using cmd As New SqlCommand(editMovie)
@@ -49,8 +49,8 @@ Public Class Movieslist
 
     Private Sub SubmitModalAdd_Click(sender As Object, e As EventArgs) Handles SubmitModalAdd.Click
         Dim conString As String = "Data Source=DESKTOP-62PB5DH;Initial Catalog=Movie_System;Integrated Security=True"
-        Dim addMovie As String = "INSERT INTO movies (movie_name, movie_language, movie_duration, movie_type, movie_release_date, movie_tickets) 
-                                  VALUES ('" & AddName.Text & "', '" & AddLang.Text & "', '" & AddDuration.Text & "', '" & AddGenre.Text & "', '" & AddDate.Text & "', '" & AddTicket.Text & "');"
+        Dim addMovie As String = "INSERT INTO movies (movie_name, movie_language, movie_duration, movie_type, movie_release_date) 
+                                  VALUES ('" & AddName.Text & "', '" & AddLang.Text & "', '" & AddDuration.Text & "', '" & AddGenre.Text & "', '" & AddDate.Text & "');"
         Dim checkMovie As String = "SELECT * FROM movies WHERE movie_name = '" & AddName.Text & "';"
         Using con As New SqlConnection(conString)
             Using cmd As New SqlCommand(addMovie)

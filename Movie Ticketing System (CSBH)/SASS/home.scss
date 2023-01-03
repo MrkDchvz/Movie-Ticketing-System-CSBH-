@@ -2,6 +2,10 @@
 @import '_variables.scss';
 
 // Global
+.active-link {
+    border-bottom: 2px solid $accent-color;
+}
+
 .accent-color {
     color: $accent-color;
 }

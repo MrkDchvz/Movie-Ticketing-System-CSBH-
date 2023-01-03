@@ -44,6 +44,8 @@ Public Class WebForm1
                 Response.Redirect("home.aspx")
             ElseIf Session("rank") = "2" Then
                 Response.Redirect("admin.aspx")
+            Else
+                loginError.Text = "Invalid username or password"
             End If
         Else
             loginError.Text = "Invalid username or password"

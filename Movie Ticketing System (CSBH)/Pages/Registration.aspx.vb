@@ -10,8 +10,8 @@ Public Class Registration
 
     Protected Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
         Dim conString As String = "Data Source=DESKTOP-62PB5DH;Initial Catalog=Movie_System;Integrated Security=True"
-        Dim checkUser As String = "SELECT * FROM users WHERE username = '" & loginUsername.Text.ToLower & "';"
-        Dim addUser As String = "INSERT INTO users VALUES( '" & loginUsername.Text & "', '" & loginPassword.Text & "', '" & loginEmail.Text & "', '" & 1 & "');"
+        Dim checkUser As String = "SELECT * FROM users WHERE rank = 1 AND  username = '" & loginUsername.Text.ToLower & "';"
+        Dim addUser As String = "INSERT INTO users (username, password, email, rank) VALUES( '" & loginUsername.Text & "', '" & loginPassword.Text & "', '" & loginEmail.Text & "', '" & 1 & "');"
         Using con As New SqlConnection(conString)
             Using cmd As New SqlCommand(checkUser)
                 Using sa As New SqlDataAdapter()

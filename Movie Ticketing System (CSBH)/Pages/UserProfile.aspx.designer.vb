@@ -11,7 +11,7 @@ Option Strict On
 Option Explicit On
 
 
-Partial Public Class Movieslist
+Partial Public Class UserProfile
 
     '''<summary>
     '''form1 control.
@@ -23,173 +23,155 @@ Partial Public Class Movieslist
     Protected WithEvents form1 As Global.System.Web.UI.HtmlControls.HtmlForm
 
     '''<summary>
-    '''logoutButton control.
+    '''logoutButtonDesktop control.
     '''</summary>
     '''<remarks>
     '''Auto-generated field.
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
-    Protected WithEvents logoutButton As Global.System.Web.UI.WebControls.LinkButton
+    Protected WithEvents logoutButtonDesktop As Global.System.Web.UI.WebControls.LinkButton
 
     '''<summary>
-    '''SelectedMovie control.
+    '''logoutButtonMobile control.
     '''</summary>
     '''<remarks>
     '''Auto-generated field.
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
-    Protected WithEvents SelectedMovie As Global.System.Web.UI.WebControls.Label
+    Protected WithEvents logoutButtonMobile As Global.System.Web.UI.WebControls.LinkButton
 
     '''<summary>
-    '''hdnLabelId control.
+    '''InputAccountUsername control.
     '''</summary>
     '''<remarks>
     '''Auto-generated field.
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
-    Protected WithEvents hdnLabelId As Global.System.Web.UI.HtmlControls.HtmlInputHidden
+    Protected WithEvents InputAccountUsername As Global.System.Web.UI.WebControls.TextBox
 
     '''<summary>
-    '''SelectedMovieId control.
+    '''HiddenUsername control.
     '''</summary>
     '''<remarks>
     '''Auto-generated field.
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
-    Protected WithEvents SelectedMovieId As Global.System.Web.UI.WebControls.Label
+    Protected WithEvents HiddenUsername As Global.System.Web.UI.WebControls.HiddenField
 
     '''<summary>
-    '''SubmitModalDelete control.
+    '''SubmitUsername control.
     '''</summary>
     '''<remarks>
     '''Auto-generated field.
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
-    Protected WithEvents SubmitModalDelete As Global.System.Web.UI.WebControls.Button
+    Protected WithEvents SubmitUsername As Global.System.Web.UI.WebControls.Button
 
     '''<summary>
-    '''EditName control.
+    '''InputCurrentPassword control.
     '''</summary>
     '''<remarks>
     '''Auto-generated field.
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
-    Protected WithEvents EditName As Global.System.Web.UI.WebControls.TextBox
+    Protected WithEvents InputCurrentPassword As Global.System.Web.UI.WebControls.TextBox
 
     '''<summary>
-    '''EditLang control.
+    '''CurrentPassError control.
     '''</summary>
     '''<remarks>
     '''Auto-generated field.
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
-    Protected WithEvents EditLang As Global.System.Web.UI.WebControls.TextBox
+    Protected WithEvents CurrentPassError As Global.System.Web.UI.WebControls.Label
 
     '''<summary>
-    '''EditDuration control.
+    '''InputNewPassword control.
     '''</summary>
     '''<remarks>
     '''Auto-generated field.
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
-    Protected WithEvents EditDuration As Global.System.Web.UI.WebControls.TextBox
+    Protected WithEvents InputNewPassword As Global.System.Web.UI.WebControls.TextBox
 
     '''<summary>
-    '''EditGenre control.
+    '''InputConfirmPassword control.
     '''</summary>
     '''<remarks>
     '''Auto-generated field.
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
-    Protected WithEvents EditGenre As Global.System.Web.UI.WebControls.TextBox
+    Protected WithEvents InputConfirmPassword As Global.System.Web.UI.WebControls.TextBox
 
     '''<summary>
-    '''EditDate control.
+    '''PasswordValidation control.
     '''</summary>
     '''<remarks>
     '''Auto-generated field.
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
-    Protected WithEvents EditDate As Global.System.Web.UI.WebControls.TextBox
+    Protected WithEvents PasswordValidation As Global.System.Web.UI.WebControls.CompareValidator
 
     '''<summary>
-    '''RequiredFieldValidator1 control.
+    '''SubmitPassword control.
     '''</summary>
     '''<remarks>
     '''Auto-generated field.
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
-    Protected WithEvents RequiredFieldValidator1 As Global.System.Web.UI.WebControls.RequiredFieldValidator
+    Protected WithEvents SubmitPassword As Global.System.Web.UI.WebControls.Button
 
     '''<summary>
-    '''SubmitModalEdit control.
+    '''InputEmail control.
     '''</summary>
     '''<remarks>
     '''Auto-generated field.
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
-    Protected WithEvents SubmitModalEdit As Global.System.Web.UI.WebControls.Button
+    Protected WithEvents InputEmail As Global.System.Web.UI.WebControls.TextBox
 
     '''<summary>
-    '''AddName control.
+    '''HiddenEmail control.
     '''</summary>
     '''<remarks>
     '''Auto-generated field.
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
-    Protected WithEvents AddName As Global.System.Web.UI.WebControls.TextBox
+    Protected WithEvents HiddenEmail As Global.System.Web.UI.WebControls.HiddenField
 
     '''<summary>
-    '''AddLang control.
+    '''regexEmailValid control.
     '''</summary>
     '''<remarks>
     '''Auto-generated field.
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
-    Protected WithEvents AddLang As Global.System.Web.UI.WebControls.TextBox
+    Protected WithEvents regexEmailValid As Global.System.Web.UI.WebControls.RegularExpressionValidator
 
     '''<summary>
-    '''AddDuration control.
+    '''SubmitEmail control.
     '''</summary>
     '''<remarks>
     '''Auto-generated field.
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
-    Protected WithEvents AddDuration As Global.System.Web.UI.WebControls.TextBox
+    Protected WithEvents SubmitEmail As Global.System.Web.UI.WebControls.Button
 
     '''<summary>
-    '''AddGenre control.
+    '''GridView1 control.
     '''</summary>
     '''<remarks>
     '''Auto-generated field.
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
-    Protected WithEvents AddGenre As Global.System.Web.UI.WebControls.TextBox
+    Protected WithEvents GridView1 As Global.System.Web.UI.WebControls.GridView
 
     '''<summary>
-    '''AddDate control.
+    '''SubmitDelete control.
     '''</summary>
     '''<remarks>
     '''Auto-generated field.
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
-    Protected WithEvents AddDate As Global.System.Web.UI.WebControls.TextBox
-
-    '''<summary>
-    '''RequiredFieldValidator2 control.
-    '''</summary>
-    '''<remarks>
-    '''Auto-generated field.
-    '''To modify move field declaration from designer file to code-behind file.
-    '''</remarks>
-    Protected WithEvents RequiredFieldValidator2 As Global.System.Web.UI.WebControls.RequiredFieldValidator
-
-    '''<summary>
-    '''SubmitModalAdd control.
-    '''</summary>
-    '''<remarks>
-    '''Auto-generated field.
-    '''To modify move field declaration from designer file to code-behind file.
-    '''</remarks>
-    Protected WithEvents SubmitModalAdd As Global.System.Web.UI.WebControls.Button
+    Protected WithEvents SubmitDelete As Global.System.Web.UI.WebControls.Button
 End Class

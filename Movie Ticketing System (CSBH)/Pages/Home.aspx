@@ -24,8 +24,9 @@
       <div class="navbar__logo"><i class="fa-solid fa-bug-slash navbar__logo--icon"></i><span class="navbar__logo--title">CSBH</span></div>
       <nav class="navbar--desktop">
         <ul class="navbar--desktop__list">
-          <li class="navbar--desktop__item"><a href="Home.aspx" class="link-style">Home</a></li>
+          <li class="navbar--desktop__item active-link"><a href="Home.aspx" class="link-style">Home</a></li>
           <li class="navbar--desktop__item"><a href="Movies.aspx" class="link-style">Movies</a></li>
+            <li class="navbar--desktop__item"><a href="UserProfile.aspx" class="link-style">Profile</a></li>
           <li class="navbar--desktop__item"><asp:LinkButton ID="logoutButtonDesktop" CssClass="link-style link-style--danger" runat="server">Logout</asp:LinkButton></li>
         </ul>
       </nav>
@@ -36,6 +37,7 @@
       <ul class="navbar--mobile__list" role="list">
         <li class="navbar--mobile__item"><a href="Home.aspx" class="link-style">Home</a></li>
         <li class="navbar--mobile__item"><a href="Movies.aspx" class="link-style">Movies</a></li>
+          <li class="navbar--mobile__item"><a href="UserProfile.aspx" class="link-style">Profile</a></li>
         <li class="navbar--mobile__item"><asp:LinkButton ID="logoutButtonMobile" CssClass="link-style link-style--danger" runat="server">Logout</asp:LinkButton></li>
       </ul>
     </nav>
@@ -44,7 +46,7 @@
       <div class="content__main">
         <h1 class="content__heading">Booking made easy</h1>
         <p class="content__sub-heading">The cinema that answers all of your needs and provides best watching experience.</p>
-        <button class="content__button">Book now!</button>
+          <asp:LinkButton ID="BookNowButton" runat="server" href="Movies.aspx" CssClass="content__button link-style">Book now!</asp:LinkButton>
       </div>
 
     </main>

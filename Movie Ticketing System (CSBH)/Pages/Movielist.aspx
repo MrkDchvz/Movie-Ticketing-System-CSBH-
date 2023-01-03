@@ -87,7 +87,6 @@
                                             <th>Duration(Mins)</th>
                                             <th>Genre</th>
                                             <th>Release Date</th>
-                                            <th>Tickets</th>
                                             <th>Delete</th>
                                         </tr>
                                     </thead>
@@ -165,16 +164,8 @@
                                                 <asp:TextBox ID="EditDate" CssClass="col-md-12" runat="server" TextMode="Date" ValidationGroup="editValidation" CientIDMode="Static" autocomplete="off"></asp:TextBox>
                                             </div>
                                         </div>
-                                        <div class="row mt-1">
-                                            <div class="col-md-12 p-0">
-                                                <p>Number of tickets</p>
-                                                <asp:TextBox ID="EditTicket" CssClass="col-md-12 p-0" runat="server" TextMode="Number" ValidationGroup="editValidation" CientIDMode="Static" autocomplete="off"></asp:TextBox>
-                                            </div>
-                                        </div>
-
-
                                     </div>
-                                    <asp:RequiredFieldValidator ControlToValidate="EditName" ID="RequiredFieldValidator1" runat="server" ErrorMessage="RequiredFieldValidator" ValidationGroup="editValidation"></asp:RequiredFieldValidator>
+                                    <asp:RequiredFieldValidator ControlToValidate="EditName" ID="RequiredFieldValidator1" runat="server" ErrorMessage="Invalid Input" ValidationGroup="editValidation" CssClass="text-danger"></asp:RequiredFieldValidator>
                                 </div>
 
                                 <div class="modal-footer">
@@ -227,16 +218,11 @@
                                                 <asp:TextBox ID="AddDate" CssClass="col-md-12" runat="server" TextMode="Date" CientIDMode="Static" ValidationGroup="addValidation" autocomplete="off"></asp:TextBox>
                                             </div>
                                         </div>
-                                        <div class="row mt-1">
-                                            <div class="col-md-12 p-0">
-                                                <p>Number of tickets</p>
-                                                <asp:TextBox ID="AddTicket" CssClass="col-md-12 p-0" runat="server" TextMode="Number" CientIDMode="Static" ValidationGroup="addValidation" autocomplete="off"></asp:TextBox>
-                                            </div>
-                                        </div>
+
 
                                     </div>
 
-                                    <asp:RequiredFieldValidator ID="RequiredFieldValidator2" ControlToValidate="AddName" runat="server" ErrorMessage="RequiredFieldValidator" ValidationGroup="addValidation"></asp:RequiredFieldValidator>
+                                    <asp:RequiredFieldValidator ID="RequiredFieldValidator2" ControlToValidate="AddName" runat="server" ErrorMessage="Invalid Input" ValidationGroup="addValidation" CssClass="text-danger"></asp:RequiredFieldValidator>
                                 </div>
                                 <div class="modal-footer">
                                     <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
@@ -298,12 +284,10 @@
                                     return month + "/" + date.getDate() + "/" + date.getFullYear()
                                 }
                             },
-
-                            { 'data': 'movie_tickets' },
                             {
                                 'data': null,
                                 'render': function (data, type, row) {
-                                    return '<button type="button" data-id="' + row['movie_id'] + '" data-movie="' + row['movie_name'] + '" data-lang="' + row['movie_language'] + '" data-duration="' + row['movie_duration'] + '" data-genre="' + row['movie_type'] + '" data-date="' + row['movie_release_date'] + '" data-ticket="' + row['movie_tickets'] + '"     class="btn btn-primary me-2" onclick="EditModal(event)" data-bs-toggle="modal" data-bs-target="#editModal">Edit</button>' +
+                                    return '<button type="button" data-id="' + row['movie_id'] + '" data-movie="' + row['movie_name'] + '" data-lang="' + row['movie_language'] + '" data-duration="' + row['movie_duration'] + '" data-genre="' + row['movie_type'] + '" data-date="' + row['movie_release_date'] + '" class="btn btn-secondary me-2" onclick="EditModal(event)" data-bs-toggle="modal" data-bs-target="#editModal">Edit</button>' +
 
                                         '<button type="button" data-id="' + row['movie_id'] + '" data-movie="' + row['movie_name'] + '"  class="btn btn-danger" onclick="InsertToModal(event)"  data-bs-toggle="modal" data-bs-target="#deleteModal">Delete</button>'
                                         ;
@@ -339,7 +323,6 @@
             document.getElementById('<%= EditLang.ClientID %>').value = e.target.getAttribute('data-lang');
             document.getElementById('<%= EditDuration.ClientID %>').value = e.target.getAttribute('data-duration');
             document.getElementById('<%= EditGenre.ClientID %>').value = e.target.getAttribute('data-genre');
-            document.getElementById('<%= EditTicket.ClientID %>').value = e.target.getAttribute('data-ticket');
         }
 
 

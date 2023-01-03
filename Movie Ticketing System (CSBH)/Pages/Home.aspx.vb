@@ -1,11 +1,12 @@
 ﻿
 Public Class User
     Inherits System.Web.UI.Page
-    Protected Sub Page_Load(ByVal sender As Object, ByVal e As System.EventArgs) Handles Me.Load
+    Private Sub User_Init(sender As Object, e As EventArgs) Handles Me.Init
         If Session("username") = Nothing Then
             Response.Redirect("login.aspx")
         End If
     End Sub
+
 
     Protected Sub LogoutButtonMobile_Click(sender As Object, e As EventArgs) Handles logoutButtonMobile.Click
         Session.Clear()
@@ -22,5 +23,6 @@ Public Class User
         Response.Redirect("Login.aspx")
 
     End Sub
+
 
 End Class

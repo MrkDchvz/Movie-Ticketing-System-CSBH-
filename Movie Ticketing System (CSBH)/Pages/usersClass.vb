@@ -12,7 +12,6 @@ Public Class MoviesClass
     Public Property movie_duration As Integer
     Public Property movie_type As String
     Public Property movie_release_date As Date
-    Public Property movie_tickets As Integer
 
 
 End Class

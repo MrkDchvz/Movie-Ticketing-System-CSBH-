@@ -29,7 +29,8 @@
             <div class="nav-logo"><i class="nav-icon-logo fa-solid fa-bug-slash"></i></div>
             <div class="nav-links">
                 <a href="Home.aspx">Home</a>
-                <a href="#">Profile</a>
+                <a href="movies.aspx" class="active-link">movies</a>
+                <a href="UserProfile.aspx">Profile</a>
                 <asp:LinkButton ID="LogoutButtonDesktop" CssClass="text-danger" runat="server"><span>Logout</span></asp:LinkButton>
 
             </div>
@@ -42,7 +43,8 @@
         <nav class="nav-mobile-menu">
             <div class="nav-mobile-links">
                 <a href="Home.aspx">Home</a>
-                <a href="#">Profile</a>
+                <a href="Movies.aspx">Movies</a>
+                <a href="UserProfile.aspx">Profile</a>
                 <asp:LinkButton ID="logoutButtonMobile" CssClass="text-danger" runat="server"><i class="bi bi-box-arrow-in-right me-2 fa-sm"></i><span>Logout</span></asp:LinkButton>
             </div>
         </nav>
@@ -78,7 +80,7 @@
 
                     <div class="modal-footer">
                         <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
-                        <asp:Button ID="SubmitBooking" runat="server"  CssClass="btn btn-primary" Text="Confirm" />
+                        <asp:Button ID="SubmitBooking" runat="server"  CssClass="btn btn-primary" Text="Confirm"/>
                     </div>
                 </div>
             </div>
@@ -125,6 +127,7 @@
                                 <div class="tags tags--length">145 mins</div>
                             </div>
                             <p class="movie__description">Forever alone in a crowd, failed comedian Arthur Fleck seeks connection as he walks the streets of Gotham City. Isolated, bullied and disregarded by society, Fleck begins a slow descent into madness as he transforms into the criminal mastermind known as the Joker.</p>
+
                             <button type="button" class="btn btn--2 article__button" data-bs-toggle="modal" data-movie="Joker" data-bs-target="#ConfirmModal">Book Now</button>
                         </div>
                     </article>

@@ -81,6 +81,7 @@
                                 <div class="admin__input admin__input--username">
                                     <p class="admin__label">Change Username</p>
                                     <asp:TextBox ID="AdminNameInput" CssClass="admin__field" runat="server" ClientIDMode="Static" placeholder="Username" ></asp:TextBox>
+                                    <asp:HiddenField ID="HiddenUsername" runat="server" ClientIDMode="Static" />
                                     <asp:Button ID="UsernameSubmit" runat="server" Text="Save Username" CssClass="admin__btn admin__btn--username" />
 
                                 </div>
@@ -147,11 +148,12 @@
         // Username Button
         const userbtn = document.getElementById("UsernameSubmit");
         const userInput = document.getElementById("AdminNameInput");
-        const prevInput = userInput.value;
+        const prevInput = document.getElementById('<%= HiddenUsername.ClientID  %>');
+        console.log(prevInput.value);
 
         // Username Input Event
         userInput.addEventListener('input', () => {
-            if (userInput.value != prevInput && userInput.value.length != 0) {
+            if (userInput.value != prevInput.value && userInput.value.length != 0) {
                 userbtn.classList.add("show");
             } else {
                 userbtn.classList.remove("show");

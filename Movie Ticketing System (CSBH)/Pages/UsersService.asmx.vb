@@ -58,7 +58,6 @@ Public Class UsersService
                 movie.movie_duration = Convert.ToInt32(rdr("movie_duration"))
                 movie.movie_type = rdr("movie_type").ToString
                 movie.movie_release_date = Convert.ToDateTime(rdr("movie_release_date"))
-                movie.movie_tickets = Convert.ToInt32(rdr("movie_tickets"))
 
                 movieList.Add(movie)
 

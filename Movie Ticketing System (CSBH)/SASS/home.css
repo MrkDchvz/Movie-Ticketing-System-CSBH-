@@ -27,6 +27,9 @@ ol[role='list'] {
   list-style: none;
   padding: 0; }
 
+.active-link {
+  border-bottom: 2px solid #dd2e44; }
+
 .accent-color {
   color: #dd2e44; }
 
