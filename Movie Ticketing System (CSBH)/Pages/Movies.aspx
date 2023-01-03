@@ -179,48 +179,7 @@
     <!-- Jquery script-->
     <script src="https://code.jquery.com/jquery-3.6.1.js" integrity="sha256-3zlB5s2uwoUzrXK3BT7AX3FyvojsraNFxCc2vC/7pNI=" crossorigin="anonymous"></script>
 
-    <script>
-        const allBtn = document.querySelectorAll('.article__button');
-        allBtn.forEach((btn) => {
-            btn.addEventListener('click', () => {
-                const movie = btn.dataset.movie;
-                const date = new Date;
-                const today = date.toLocaleDateString();
-                const BookingDate = document.getElementById('BookingDate');
-                const BookingMovie = document.getElementById('BookingMovie');
-
-                const hdnLabelName = document.getElementById('<%= HdnLabelName.ClientID %>');
-                const hdnLabelDate = document.getElementById('<%= HdnLabelDate.ClientID %>');
-
-                hdnLabelName.value = btn.dataset.movie;
-                hdnLabelDate.value = today;
-
-
-                BookingMovie.innerHTML = btn.dataset.movie;
-                BookingDate.innerHTML = today;
-                console.log(movie);
-            })
-        })
-
-
-    </script>
-
-    <script>
-        console.log("Hello");
-        const hamburger = document.querySelector(".nav-hamburger");
-        const mobileNav = document.querySelector(".nav-mobile-menu");
-        hamburger.addEventListener('click', () => {
-            hamburger.classList.toggle("isactive");
-            mobileNav.classList.toggle("isactive");
-        })
-    </script>
     <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
-
-
-
-
-    
-
     <script>
         const swiper = new Swiper('.swiper', {
             // Optional parameters
@@ -248,5 +207,43 @@
             } */
         });
     </script>
+
+    <script>
+        const allBtn = document.querySelectorAll('.article__button');
+        allBtn.forEach((btn) => {
+            btn.addEventListener('click', () => {
+                const movie = btn.dataset.movie;
+                const date = new Date;
+                const today = date.toLocaleDateString();
+                const BookingDate = document.getElementById('BookingDate');
+                const BookingMovie = document.getElementById('BookingMovie');
+
+                const hdnLabelName = document.getElementById('<%= HdnLabelName.ClientID %>');
+                const hdnLabelDate = document.getElementById('<%= HdnLabelDate.ClientID %>');
+
+                hdnLabelName.value = btn.dataset.movie;
+                hdnLabelDate.value = today;
+
+
+                BookingMovie.textContent = btn.dataset.movie;
+                BookingDate.textContent = today;
+                console.log(movie);
+            })
+        })
+
+      
+
+    </script>
+
+    <script>
+        console.log("Hello");
+        const hamburger = document.querySelector(".nav-hamburger");
+        const mobileNav = document.querySelector(".nav-mobile-menu");
+        hamburger.addEventListener('click', () => {
+            hamburger.classList.toggle("isactive");
+            mobileNav.classList.toggle("isactive");
+        })
+    </script>
+    
 </body>
 </html>
