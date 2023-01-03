@@ -47,7 +47,7 @@
 
             </div>
             <div class="login__empty">
-                <div class="login__icon--both"><i class="fa-solid fa-bug-slash"></i><span>CBSH</span></div>
+                <div class="login__icon--both"><i class="fa-solid fa-bug-slash"></i><span>CSBH</span></div>
                 <div class="login__description">
                     <span class="login__heading">Don't have an account?</span>
                     <p class="login__subheading">Register to access all the features of our service.
