@@ -175,17 +175,17 @@
     <Content Include="SASS\registration.min.css">
       <DependentUpon>registration.css</DependentUpon>
     </Content>
-    <Content Include="SASS\userlist.css">
-      <DependentUpon>users.scss</DependentUpon>
-    </Content>
-    <Content Include="SASS\userlist.min.css">
-      <DependentUpon>userlist.css</DependentUpon>
-    </Content>
     <Content Include="SASS\UserProfile.css">
       <DependentUpon>UserProfile.scss</DependentUpon>
     </Content>
     <Content Include="SASS\UserProfile.min.css">
       <DependentUpon>UserProfile.css</DependentUpon>
+    </Content>
+    <Content Include="SASS\users.css">
+      <DependentUpon>users.scss</DependentUpon>
+    </Content>
+    <Content Include="SASS\users.min.css">
+      <DependentUpon>users.css</DependentUpon>
     </Content>
     <Content Include="Scripts\bootstrap.bundle.js" />
     <Content Include="Scripts\bootstrap.bundle.min.js" />

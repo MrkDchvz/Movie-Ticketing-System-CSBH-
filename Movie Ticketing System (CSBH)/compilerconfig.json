@@ -34,5 +34,9 @@
   {
     "outputFile": "SASS/UserProfile.css",
     "inputFile": "SASS/UserProfile.scss"
+  },
+  {
+    "outputFile": "SASS/users.css",
+    "inputFile": "SASS/users.scss"
   }
 ]
